@@ -1,0 +1,43 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# terraform.tfvars.example
+#
+# 1. Copy this file:
+#       cp terraform.tfvars.example terraform.tfvars
+#
+# 2. Fill in the values below (terraform.tfvars is in .gitignore — safe to add secrets).
+#
+# 3. Export Snowflake connection vars (the provider reads them automatically):
+#       export SNOWFLAKE_ACCOUNT="abc12345.eu-west-1"
+#       export SNOWFLAKE_USER="WELTON"
+#       export SNOWFLAKE_PASSWORD="your-password"
+#
+#    Or just run the wrapper — it loads .env for you:
+#       scripts/tf_deploy.sh apply
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Service account ───────────────────────────────────────────────────────────
+# Password for DBT_USER, the service account used by dbt + Airflow DAGs.
+dbt_user_password = "<REPLACE_WITH_STRONG_PASSWORD>"
+
+# Key-pair (JWT) auth for DBT_USER — the production standard for service accounts.
+# Generate with: DBT_PRIVATE_KEY_PASSPHRASE='…' scripts/gen_dbt_keypair.sh
+# Paste the printed PUBLIC key body here (safe to store — it is not a secret).
+# Leave "" to keep password-only auth.
+dbt_user_rsa_public_key = ""
+
+# ── Virtual warehouse ─────────────────────────────────────────────────────────
+# X-SMALL is enough for dev/demo (~$0.50/hr on Enterprise; 0 cost when suspended).
+warehouse_size = "X-SMALL"
+
+# ── MinIO external stage (Phase 7 streaming path) ────────────────────────────
+# Set minio_endpoint to your ngrok HTTPS URL (no trailing slash).
+# Leave empty ("") to skip creating the external stage and Snowpipes.
+minio_endpoint   = "https://abc123.ngrok.io"
+minio_access_key = "minioadmin"
+minio_secret_key = "<REPLACE_WITH_MINIO_SECRET_KEY>"
+minio_bucket     = "retail-datalake"
+
+# ── Streamlit deploy ──────────────────────────────────────────────────────────
+# Set to false to skip the `snow streamlit deploy` step (useful in CI).
+deploy_streamlit = true
+snow_connection  = "retail"

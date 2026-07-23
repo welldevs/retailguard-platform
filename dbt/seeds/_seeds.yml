@@ -1,0 +1,19 @@
+version: 2
+
+seeds:
+  - name: budget_mensal
+    description: >
+      Meta mensal de GMV (budget sintético) por year_month, de 2025-06 a 2026-06.
+      Valores determinísticos com sazonalidade (dez mais alto, fev mais baixo) de modo
+      que o realizado fique ora acima ora abaixo da meta. Usado pelo dashboard para
+      comparar GMV realizado (mart_gmv_mensal.gmv_gross) vs meta.
+    columns:
+      - name: year_month
+        description: Mês de referência no formato YYYY-MM
+        tests:
+          - not_null
+          - unique
+      - name: gmv_meta
+        description: Meta de GMV (EUR) para o mês
+        tests:
+          - not_null

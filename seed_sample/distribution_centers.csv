@@ -1,0 +1,6 @@
+dc_id,name,city,region,latitude,longitude,stock_weight
+DC_MAD,Centro de Distribuição Madrid,Madrid,Madrid,40.4168,-3.7038,0.274
+DC_BCN,Centro de Distribuição Barcelona,Barcelona,Cataluña,41.3851,2.1734,0.158
+DC_VLC,Centro de Distribuição Valencia,Valencia,Comunitat Valenciana,39.4699,-0.3763,0.161
+DC_SEV,Centro de Distribuição Sevilla,Sevilla,Andalucía,37.3891,-5.9845,0.226
+DC_ZGZ,Centro de Distribuição Zaragoza,Zaragoza,Aragón,41.6488,-0.8891,0.181

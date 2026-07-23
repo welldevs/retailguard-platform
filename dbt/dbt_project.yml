@@ -1,0 +1,37 @@
+name: 'retail_analytics'
+version: '1.0.0'
+config-version: 2
+
+profile: 'retail_analytics'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  retail_analytics:
+    staging:
+      +materialized: view
+      +schema: staging
+    marts:
+      core:
+        +materialized: table
+        +schema: marts
+      kpi:
+        +materialized: table
+        +schema: marts
+
+seeds:
+  retail_analytics:
+    # budget_mensal → MARTS.BUDGET_MENSAL (Snowflake) / main_marts (DuckDB).
+    # Schema explícito: evita o ramo custom_schema=None do generate_schema_name
+    # (que resolve para schema vazio no dbt-duckdb) e alinha com o README.
+    +schema: marts
+

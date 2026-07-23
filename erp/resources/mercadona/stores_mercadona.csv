@@ -1,0 +1,1598 @@
+id,region,province,city,address,has_listo_para_comer,has_cafe_service
+1,Galicia,A Coruña,A Coruña,"C/ Ronda Outeiro, 217",t,f
+2,Galicia,A Coruña,A Coruña,"Avda. de Oza, 132",f,f
+3,Galicia,A Coruña,A Coruña,"Rúa José Pascual López Cortón, 10",f,f
+4,Galicia,A Coruña,A Coruña,"Rúa Panadeiras, 28",t,f
+5,Galicia,A Coruña,A Coruña,"Estr. Baños de Arteixo, 43",t,f
+6,Galicia,A Coruña,Ames,"Avda. de Mahia, 75",t,f
+7,Galicia,A Coruña,Ames,"Travesía do Porto, S/N",t,f
+8,Galicia,A Coruña,Arteixo,"Avda. Diputación, 75",t,f
+9,Galicia,A Coruña,Betanzos,"Avda. Fraga Iribarne, 7",t,f
+10,Galicia,A Coruña,Boiro,"Rua Principal, 76",t,f
+11,Galicia,A Coruña,Carballo,"Avda. A Revolta, 19",t,f
+12,Galicia,A Coruña,Cee,"Lg. Vilar de Toba, S/N",t,f
+13,Galicia,A Coruña,Culleredo,"Avda. de Alvedro, 5",t,f
+14,Galicia,A Coruña,Fene,"Rúa Áncoras, S/N",t,f
+15,Galicia,A Coruña,Ferrol,"San Pedro de Leixa, 293",t,f
+16,Galicia,A Coruña,Ferrol,"Rúa Españoleto, 1",t,f
+17,Galicia,A Coruña,Narón,"Avda. do Mar, 102",t,f
+18,Galicia,A Coruña,Narón,"Ctra. de Cedeira, 296",t,t
+19,Galicia,A Coruña,Noia,"C/ Pedra Sartaña, 4",t,f
+20,Galicia,A Coruña,Oleiros,"Avda. Ramón Núñez Montero, 52",t,f
+21,Galicia,A Coruña,Oleiros,"Avda. das Mariñas, 283",t,f
+22,Galicia,A Coruña,Ribeira,"R. Xohana Torres, 12",t,f
+23,Galicia,A Coruña,Santiago de Compostela,"Rúa Maria Casares, 5",t,f
+24,Galicia,A Coruña,Santiago de Compostela,"Rúa Castela e León, 4",t,t
+25,Euskadi,Álava,Vitoria-Gasteiz,"C/ Alto de Armentia, 7",t,f
+26,Euskadi,Álava,Vitoria-Gasteiz,"Avda. Olarizu, 1",t,f
+27,Euskadi,Álava,Vitoria-Gasteiz,"C/ Düsseldorf, 8",t,f
+28,Euskadi,Álava,Vitoria-Gasteiz,"C/ Simón de Anda, 19",t,t
+29,Euskadi,Álava,Vitoria-Gasteiz,"C/ Sierra de Andia, 10",t,t
+30,Euskadi,Álava,Vitoria-Gasteiz,"C/ Portal de Betoño, 10",t,f
+31,Castilla-La Mancha,Albacete,Albacete,"Ctra. Jaén, 11",f,f
+32,Castilla-La Mancha,Albacete,Albacete,"C/ Antonio Gotor, 6",f,f
+33,Castilla-La Mancha,Albacete,Albacete,"Avda. Ramón y Cajal, 16",t,f
+34,Castilla-La Mancha,Albacete,Albacete,"C/ Cristóbal Pérez Pastor, 12",t,f
+35,Castilla-La Mancha,Albacete,Albacete,"Avda. Constantino Romero, S/N",t,f
+36,Castilla-La Mancha,Albacete,Albacete,"C/ Alcalde Conangla, S/N",t,t
+37,Castilla-La Mancha,Albacete,Almansa,"Avda. José Rodríguez Ruano, 16",t,f
+38,Castilla-La Mancha,Albacete,Hellín,"C/ Gran Vía, 60",t,f
+39,Castilla-La Mancha,Albacete,La Roda,"C/ Brunete, 6",t,f
+40,Castilla-La Mancha,Albacete,Villarrobledo,"Avda. Reyes Católicos, 96",t,t
+41,Comunidad Valenciana,Alicante,Alicante,"C/ Dr. Ayela, 7",t,f
+42,Comunidad Valenciana,Alicante,Alicante,"C/ Calderón de la Barca, 39",t,t
+43,Comunidad Valenciana,Alicante,Alicante,"C/ Reyes Católicos, 51",t,f
+44,Comunidad Valenciana,Alicante,Alicante,"C/ Alonso Cano, S/N",t,f
+45,Comunidad Valenciana,Alicante,Alicante,"C/ Dr. Rico, 5",t,f
+46,Comunidad Valenciana,Alicante,Alicante,"Avda. Orihuela, 21",t,f
+47,Comunidad Valenciana,Alicante,Alicante,"C/ Caja de Ahorros, S/N",t,f
+48,Comunidad Valenciana,Alicante,Alicante,"Avda. de la Condomina, S/N",t,t
+49,Comunidad Valenciana,Alicante,Alicante,"Avda. Dr. Jiménez Díaz, 17",t,f
+50,Comunidad Valenciana,Alicante,Alicante,"Avda. Las Naciones, 4",t,f
+51,Comunidad Valenciana,Alicante,Alicante,"C/ Río Muni, 8",t,f
+52,Comunidad Valenciana,Alicante,Alicante,"C/ Los Cincuenta, 46",t,f
+53,Comunidad Valenciana,Alicante,Alicante,"Avda. La Estación, 12",t,f
+54,Comunidad Valenciana,Alicante,Albatera,"Avda. Hondo de los Frailes, 28",t,f
+55,Comunidad Valenciana,Alicante,Alcoy,"C/ Santa Rosa, 7",t,f
+56,Comunidad Valenciana,Alicante,Alcoy,"Avda. de la Hispanidad, 36",t,f
+57,Comunidad Valenciana,Alicante,Almoradí,"Avda. Comunidad Europea, S/N",t,f
+58,Comunidad Valenciana,Alicante,Altea,"C/ Síndic de Greuges, 39",t,f
+59,Comunidad Valenciana,Alicante,Aspe,"Avda. Alcalde Carlos Carbonell, 67",t,f
+60,Comunidad Valenciana,Alicante,Benidorm,"C/ Invierno, 11",t,f
+61,Comunidad Valenciana,Alicante,Benidorm,"C/ Secretario Juan Antonio Baldoví, 9",t,f
+62,Comunidad Valenciana,Alicante,Denia,"Av. Miguel Hernández, 23",t,f
+63,Comunidad Valenciana,Alicante,Denia,"Paseo Saladar, S/N",t,f
+64,Comunidad Valenciana,Alicante,Elx,"Av. Cortes Valencianas, S/N",t,f
+65,Comunidad Valenciana,Alicante,Elx,"C/ Olegario Domarco Seller, 93",t,f
+66,Comunidad Valenciana,Alicante,Torrevieja,"Av. Orihuela, S/N",t,f
+67,Comunidad Valenciana,Alicante,Torrevieja,Ctra. de Crevillente - C/ Calaceite,t,f
+68,Andalucía,Almería,Almería,"Av. Vega de Aca, S/N",t,f
+69,Andalucía,Almería,Almería,"C/ Pilarica, S/N - Cno. Minor, S/N",t,f
+70,Andalucía,Almería,Almería,"Plaza Barcelona, S/N",t,f
+71,Andalucía,Almería,Berja,Av. Ramón y Cajal – Ctra. A Adra,t,f
+72,Andalucía,Almería,Huercal de Almería,"Ctra. Campamento, 6",t,f
+73,Andalucía,Almería,Roquetas de Mar,"Av. Cámara de Comercio, S/N",t,f
+74,Andalucía,Almería,Roquetas de Mar,"Ctra. Alicún, S/N",t,f
+75,Andalucía,Almería,Vera,"Av. Medina Azahara, 2",t,f
+76,Andalucía,Cádiz,Algeciras,"C/ Misioneras Concepcionistas, 1",t,f
+77,Andalucía,Cádiz,Algeciras,"Ctra. de Getares, S/N",t,f
+78,Andalucía,Cádiz,Cádiz,"Av. de la Ilustración, 2",t,f
+79,Andalucía,Cádiz,Chiclana de la Frontera,"Av. del Mueble, S/N",t,f
+80,Andalucía,Cádiz,Jerez de la Frontera,"Av. Álvaro Domecq, 10",t,t
+81,Andalucía,Cádiz,San Fernando,"C/ Real, 237",t,f
+82,Andalucía,Sevilla,Sevilla,"C/ Virgen de Luján, 38",t,t
+83,Andalucía,Sevilla,Sevilla,"C/ Luis Montoto, 122",t,f
+84,Andalucía,Sevilla,Sevilla,"Av. de la Palmera, 37",t,f
+85,Andalucía,Sevilla,Dos Hermanas,"Av. Juan Pablo II, S/N",t,f
+86,Andalucía,Sevilla,Écija,"Av. Miguel de Cervantes, 21",t,f
+87,Andalucía,Málaga,Málaga,"C/ Pacífico, 46",t,t
+88,Andalucía,Málaga,Málaga,"Av. Juan XXIII, 4",t,f
+89,Andalucía,Málaga,Marbella,"Av. Ricardo Soriano, 72",t,t
+90,Andalucía,Málaga,Mijas,"Ctra. de Cádiz, Km 204",t,f
+91,Andalucía,Granada,Granada,"C/ Arabial, S/N",t,t
+92,Andalucía,Granada,Granada,"Av. de Andalucía, 18",t,f
+93,Andalucía,Córdoba,Córdoba,"Av. del Brillante, 56",t,f
+94,Andalucía,Córdoba,Córdoba,"C/ Cronista Rey Díaz, S/N",t,t
+95,Comunidad de Madrid,Madrid,Madrid,"C/ Fuencarral, 161",t,t
+96,Comunidad de Madrid,Madrid,Madrid,"C/ Alcalá, 411",t,f
+97,Comunidad de Madrid,Madrid,Madrid,"C/ Princesa, 47",t,t
+98,Comunidad de Madrid,Madrid,Madrid,"Av. de la Albufera, 35",t,f
+99,Comunidad de Madrid,Madrid,Madrid,"C/ Hermanos García Noblejas, 47",t,f
+100,Comunidad de Madrid,Madrid,Madrid,"C/ Bravo Murillo, 75",t,t
+101,Comunidad de Madrid,Madrid,Alcalá de Henares,"Av. Juan de Austria, 4",t,f
+102,Comunidad de Madrid,Madrid,Alcobendas,"C/ Vía de los Poblados, 3",t,t
+103,Comunidad de Madrid,Madrid,Getafe,"C/ Madrid, 118",t,f
+104,Comunidad de Madrid,Madrid,Leganés,"Av. Pablo Iglesias, 8",t,f
+105,Comunidad de Madrid,Madrid,Móstoles,"Av. de las Américas, 37",t,f
+106,Comunidad de Madrid,Madrid,Pozuelo de Alarcón,"C/ Pradillo, 4",t,t
+107,Cataluña,Barcelona,Barcelona,"C/ Mallorca, 282",t,t
+108,Cataluña,Barcelona,Barcelona,"Av. Diagonal, 427",t,t
+109,Cataluña,Barcelona,Barcelona,"C/ Provença, 177",t,f
+110,Cataluña,Barcelona,Barcelona,"Av. Meridiana, 350",t,f
+111,Cataluña,Barcelona,Badalona,"C/ Prim, 89",t,f
+112,Cataluña,Barcelona,L'Hospitalet de Llobregat,"Av. Isabel la Católica, 2",t,t
+113,Cataluña,Barcelona,Sabadell,"C/ de la Salut, 76",t,f
+114,Cataluña,Barcelona,Terrassa,"C/ Nou, 30",t,f
+115,Cataluña,Girona,Girona,"C/ Barcelona, 112",t,f
+116,Cataluña,Lleida,Lleida,"Av. Prat de la Riba, 56",t,f
+117,Cataluña,Tarragona,Tarragona,"Av. Roma, 14",t,t
+118,Comunidad Valenciana,Valencia,Valencia,"C/ Colón, 27",t,t
+119,Comunidad Valenciana,Valencia,Valencia,"Av. del Cid, 56",t,f
+120,Comunidad Valenciana,Valencia,Valencia,"C/ Jesús, 52",t,f
+121,Comunidad Valenciana,Valencia,Valencia,"C/ Xàtiva, 14",t,t
+122,Comunidad Valenciana,Valencia,Gandía,"C/ Beniopa, 6",t,f
+123,Comunidad Valenciana,Castellón,Castellón de la Plana,"Av. de Lidón, 45",t,f
+124,Aragón,Zaragoza,Zaragoza,"C/ Miguel Servet, 1",t,t
+125,Aragón,Zaragoza,Zaragoza,"Av. Goya, 29",t,f
+126,Aragón,Zaragoza,Zaragoza,"C/ Costa, 12",t,f
+127,Aragón,Huesca,Huesca,"C/ Zaragoza, 4",t,f
+128,Región de Murcia,Murcia,Murcia,"Av. Juan Carlos I, 31",t,t
+129,Región de Murcia,Murcia,Murcia,"C/ Floridablanca, 1",t,f
+130,Región de Murcia,Murcia,Cartagena,"C/ Real, 12",t,f
+131,Región de Murcia,Murcia,Lorca,"Av. Juan Carlos I, 60",t,f
+132,Castilla y León,Valladolid,Valladolid,"C/ Gamazo, 7",t,t
+133,Castilla y León,Valladolid,Valladolid,"C/ Paseo Zorrilla, 100",t,f
+134,Castilla y León,Burgos,Burgos,"C/ Vitoria, 21",t,f
+135,Castilla y León,Salamanca,Salamanca,"C/ Paseo de Canalejas, 49",t,t
+136,Castilla y León,León,León,"C/ Ordoño II, 20",t,f
+137,Extremadura,Badajoz,Badajoz,"Av. de Huelva, 3",t,f
+138,Extremadura,Cáceres,Cáceres,"Av. del Rodeo, 7",t,f
+139,La Rioja,La Rioja,Logroño,"C/ Vara de Rey, 71",t,t
+140,La Rioja,La Rioja,Logroño,"Av. de la Paz, 22",t,f
+141,Comunidad Foral de Navarra,Navarra,Pamplona,"C/ San Nicolás, 5",t,t
+142,Comunidad Foral de Navarra,Navarra,Pamplona,"C/ Esquíroz, 29",t,f
+143,Cantabria,Cantabria,Santander,"C/ Tetuán, 16",t,t
+144,Cantabria,Cantabria,Santander,"Av. de Los Castros, 5",t,f
+145,Principado de Asturias,Asturias,Oviedo,"C/ Uría, 40",t,t
+146,Principado de Asturias,Asturias,Gijón,"C/ Corrida, 26",t,t
+147,Principado de Asturias,Asturias,Avilés,"C/ La Cámara, 25",t,f
+148,Illes Balears,Baleares,Palma,"Av. Joan Miró, 17",t,t
+149,Illes Balears,Baleares,Palma,"C/ Arxiduc Lluís Salvador, 15",t,f
+150,Illes Balears,Baleares,Ibiza,"Av. Isidor Macabich, 40",t,t
+151,Comunidad Valenciana,Valencia,Valencia,"Bulevar Pino, 52",f,f
+152,Comunidad Valenciana,Valencia,Valencia,"C/ Trabajo, 63",f,f
+153,Comunidad Valenciana,Valencia,Valencia,"Calle Doctor Marañón, 135",f,f
+154,Comunidad Valenciana,Valencia,Valencia,"C/ Andalucía, 181",t,t
+155,Comunidad Valenciana,Valencia,Valencia,"C/ Periodista, 193",f,f
+156,Comunidad Valenciana,Valencia,Valencia,"C/ Trabajo, 55",f,f
+157,Comunidad Valenciana,Valencia,Valencia,"Calle Pintor Sorolla, 107",f,f
+158,Comunidad Valenciana,Valencia,Valencia,"C/ Río Segura, 100",t,f
+159,Comunidad Valenciana,Valencia,Valencia,"Calle Doctor Gregorio Marañón, 107",t,f
+160,Comunidad Valenciana,Valencia,Valencia,"Paseo Paz, 53",t,f
+161,Comunidad Valenciana,Valencia,Valencia,"C/ Fuente, 130",t,f
+162,Comunidad Valenciana,Valencia,Valencia,"Paseo África, 29",t,f
+163,Comunidad Valenciana,Valencia,Valencia,"C/ Victoria, 119",f,f
+164,Comunidad Valenciana,Valencia,Valencia,"Plaza América, 161",t,f
+165,Comunidad Valenciana,Valencia,Valencia,"Calle Río Ebro, 182",f,f
+166,Comunidad Valenciana,Valencia,Valencia,"C/ Maestro Falla, 179",f,t
+167,Comunidad Valenciana,Valencia,Valencia,"C/ Galicia, 176",t,f
+168,Comunidad Valenciana,Valencia,Valencia,"C/ Constitución, 39",f,f
+169,Comunidad Valenciana,Valencia,Valencia,"C/ Federico García Lorca, 51",f,f
+170,Comunidad Valenciana,Valencia,Valencia,"Plaza Asia, 68",f,f
+171,Comunidad Valenciana,Valencia,Valencia,"Paseo Mar, 19",t,f
+172,Comunidad Valenciana,Valencia,Valencia,"Bulevar Teniente Coronel, 188",t,t
+173,Comunidad Valenciana,Valencia,Valencia,"C/ Mar, 100",t,f
+174,Comunidad Valenciana,Valencia,Valencia,"Calle San Juan, 193",f,f
+175,Comunidad Valenciana,Valencia,Valencia,"Bulevar Maestro Rodrigo, 140",f,f
+176,Comunidad Valenciana,Valencia,Valencia,"Avda. Gran Vía, 59",t,t
+177,Comunidad Valenciana,Valencia,Valencia,"C/ Escultor Benlliure, 158",f,f
+178,Comunidad Valenciana,Valencia,Valencia,"C/ Victoria, 125",f,f
+179,Comunidad Valenciana,Valencia,Valencia,"C/ Alfonso XIII, 33",f,f
+180,Comunidad Valenciana,Valencia,Valencia,"Bulevar Cataluña, 155",f,f
+181,Comunidad Valenciana,Valencia,Valencia,"Ronda Federico Chopin, 140",f,t
+182,Comunidad Valenciana,Valencia,Valencia,"C/ Mayor, 47",t,f
+183,Comunidad Valenciana,Valencia,Valencia,"Bulevar Maestro Rodrigo, 159",f,f
+184,Comunidad Valenciana,Valencia,Valencia,"C/ Príncipe, 48",f,f
+185,Comunidad Valenciana,Valencia,Valencia,"Plaza Escultor Benlliure, 113",f,f
+186,Comunidad Valenciana,Valencia,Valencia,"C/ Santa Teresa, 151",f,f
+187,Comunidad Valenciana,Valencia,Valencia,"Bulevar Abogado, 35",f,f
+188,Comunidad Valenciana,Valencia,Valencia,"Paseo Mar, 193",t,f
+189,Comunidad Valenciana,Valencia,Valencia,"C/ Gran Vía, 86",f,f
+190,Comunidad Valenciana,Valencia,Valencia,"Ronda Doctor Marañón, 169",f,f
+191,Comunidad Valenciana,Valencia,Valencia,"Plaza Aragón, 128",f,t
+192,Comunidad Valenciana,Valencia,Valencia,"Calle España, 131",t,f
+193,Comunidad Valenciana,Valencia,Valencia,"C/ Maestra Justa, 188",t,f
+194,Comunidad Valenciana,Valencia,Valencia,"Avda. Poeta Lorca, 18",f,t
+195,Comunidad Valenciana,Valencia,Valencia,"C/ Río Guadalquivir, 79",f,f
+196,Comunidad Valenciana,Valencia,Valencia,"C/ San Pedro, 120",f,f
+197,Comunidad Valenciana,Valencia,Valencia,"Bulevar Río Segura, 41",t,t
+198,Comunidad Valenciana,Valencia,Valencia,"Calle Doctor Gregorio Marañón, 163",f,f
+199,Comunidad Valenciana,Valencia,Valencia,"Avda. Colón, 169",f,t
+200,Comunidad Valenciana,Valencia,Valencia,"C/ Paz, 31",t,f
+201,Comunidad Valenciana,Valencia,Valencia,"C/ Luna, 146",f,f
+202,Comunidad Valenciana,Valencia,Valencia,"Bulevar Notario, 179",t,f
+203,Comunidad Valenciana,Valencia,Valencia,"C/ Constitución, 132",t,f
+204,Comunidad Valenciana,Valencia,Valencia,"Bulevar Doctor Severo Ochoa, 115",f,f
+205,Comunidad Valenciana,Valencia,Valencia,"C/ Aragón, 196",t,f
+206,Comunidad Valenciana,Valencia,Valencia,"Bulevar San Juan, 116",f,f
+207,Comunidad Valenciana,Valencia,Torrent,"Calle Aviación, 134",t,f
+208,Comunidad Valenciana,Valencia,Torrent,"Calle Paz, 108",f,f
+209,Comunidad Valenciana,Valencia,Torrent,"C/ Maestro Rodrigo, 176",f,f
+210,Comunidad Valenciana,Valencia,Torrent,"Ronda Colón, 65",f,f
+211,Comunidad Valenciana,Valencia,Torrent,"C/ Doctor Severo Ochoa, 133",t,f
+212,Comunidad Valenciana,Valencia,Torrent,"Ronda Calvo Sotelo, 196",t,f
+213,Comunidad Valenciana,Valencia,Torrent,"Bulevar Naranjo, 76",t,f
+214,Comunidad Valenciana,Valencia,Torrent,"C/ Federico Chopin, 123",f,f
+215,Comunidad Valenciana,Valencia,Torrent,"Bulevar General Perón, 97",f,f
+216,Comunidad Valenciana,Valencia,Gandia,"Avda. Doctor Gregorio Marañón, 157",t,f
+217,Comunidad Valenciana,Valencia,Gandia,"Avda. Galicia, 66",t,f
+218,Comunidad Valenciana,Valencia,Gandia,"C/ Maestra Justa, 134",t,f
+219,Comunidad Valenciana,Valencia,Gandia,"Paseo Antonio Machado, 50",f,f
+220,Comunidad Valenciana,Valencia,Gandia,"Avda. Príncipe, 32",t,f
+221,Comunidad Valenciana,Valencia,Paterna,"Bulevar General Perón, 26",t,f
+222,Comunidad Valenciana,Valencia,Paterna,"C/ Roble, 167",f,f
+223,Comunidad Valenciana,Valencia,Paterna,"Paseo Maestro Falla, 28",f,f
+224,Comunidad Valenciana,Valencia,Paterna,"Calle Pintor Sorolla, 180",t,f
+225,Comunidad Valenciana,Valencia,Paterna,"C/ Libertad, 155",t,t
+226,Comunidad Valenciana,Valencia,Paterna,"C/ Antonio Machado, 130",f,f
+227,Comunidad Valenciana,Valencia,Burjassot,"Ronda Jovellanos, 180",f,f
+228,Comunidad Valenciana,Valencia,Burjassot,"C/ Jovellanos, 173",f,f
+229,Comunidad Valenciana,Valencia,Burjassot,"Bulevar Maestro Rodrigo, 29",f,f
+230,Comunidad Valenciana,Valencia,Burjassot,"C/ Reina, 40",t,f
+231,Comunidad Valenciana,Valencia,Mislata,"Plaza Maestro Rodrigo, 149",f,f
+232,Comunidad Valenciana,Valencia,Mislata,"C/ Maestro Falla, 73",t,f
+233,Comunidad Valenciana,Valencia,Mislata,"Plaza Escultor Benlliure, 93",f,f
+234,Comunidad Valenciana,Valencia,Mislata,"C/ Ramón y Cajal, 130",f,f
+235,Comunidad Valenciana,Valencia,Xàtiva,"C/ Poeta Machado, 120",t,t
+236,Comunidad Valenciana,Valencia,Xàtiva,"Avda. Doctor Gregorio Marañón, 13",t,f
+237,Comunidad Valenciana,Valencia,Xàtiva,"Avda. Notario, 22",f,f
+238,Comunidad Valenciana,Valencia,Alzira,"Ronda Maestro Rodrigo, 192",f,f
+239,Comunidad Valenciana,Valencia,Alzira,"Calle General Mola, 132",f,f
+240,Comunidad Valenciana,Valencia,Alzira,"Bulevar Independencia, 174",t,f
+241,Comunidad Valenciana,Valencia,Alzira,"Plaza Farmacéutico, 63",t,f
+242,Comunidad Valenciana,Valencia,Manises,"C/ Calvo Sotelo, 160",f,f
+243,Comunidad Valenciana,Valencia,Manises,"Calle San José, 39",t,t
+244,Comunidad Valenciana,Valencia,Manises,"Calle Río Turia, 51",t,f
+245,Comunidad Valenciana,Valencia,Catarroja,"C/ Castelar, 26",f,f
+246,Comunidad Valenciana,Valencia,Catarroja,"Paseo Colón, 106",t,t
+247,Comunidad Valenciana,Valencia,Catarroja,"Calle España, 116",f,f
+248,Comunidad Valenciana,Valencia,Sagunt,"Calle África, 116",t,f
+249,Comunidad Valenciana,Valencia,Sagunt,"Bulevar Industria, 106",f,f
+250,Comunidad Valenciana,Valencia,Sagunt,"C/ Jovellanos, 30",f,f
+251,Comunidad Valenciana,Valencia,Sagunt,"Paseo Conde, 102",f,f
+252,Comunidad Valenciana,Valencia,Sueca,"Plaza Teniente Coronel, 164",f,t
+253,Comunidad Valenciana,Valencia,Sueca,"C/ Alcalá, 95",f,f
+254,Comunidad Valenciana,Valencia,Quart de Poblet,"Calle Rey, 156",f,f
+255,Comunidad Valenciana,Valencia,Quart de Poblet,"C/ General Perón, 105",f,f
+256,Comunidad Valenciana,Valencia,Quart de Poblet,"C/ Alcalá, 5",t,f
+257,Comunidad Valenciana,Valencia,Alfafar,"Paseo Castelar, 193",t,t
+258,Comunidad Valenciana,Valencia,Alfafar,"C/ Olivo, 16",t,f
+259,Comunidad Valenciana,Valencia,Algemesí,"Ronda Naranjo, 200",t,f
+260,Comunidad Valenciana,Valencia,Algemesí,"C/ Gloria, 92",t,f
+261,Comunidad Valenciana,Valencia,Aldaia,"Calle Gloria, 4",f,f
+262,Comunidad Valenciana,Valencia,Aldaia,"Ronda Poeta Lorca, 115",f,f
+263,Comunidad Valenciana,Valencia,Puçol,"C/ San Juan, 69",f,f
+264,Comunidad Valenciana,Valencia,Puçol,"C/ San Pedro, 113",t,f
+265,Comunidad Valenciana,Valencia,Llíria,"Avda. Infanta, 21",f,t
+266,Comunidad Valenciana,Valencia,Llíria,"C/ Federico García Lorca, 42",f,f
+267,Comunidad Valenciana,Valencia,Cullera,"C/ Reina, 105",f,f
+268,Comunidad Valenciana,Valencia,Cullera,"Paseo Comercio, 193",f,f
+269,Comunidad Valenciana,Valencia,Alaquàs,"C/ Esperanza, 93",f,f
+270,Comunidad Valenciana,Valencia,Alaquàs,"C/ Periodista, 186",t,f
+271,Comunidad Valenciana,Valencia,Meliana,"C/ Maestro Falla, 112",f,f
+272,Comunidad Valenciana,Valencia,Paiporta,"Plaza Valencia, 164",t,f
+273,Comunidad Valenciana,Valencia,Paiporta,"C/ África, 38",t,f
+274,Comunidad Valenciana,Alicante,Alicante,"Calle Conde, 32",f,t
+275,Comunidad Valenciana,Alicante,Alicante,"C/ Infanta, 27",f,f
+276,Comunidad Valenciana,Alicante,Alicante,"Bulevar Valencia, 105",f,f
+277,Comunidad Valenciana,Alicante,Alicante,"Plaza Río Segura, 147",t,f
+278,Comunidad Valenciana,Alicante,Alicante,"C/ Miguel Hernández, 57",f,f
+279,Comunidad Valenciana,Alicante,Alicante,"Paseo Mayor, 131",f,f
+280,Comunidad Valenciana,Alicante,Alicante,"C/ Cedro, 191",f,f
+281,Comunidad Valenciana,Alicante,Alicante,"Bulevar Naranjo, 60",t,f
+282,Comunidad Valenciana,Alicante,Alicante,"Bulevar Poeta Lorca, 161",f,f
+283,Comunidad Valenciana,Alicante,Alicante,"Calle Industria, 179",t,f
+284,Comunidad Valenciana,Alicante,Alicante,"C/ Río Guadalquivir, 5",f,f
+285,Comunidad Valenciana,Alicante,Alicante,"Plaza Sol, 165",t,f
+286,Comunidad Valenciana,Alicante,Alicante,"Avda. Primo de Rivera, 124",f,f
+287,Comunidad Valenciana,Alicante,Alicante,"C/ Aviación, 185",t,t
+288,Comunidad Valenciana,Alicante,Alicante,"C/ Federico García Lorca, 139",f,f
+289,Comunidad Valenciana,Alicante,Alicante,"Bulevar Maestro Falla, 128",f,f
+290,Comunidad Valenciana,Alicante,Alicante,"C/ Castelar, 22",t,f
+291,Comunidad Valenciana,Alicante,Alicante,"Ronda Río Segura, 80",f,f
+292,Comunidad Valenciana,Alicante,Alicante,"Calle Duque, 48",f,f
+293,Comunidad Valenciana,Alicante,Alicante,"Plaza Federico García Lorca, 132",f,t
+294,Comunidad Valenciana,Alicante,Alicante,"Paseo Almendro, 44",f,f
+295,Comunidad Valenciana,Alicante,Elche,"Avda. Europa, 36",f,f
+296,Comunidad Valenciana,Alicante,Elche,"C/ Gran Vía, 27",t,f
+297,Comunidad Valenciana,Alicante,Elche,"Ronda Paz, 153",f,f
+298,Comunidad Valenciana,Alicante,Elche,"Plaza Mar, 3",t,f
+299,Comunidad Valenciana,Alicante,Elche,"Calle Santa María, 197",f,t
+300,Comunidad Valenciana,Alicante,Elche,"Ronda Abogado, 194",f,f
+301,Comunidad Valenciana,Alicante,Elche,"Ronda Mar, 117",t,f
+302,Comunidad Valenciana,Alicante,Elche,"Avda. Castelar, 173",f,f
+303,Comunidad Valenciana,Alicante,Elche,"Calle Comercio, 64",f,f
+304,Comunidad Valenciana,Alicante,Elche,"C/ Jovellanos, 99",f,t
+305,Comunidad Valenciana,Alicante,Elche,"C/ Mayor, 77",f,f
+306,Comunidad Valenciana,Alicante,Torrevieja,"C/ Conde, 88",f,f
+307,Comunidad Valenciana,Alicante,Torrevieja,"C/ Colón, 166",t,f
+308,Comunidad Valenciana,Alicante,Torrevieja,"Calle Poeta Nicolás Guillén, 159",f,f
+309,Comunidad Valenciana,Alicante,Torrevieja,"C/ Valencia, 60",t,f
+310,Comunidad Valenciana,Alicante,Torrevieja,"C/ Rey, 133",f,f
+311,Comunidad Valenciana,Alicante,Orihuela,"C/ Cataluña, 10",f,f
+312,Comunidad Valenciana,Alicante,Orihuela,"Paseo Santa Ana, 17",t,f
+313,Comunidad Valenciana,Alicante,Orihuela,"Bulevar Fuente, 196",f,t
+314,Comunidad Valenciana,Alicante,Orihuela,"Bulevar Farmacéutico, 26",f,f
+315,Comunidad Valenciana,Alicante,Orihuela,"Calle Conde, 59",t,f
+316,Comunidad Valenciana,Alicante,Benidorm,"Calle Calvo Sotelo, 16",f,f
+317,Comunidad Valenciana,Alicante,Benidorm,"Calle América, 21",t,f
+318,Comunidad Valenciana,Alicante,Benidorm,"C/ Calvo Sotelo, 79",f,f
+319,Comunidad Valenciana,Alicante,Benidorm,"Paseo Doctor Marañón, 92",f,t
+320,Comunidad Valenciana,Alicante,Villena,"C/ Beethoven, 133",t,f
+321,Comunidad Valenciana,Alicante,Villena,"Plaza Federico Chopin, 149",f,f
+322,Comunidad Valenciana,Alicante,Villena,"Avda. Isabel II, 7",t,f
+323,Comunidad Valenciana,Alicante,Villena,"Bulevar Cedro, 199",t,f
+324,Comunidad Valenciana,Alicante,Elda,"C/ Aviación, 10",f,f
+325,Comunidad Valenciana,Alicante,Elda,"Paseo Doctor Fleming, 15",t,f
+326,Comunidad Valenciana,Alicante,Elda,"Avda. Real, 110",t,f
+327,Comunidad Valenciana,Alicante,Elda,"Avda. Valencia, 167",f,f
+328,Comunidad Valenciana,Alicante,Petrer,"Bulevar Cervantes, 123",f,f
+329,Comunidad Valenciana,Alicante,Petrer,"Paseo Santa María, 133",t,f
+330,Comunidad Valenciana,Alicante,Petrer,"C/ Conde, 163",f,f
+331,Comunidad Valenciana,Alicante,Novelda,"C/ Colón, 76",f,f
+332,Comunidad Valenciana,Alicante,Novelda,"C/ Poeta Machado, 93",f,f
+333,Comunidad Valenciana,Alicante,Novelda,"Bulevar Conde, 15",f,t
+334,Comunidad Valenciana,Alicante,Alcoy,"Calle Jovellanos, 94",t,t
+335,Comunidad Valenciana,Alicante,Alcoy,"C/ Abogado, 135",f,f
+336,Comunidad Valenciana,Alicante,Alcoy,"C/ Luna, 192",f,f
+337,Comunidad Valenciana,Alicante,Denia,"C/ Constitución, 27",f,f
+338,Comunidad Valenciana,Alicante,Denia,"C/ Poeta Lorca, 62",t,f
+339,Comunidad Valenciana,Alicante,Denia,"Plaza Poeta Lorca, 66",t,f
+340,Comunidad Valenciana,Alicante,Calpe,"C/ América, 145",f,f
+341,Comunidad Valenciana,Alicante,Calpe,"Bulevar Generalísimo, 128",f,f
+342,Comunidad Valenciana,Alicante,Calpe,"C/ Real, 189",f,t
+343,Comunidad Valenciana,Alicante,Ibi,"Ronda Río Ebro, 110",f,f
+344,Comunidad Valenciana,Alicante,Crevillent,"Bulevar Generalísimo, 195",t,f
+345,Comunidad Valenciana,Alicante,Crevillent,"Calle Doctor Gregorio Marañón, 125",t,f
+346,Comunidad Valenciana,Alicante,Guardamar del Segura,"Paseo Independencia, 23",t,f
+347,Comunidad Valenciana,Alicante,Guardamar del Segura,"Bulevar San Antonio, 123",f,t
+348,Comunidad Valenciana,Alicante,Pego,"C/ San José, 183",f,f
+349,Comunidad Valenciana,Alicante,Pego,"Ronda Teniente Coronel, 167",t,t
+350,Comunidad Valenciana,Alicante,Finestrat,"Avda. Doctor Fleming, 28",f,t
+351,Comunidad Valenciana,Alicante,Finestrat,"C/ Beethoven, 152",t,f
+352,Comunidad Valenciana,Alicante,Rojales,"Paseo Rey, 25",f,f
+353,Comunidad Valenciana,Alicante,Rojales,"Plaza Río Turia, 185",f,f
+354,Comunidad Valenciana,Castellón,Castellón de la Plana,"Avda. Poeta Machado, 23",f,t
+355,Comunidad Valenciana,Castellón,Castellón de la Plana,"Avda. Poeta Machado, 6",t,f
+356,Comunidad Valenciana,Castellón,Castellón de la Plana,"C/ Miguel Hernández, 49",t,t
+357,Comunidad Valenciana,Castellón,Castellón de la Plana,"Paseo Constitución, 186",t,f
+358,Comunidad Valenciana,Castellón,Castellón de la Plana,"Paseo Independencia, 90",f,f
+359,Comunidad Valenciana,Castellón,Castellón de la Plana,"C/ Duque, 166",f,f
+360,Comunidad Valenciana,Castellón,Castellón de la Plana,"C/ Teniente Coronel, 190",t,f
+361,Comunidad Valenciana,Castellón,Castellón de la Plana,"C/ Industria, 69",f,f
+362,Comunidad Valenciana,Castellón,Castellón de la Plana,"Ronda Doctor Severo Ochoa, 158",f,f
+363,Comunidad Valenciana,Castellón,Castellón de la Plana,"C/ Esperanza, 171",t,f
+364,Comunidad Valenciana,Castellón,Castellón de la Plana,"C/ Roble, 136",f,t
+365,Comunidad Valenciana,Castellón,Benicarló,"Plaza Cervantes, 162",f,f
+366,Comunidad Valenciana,Castellón,Benicarló,"Paseo Río Segura, 37",t,f
+367,Comunidad Valenciana,Castellón,Benicarló,"C/ Poeta Nicolás Guillén, 11",t,f
+368,Comunidad Valenciana,Castellón,Vinaròs,"Bulevar Río Guadalquivir, 115",f,f
+369,Comunidad Valenciana,Castellón,Vinaròs,"Paseo África, 100",f,f
+370,Comunidad Valenciana,Castellón,Vinaròs,"Calle Gran Vía, 186",f,f
+371,Comunidad Valenciana,Castellón,Vila-real,"Calle Beethoven, 171",t,f
+372,Comunidad Valenciana,Castellón,Vila-real,"C/ Sagasta, 192",f,f
+373,Comunidad Valenciana,Castellón,Vila-real,"C/ San Juan, 96",t,f
+374,Comunidad Valenciana,Castellón,Vila-real,"C/ Príncipe, 55",f,f
+375,Comunidad Valenciana,Castellón,Onda,"Calle Río Ebro, 10",f,f
+376,Comunidad Valenciana,Castellón,Onda,"Plaza Santa Ana, 6",t,f
+377,Comunidad Valenciana,Castellón,Onda,"C/ Farmacéutico, 3",f,f
+378,Comunidad Valenciana,Castellón,Nules,"Bulevar San José, 179",t,f
+379,Comunidad Valenciana,Castellón,Nules,"C/ Río Turia, 93",f,f
+380,Comunidad Valenciana,Castellón,Benicasim,"C/ Reina, 167",f,t
+381,Comunidad Valenciana,Castellón,Benicasim,"Bulevar Generalísimo, 23",t,f
+382,Comunidad Valenciana,Castellón,Peñíscola,"Plaza Gran Vía, 93",t,f
+383,Comunidad Valenciana,Castellón,Peñíscola,"Paseo América, 11",t,f
+384,Comunidad Valenciana,Castellón,La Vall d'Uixó,"Bulevar Maestra Justa, 87",f,f
+385,Comunidad Valenciana,Castellón,La Vall d'Uixó,"C/ Luna, 33",f,t
+386,Comunidad Valenciana,Castellón,Burriana,"Avda. Comercio, 108",f,f
+387,Comunidad Valenciana,Castellón,Burriana,"C/ Generalísimo, 73",f,f
+388,Comunidad Valenciana,Castellón,Burriana,"Calle Periodista, 185",f,f
+389,Andalucía,Sevilla,Sevilla,"Avda. Galicia, 30",f,t
+390,Andalucía,Sevilla,Sevilla,"Avda. Jovellanos, 15",f,f
+391,Andalucía,Sevilla,Sevilla,"C/ Aviación, 26",f,f
+392,Andalucía,Sevilla,Sevilla,"C/ Sagasta, 80",t,f
+393,Andalucía,Sevilla,Sevilla,"Paseo Asia, 179",f,t
+394,Andalucía,Sevilla,Sevilla,"C/ Río Guadalquivir, 53",f,f
+395,Andalucía,Sevilla,Sevilla,"Ronda Generalísimo, 119",t,f
+396,Andalucía,Sevilla,Sevilla,"C/ Maestra Justa, 37",f,t
+397,Andalucía,Sevilla,Sevilla,"Paseo Cervantes, 120",f,f
+398,Andalucía,Sevilla,Sevilla,"C/ Castilla, 90",f,f
+399,Andalucía,Sevilla,Sevilla,"C/ Industria, 48",t,f
+400,Andalucía,Sevilla,Sevilla,"C/ Teniente Coronel, 137",f,f
+401,Andalucía,Sevilla,Sevilla,"C/ Doctor Gregorio Marañón, 159",f,f
+402,Andalucía,Sevilla,Sevilla,"Plaza Primo de Rivera, 131",t,f
+403,Andalucía,Sevilla,Sevilla,"C/ Sol, 143",t,f
+404,Andalucía,Sevilla,Sevilla,"Paseo Pintor Sorolla, 96",f,f
+405,Andalucía,Sevilla,Sevilla,"C/ España, 182",t,f
+406,Andalucía,Sevilla,Sevilla,"C/ San José, 123",t,f
+407,Andalucía,Sevilla,Sevilla,"Ronda Pino, 199",f,f
+408,Andalucía,Sevilla,Sevilla,"Paseo Teniente Coronel, 7",f,f
+409,Andalucía,Sevilla,Sevilla,"C/ África, 27",f,f
+410,Andalucía,Sevilla,Sevilla,"C/ Aeropuerto, 48",t,f
+411,Andalucía,Sevilla,Sevilla,"C/ Isabel II, 168",f,f
+412,Andalucía,Sevilla,Sevilla,"Calle Luna, 61",f,f
+413,Andalucía,Sevilla,Sevilla,"C/ Mar, 132",f,f
+414,Andalucía,Sevilla,Sevilla,"C/ Escultor Benlliure, 147",f,t
+415,Andalucía,Sevilla,Sevilla,"Bulevar Castilla, 162",f,t
+416,Andalucía,Sevilla,Sevilla,"Paseo Asia, 143",t,f
+417,Andalucía,Sevilla,Sevilla,"Avda. Santa Teresa, 168",f,f
+418,Andalucía,Sevilla,Sevilla,"Bulevar Primo de Rivera, 50",f,f
+419,Andalucía,Sevilla,Sevilla,"C/ Río Ebro, 81",t,f
+420,Andalucía,Sevilla,Sevilla,"Ronda Beethoven, 88",f,t
+421,Andalucía,Sevilla,Sevilla,"Paseo Maestra Justa, 7",f,f
+422,Andalucía,Sevilla,Sevilla,"C/ Real, 161",f,f
+423,Andalucía,Sevilla,Sevilla,"C/ Pino, 13",t,f
+424,Andalucía,Sevilla,Sevilla,"C/ General Mola, 12",t,f
+425,Andalucía,Sevilla,Sevilla,"C/ España, 183",f,f
+426,Andalucía,Sevilla,Sevilla,"Avda. América, 45",f,f
+427,Andalucía,Sevilla,Sevilla,"C/ Cataluña, 176",f,f
+428,Andalucía,Sevilla,Sevilla,"Calle San Pedro, 131",f,f
+429,Andalucía,Sevilla,Sevilla,"Ronda Alfonso XIII, 72",f,f
+430,Andalucía,Sevilla,Sevilla,"Plaza Alcalá, 106",f,f
+431,Andalucía,Sevilla,Sevilla,"Ronda San Pedro, 29",f,f
+432,Andalucía,Sevilla,Dos Hermanas,"Plaza Poeta Machado, 168",f,f
+433,Andalucía,Sevilla,Dos Hermanas,"Bulevar Isabel II, 55",t,f
+434,Andalucía,Sevilla,Dos Hermanas,"Ronda Libertad, 191",t,t
+435,Andalucía,Sevilla,Dos Hermanas,"C/ Santa María, 7",f,f
+436,Andalucía,Sevilla,Dos Hermanas,"Calle General Perón, 1",f,f
+437,Andalucía,Sevilla,Dos Hermanas,"C/ Sagasta, 153",t,f
+438,Andalucía,Sevilla,Alcalá de Guadaíra,"C/ Abogado, 165",t,f
+439,Andalucía,Sevilla,Alcalá de Guadaíra,"Plaza Infanta, 70",f,f
+440,Andalucía,Sevilla,Alcalá de Guadaíra,"Paseo Castilla, 139",f,f
+441,Andalucía,Sevilla,Alcalá de Guadaíra,"Plaza Isabel II, 58",f,f
+442,Andalucía,Sevilla,Alcalá de Guadaíra,"C/ San Francisco, 150",t,f
+443,Andalucía,Sevilla,Utrera,"C/ Escultor Benlliure, 176",t,t
+444,Andalucía,Sevilla,Utrera,"Plaza Alcalá, 28",f,f
+445,Andalucía,Sevilla,Utrera,"Bulevar Periodista, 25",f,f
+446,Andalucía,Sevilla,Utrera,"Ronda Esperanza, 42",f,f
+447,Andalucía,Sevilla,Mairena del Aljarafe,"Calle Cruz, 152",t,t
+448,Andalucía,Sevilla,Mairena del Aljarafe,"Avda. Notario, 106",t,f
+449,Andalucía,Sevilla,Mairena del Aljarafe,"Paseo Escultor Benlliure, 108",t,t
+450,Andalucía,Sevilla,Mairena del Aljarafe,"C/ Doctor Gregorio Marañón, 167",t,f
+451,Andalucía,Sevilla,Mairena del Aljarafe,"Plaza Pino, 160",t,f
+452,Andalucía,Sevilla,Mairena del Aljarafe,"C/ Gran Vía, 136",f,f
+453,Andalucía,Sevilla,San Juan de Aznalfarache,"Calle Mayor, 161",f,f
+454,Andalucía,Sevilla,San Juan de Aznalfarache,"Avda. Doctor Marañón, 73",t,f
+455,Andalucía,Sevilla,San Juan de Aznalfarache,"C/ Notario, 134",f,f
+456,Andalucía,Sevilla,Écija,"C/ Río Segura, 26",f,f
+457,Andalucía,Sevilla,Écija,"Paseo Galicia, 26",f,f
+458,Andalucía,Sevilla,Carmona,"Paseo Europa, 26",t,t
+459,Andalucía,Sevilla,Carmona,"Calle San Francisco, 86",t,t
+460,Andalucía,Sevilla,Carmona,"Plaza Mayor, 175",f,f
+461,Andalucía,Sevilla,Bormujos,"Plaza Colón, 144",f,f
+462,Andalucía,Sevilla,Bormujos,"C/ Roble, 119",f,t
+463,Andalucía,Sevilla,Coria del Río,"C/ Beethoven, 129",f,f
+464,Andalucía,Sevilla,Coria del Río,"Avda. Arquitecto Gaudí, 149",f,t
+465,Andalucía,Sevilla,La Rinconada,"Plaza Naranjo, 49",f,f
+466,Andalucía,Sevilla,La Rinconada,"Paseo Alfonso XIII, 17",f,f
+467,Andalucía,Sevilla,Tomares,"C/ Industria, 73",f,f
+468,Andalucía,Sevilla,Tomares,"Ronda Cedro, 31",f,f
+469,Andalucía,Sevilla,Gines,"Plaza Aeropuerto, 121",t,f
+470,Andalucía,Sevilla,Gines,"C/ Generalísimo, 33",f,f
+471,Andalucía,Málaga,Málaga,"C/ España, 140",f,f
+472,Andalucía,Málaga,Málaga,"C/ Roble, 128",f,f
+473,Andalucía,Málaga,Málaga,"C/ Gran Vía, 85",f,f
+474,Andalucía,Málaga,Málaga,"C/ General Mola, 174",f,f
+475,Andalucía,Málaga,Málaga,"C/ Luna, 146",t,f
+476,Andalucía,Málaga,Málaga,"C/ Jovellanos, 3",t,f
+477,Andalucía,Málaga,Málaga,"Ronda Santa Ana, 86",t,f
+478,Andalucía,Málaga,Málaga,"Plaza Sol, 198",f,f
+479,Andalucía,Málaga,Málaga,"C/ Pintor Sorolla, 99",t,f
+480,Andalucía,Málaga,Málaga,"Ronda Antonio Machado, 159",f,f
+481,Andalucía,Málaga,Málaga,"Avda. Santa María, 128",f,f
+482,Andalucía,Málaga,Málaga,"C/ Teniente Coronel, 10",t,f
+483,Andalucía,Málaga,Málaga,"Calle Esperanza, 132",t,f
+484,Andalucía,Málaga,Málaga,"C/ San José, 192",f,f
+485,Andalucía,Málaga,Málaga,"Avda. Gloria, 126",f,f
+486,Andalucía,Málaga,Málaga,"Plaza Infanta, 53",t,f
+487,Andalucía,Málaga,Málaga,"Ronda Farmacéutico, 74",f,f
+488,Andalucía,Málaga,Málaga,"Ronda General Perón, 71",f,f
+489,Andalucía,Málaga,Málaga,"Ronda España, 106",t,f
+490,Andalucía,Málaga,Málaga,"Ronda Almendro, 104",f,f
+491,Andalucía,Málaga,Málaga,"Plaza Doctor Marañón, 144",f,f
+492,Andalucía,Málaga,Málaga,"C/ Ramón y Cajal, 136",f,t
+493,Andalucía,Málaga,Málaga,"C/ Cedro, 152",f,f
+494,Andalucía,Málaga,Málaga,"Bulevar Arquitecto Gaudí, 17",t,f
+495,Andalucía,Málaga,Málaga,"Avda. Teniente Coronel, 118",t,t
+496,Andalucía,Málaga,Málaga,"C/ Doctor Fleming, 200",f,f
+497,Andalucía,Málaga,Málaga,"Ronda Poeta Lorca, 118",f,f
+498,Andalucía,Málaga,Málaga,"Avda. Gloria, 22",f,f
+499,Andalucía,Málaga,Málaga,"Plaza Aeropuerto, 48",t,f
+500,Andalucía,Málaga,Málaga,"Bulevar Doctor Fleming, 151",f,f
+501,Andalucía,Málaga,Málaga,"C/ Sagasta, 101",t,f
+502,Andalucía,Málaga,Málaga,"Avda. Andalucía, 176",f,f
+503,Andalucía,Málaga,Málaga,"Calle Periodista, 68",f,f
+504,Andalucía,Málaga,Málaga,"C/ Alcalá, 53",t,f
+505,Andalucía,Málaga,Marbella,"Paseo Generalísimo, 68",f,f
+506,Andalucía,Málaga,Marbella,"Calle Príncipe, 154",f,f
+507,Andalucía,Málaga,Marbella,"C/ Asia, 39",t,f
+508,Andalucía,Málaga,Marbella,"Bulevar Sol, 200",f,f
+509,Andalucía,Málaga,Marbella,"Bulevar Conde, 62",f,t
+510,Andalucía,Málaga,Marbella,"Ronda Federico García Lorca, 188",f,t
+511,Andalucía,Málaga,Fuengirola,"Paseo Poeta Machado, 158",f,f
+512,Andalucía,Málaga,Fuengirola,"C/ Maestro Falla, 113",f,f
+513,Andalucía,Málaga,Fuengirola,"Avda. Río Segura, 43",f,f
+514,Andalucía,Málaga,Fuengirola,"Ronda Almendro, 18",f,f
+515,Andalucía,Málaga,Fuengirola,"Bulevar Victoria, 82",f,f
+516,Andalucía,Málaga,Vélez-Málaga,"Calle Gran Vía, 102",f,f
+517,Andalucía,Málaga,Vélez-Málaga,"C/ Rey, 5",f,f
+518,Andalucía,Málaga,Vélez-Málaga,"Avda. Infanta, 36",f,f
+519,Andalucía,Málaga,Vélez-Málaga,"Bulevar San Francisco, 129",f,f
+520,Andalucía,Málaga,Torremolinos,"Bulevar Mar, 114",t,f
+521,Andalucía,Málaga,Torremolinos,"Calle África, 84",f,t
+522,Andalucía,Málaga,Torremolinos,"C/ Infanta, 81",t,t
+523,Andalucía,Málaga,Torremolinos,"Plaza Asia, 125",f,f
+524,Andalucía,Málaga,Mijas,"Bulevar Valencia, 60",t,f
+525,Andalucía,Málaga,Mijas,"C/ Comercio, 120",f,f
+526,Andalucía,Málaga,Antequera,"Avda. Paz, 72",f,f
+527,Andalucía,Málaga,Antequera,"C/ Maestro Rodrigo, 38",f,f
+528,Andalucía,Málaga,Antequera,"C/ Generalísimo, 75",t,f
+529,Andalucía,Málaga,Antequera,"Calle Poeta Lorca, 27",t,f
+530,Andalucía,Málaga,Nerja,"C/ Primo de Rivera, 169",f,f
+531,Andalucía,Málaga,Nerja,"Bulevar Isabel II, 92",f,f
+532,Andalucía,Málaga,Nerja,"Bulevar Cervantes, 74",f,f
+533,Andalucía,Málaga,Estepona,"Bulevar Príncipe, 160",f,f
+534,Andalucía,Málaga,Estepona,"Calle Doctor Fleming, 12",f,f
+535,Andalucía,Málaga,Estepona,"Avda. Santa María, 71",f,f
+536,Andalucía,Málaga,Estepona,"Ronda Periodista, 109",f,f
+537,Andalucía,Málaga,Benalmádena,"Bulevar Farmacéutico, 157",f,f
+538,Andalucía,Málaga,Benalmádena,"Plaza Federico Chopin, 20",f,f
+539,Andalucía,Málaga,Benalmádena,"Ronda Asia, 163",f,t
+540,Andalucía,Málaga,Alhaurín el Grande,"C/ Doctor Fleming, 54",f,f
+541,Andalucía,Málaga,Alhaurín el Grande,"Ronda Santa Teresa, 176",f,t
+542,Andalucía,Málaga,Ronda,"C/ Cervantes, 167",f,f
+543,Andalucía,Málaga,Ronda,"C/ Primo de Rivera, 87",f,f
+544,Andalucía,Málaga,Ronda,"C/ Infanta, 190",f,f
+545,Andalucía,Málaga,Coin,"C/ San Juan, 10",f,f
+546,Andalucía,Málaga,Coin,"Calle Duque, 120",f,f
+547,Andalucía,Málaga,Torre del Mar,"Ronda Abogado, 23",f,f
+548,Andalucía,Málaga,Torre del Mar,"C/ Duque, 126",t,f
+549,Andalucía,Granada,Granada,"C/ Príncipe, 54",f,f
+550,Andalucía,Granada,Granada,"Avda. Maestra Justa, 117",f,f
+551,Andalucía,Granada,Granada,"Plaza Poeta Machado, 39",f,f
+552,Andalucía,Granada,Granada,"Ronda General Mola, 13",f,f
+553,Andalucía,Granada,Granada,"Paseo Pino, 47",f,f
+554,Andalucía,Granada,Granada,"Calle Santa Ana, 48",f,f
+555,Andalucía,Granada,Granada,"Bulevar Santa Ana, 159",f,f
+556,Andalucía,Granada,Granada,"Plaza Federico Chopin, 51",t,f
+557,Andalucía,Granada,Granada,"C/ Federico García Lorca, 2",f,f
+558,Andalucía,Granada,Granada,"Ronda Asia, 67",f,f
+559,Andalucía,Granada,Granada,"Avda. Asia, 56",f,f
+560,Andalucía,Granada,Granada,"C/ Poeta Lorca, 58",f,f
+561,Andalucía,Granada,Granada,"Plaza Alfonso XIII, 153",f,t
+562,Andalucía,Granada,Granada,"Ronda Federico Chopin, 66",t,t
+563,Andalucía,Granada,Granada,"C/ Santa María, 46",f,f
+564,Andalucía,Granada,Granada,"C/ Generalísimo, 70",t,f
+565,Andalucía,Granada,Motril,"C/ Mayor, 184",t,f
+566,Andalucía,Granada,Motril,"C/ España, 59",t,t
+567,Andalucía,Granada,Motril,"Ronda Cervantes, 176",t,f
+568,Andalucía,Granada,Motril,"Calle Mar, 146",t,f
+569,Andalucía,Granada,Armilla,"Paseo Río Turia, 110",f,f
+570,Andalucía,Granada,Armilla,"Paseo Doctor Gregorio Marañón, 104",f,f
+571,Andalucía,Granada,Albolote,"Plaza Real, 96",f,f
+572,Andalucía,Granada,Maracena,"Plaza Aviación, 196",f,f
+573,Andalucía,Granada,Maracena,"C/ Luna, 49",f,f
+574,Andalucía,Granada,Baza,"Calle África, 47",t,t
+575,Andalucía,Granada,Baza,"Calle General Perón, 182",t,f
+576,Andalucía,Granada,Guadix,"Calle Aragón, 13",f,t
+577,Andalucía,Granada,Guadix,"C/ San Juan, 166",f,t
+578,Andalucía,Granada,Loja,"Avda. Periodista, 165",f,f
+579,Andalucía,Granada,Loja,"Paseo Doctor Gregorio Marañón, 18",f,f
+580,Andalucía,Granada,Almuñécar,"Avda. Victoria, 178",t,f
+581,Andalucía,Granada,Almuñécar,"Avda. Primo de Rivera, 111",f,f
+582,Andalucía,Granada,Ogíjares,"C/ Fuente, 26",f,f
+583,Andalucía,Córdoba,Córdoba,"C/ Pino, 138",f,f
+584,Andalucía,Córdoba,Córdoba,"Plaza Andalucía, 141",f,t
+585,Andalucía,Córdoba,Córdoba,"Calle Doctor Gregorio Marañón, 150",f,t
+586,Andalucía,Córdoba,Córdoba,"Paseo África, 13",t,f
+587,Andalucía,Córdoba,Córdoba,"C/ Teniente Coronel, 90",f,f
+588,Andalucía,Córdoba,Córdoba,"Ronda Real, 38",t,t
+589,Andalucía,Córdoba,Córdoba,"Calle Arquitecto Gaudí, 108",f,f
+590,Andalucía,Córdoba,Córdoba,"Ronda Río Guadalquivir, 193",f,t
+591,Andalucía,Córdoba,Córdoba,"C/ Victoria, 10",t,f
+592,Andalucía,Córdoba,Córdoba,"Plaza Río Ebro, 199",t,t
+593,Andalucía,Córdoba,Córdoba,"Paseo Calvo Sotelo, 59",f,t
+594,Andalucía,Córdoba,Córdoba,"C/ Teniente Coronel, 110",t,f
+595,Andalucía,Córdoba,Córdoba,"Paseo Comercio, 184",f,f
+596,Andalucía,Córdoba,Córdoba,"C/ San José, 163",t,f
+597,Andalucía,Córdoba,Córdoba,"Avda. Fuente, 36",f,f
+598,Andalucía,Córdoba,Córdoba,"Paseo Naranjo, 66",f,f
+599,Andalucía,Córdoba,Córdoba,"Ronda Alcalá, 164",f,t
+600,Andalucía,Córdoba,Córdoba,"Ronda Notario, 111",f,f
+601,Andalucía,Córdoba,Córdoba,"Bulevar Luna, 129",f,f
+602,Andalucía,Córdoba,Córdoba,"C/ Aeropuerto, 60",f,f
+603,Andalucía,Córdoba,Córdoba,"C/ Calvo Sotelo, 50",t,f
+604,Andalucía,Córdoba,Lucena,"C/ Escultor Benlliure, 35",f,f
+605,Andalucía,Córdoba,Lucena,"Avda. Primo de Rivera, 36",f,f
+606,Andalucía,Córdoba,Lucena,"C/ Colón, 187",f,f
+607,Andalucía,Córdoba,Lucena,"Plaza Duque, 79",f,f
+608,Andalucía,Córdoba,Baena,"C/ Santa María, 79",t,f
+609,Andalucía,Córdoba,Baena,"C/ Periodista, 197",f,f
+610,Andalucía,Córdoba,Palma del Río,"Calle Sol, 11",f,f
+611,Andalucía,Córdoba,Palma del Río,"Calle Alfonso XIII, 185",f,f
+612,Andalucía,Córdoba,Montilla,"Ronda Rey, 41",f,f
+613,Andalucía,Córdoba,Montilla,"C/ Río Guadalquivir, 144",f,f
+614,Andalucía,Córdoba,Puente Genil,"Calle Independencia, 16",t,f
+615,Andalucía,Córdoba,Puente Genil,"C/ Conde, 119",t,f
+616,Andalucía,Córdoba,Cabra,"Calle Victoria, 137",f,f
+617,Andalucía,Córdoba,Cabra,"Paseo Infanta, 114",f,f
+618,Andalucía,Jaén,Jaén,"C/ Conde, 134",t,f
+619,Andalucía,Jaén,Jaén,"Avda. Jovellanos, 64",t,f
+620,Andalucía,Jaén,Jaén,"C/ Conde, 45",f,t
+621,Andalucía,Jaén,Jaén,"Calle Doctor Fleming, 27",t,t
+622,Andalucía,Jaén,Jaén,"Calle Doctor Severo Ochoa, 163",t,f
+623,Andalucía,Jaén,Jaén,"C/ Valencia, 163",f,f
+624,Andalucía,Jaén,Jaén,"Avda. Beethoven, 86",t,f
+625,Andalucía,Jaén,Jaén,"Bulevar Valencia, 176",f,f
+626,Andalucía,Jaén,Jaén,"Bulevar Isabel II, 129",t,f
+627,Andalucía,Jaén,Linares,"C/ Cataluña, 143",f,t
+628,Andalucía,Jaén,Linares,"Bulevar Notario, 29",t,f
+629,Andalucía,Jaén,Linares,"Bulevar General Mola, 17",f,f
+630,Andalucía,Jaén,Linares,"Paseo Victoria, 157",f,f
+631,Andalucía,Jaén,Linares,"Avda. Doctor Severo Ochoa, 8",f,f
+632,Andalucía,Jaén,Andújar,"Paseo Sagasta, 119",t,t
+633,Andalucía,Jaén,Andújar,"Avda. Constitución, 24",t,f
+634,Andalucía,Jaén,Andújar,"C/ Fuente, 91",t,f
+635,Andalucía,Jaén,Andújar,"Calle Santa Teresa, 192",t,f
+636,Andalucía,Jaén,Úbeda,"C/ Pino, 69",f,f
+637,Andalucía,Jaén,Úbeda,"C/ Calvo Sotelo, 61",f,f
+638,Andalucía,Jaén,Úbeda,"C/ Gran Vía, 142",t,f
+639,Andalucía,Jaén,Baeza,"Plaza Roble, 27",t,f
+640,Andalucía,Jaén,Baeza,"Calle Aragón, 105",t,f
+641,Andalucía,Jaén,Martos,"Ronda Maestro Falla, 29",f,f
+642,Andalucía,Jaén,Martos,"C/ Industria, 103",t,f
+643,Andalucía,Jaén,Alcalá la Real,"Avda. Doctor Fleming, 126",f,f
+644,Andalucía,Cádiz,Cádiz,"C/ Rey, 34",t,f
+645,Andalucía,Cádiz,Cádiz,"Avda. Maestro Falla, 134",f,f
+646,Andalucía,Cádiz,Cádiz,"Calle América, 81",f,f
+647,Andalucía,Cádiz,Cádiz,"C/ Antonio Machado, 19",f,f
+648,Andalucía,Cádiz,Cádiz,"C/ General Perón, 131",f,f
+649,Andalucía,Cádiz,Cádiz,"C/ Luna, 88",f,f
+650,Andalucía,Cádiz,Cádiz,"C/ San José, 22",t,f
+651,Andalucía,Cádiz,Cádiz,"C/ Doctor Marañón, 190",f,f
+652,Andalucía,Cádiz,Jerez de la Frontera,"C/ Antonio Machado, 116",t,f
+653,Andalucía,Cádiz,Jerez de la Frontera,"Bulevar Río Guadalquivir, 4",t,f
+654,Andalucía,Cádiz,Jerez de la Frontera,"C/ Río Guadalquivir, 135",f,f
+655,Andalucía,Cádiz,Jerez de la Frontera,"C/ Galicia, 162",f,f
+656,Andalucía,Cádiz,Jerez de la Frontera,"Paseo América, 121",t,f
+657,Andalucía,Cádiz,Jerez de la Frontera,"C/ Reina, 144",t,f
+658,Andalucía,Cádiz,Jerez de la Frontera,"Ronda Maestro Falla, 195",f,f
+659,Andalucía,Cádiz,Jerez de la Frontera,"C/ Maestro Falla, 162",f,f
+660,Andalucía,Cádiz,Jerez de la Frontera,"Ronda Santa María, 187",f,f
+661,Andalucía,Cádiz,Jerez de la Frontera,"Ronda Río Turia, 99",f,f
+662,Andalucía,Cádiz,San Fernando,"C/ Valencia, 180",f,f
+663,Andalucía,Cádiz,San Fernando,"C/ Santa Teresa, 97",f,f
+664,Andalucía,Cádiz,San Fernando,"C/ Doctor Fleming, 187",f,f
+665,Andalucía,Cádiz,San Fernando,"C/ Santa María, 92",t,f
+666,Andalucía,Cádiz,Algeciras,"Paseo Generalísimo, 77",f,f
+667,Andalucía,Cádiz,Algeciras,"Bulevar Doctor Marañón, 108",f,f
+668,Andalucía,Cádiz,Algeciras,"C/ Luna, 125",f,f
+669,Andalucía,Cádiz,Algeciras,"C/ Olivo, 183",t,f
+670,Andalucía,Cádiz,La Línea de la Concepción,"C/ Río Turia, 83",t,f
+671,Andalucía,Cádiz,La Línea de la Concepción,"Avda. Aragón, 33",f,f
+672,Andalucía,Cádiz,La Línea de la Concepción,"Calle Almendro, 171",f,t
+673,Andalucía,Cádiz,Puerto de Santa María,"Ronda Sagasta, 145",t,t
+674,Andalucía,Cádiz,Puerto de Santa María,"C/ Duque, 4",t,f
+675,Andalucía,Cádiz,Puerto de Santa María,"C/ Naranjo, 172",f,f
+676,Andalucía,Cádiz,Puerto de Santa María,"Bulevar África, 101",f,f
+677,Andalucía,Cádiz,Chiclana de la Frontera,"Bulevar Industria, 141",f,f
+678,Andalucía,Cádiz,Chiclana de la Frontera,"Paseo General Perón, 136",f,t
+679,Andalucía,Cádiz,Chiclana de la Frontera,"Ronda Luna, 113",f,f
+680,Andalucía,Cádiz,Sanlúcar de Barrameda,"Plaza Gran Vía, 17",f,f
+681,Andalucía,Cádiz,Sanlúcar de Barrameda,"C/ Conde, 195",f,f
+682,Andalucía,Cádiz,Sanlúcar de Barrameda,"Paseo Beethoven, 20",f,f
+683,Andalucía,Cádiz,Rota,"Calle Farmacéutico, 90",t,f
+684,Andalucía,Cádiz,Rota,"C/ España, 70",f,f
+685,Andalucía,Cádiz,Puerto Real,"Ronda Duque, 8",t,f
+686,Andalucía,Cádiz,Puerto Real,"Ronda Duque, 28",t,f
+687,Andalucía,Almería,Almería,"Plaza España, 114",t,f
+688,Andalucía,Almería,Almería,"C/ Reina, 14",f,t
+689,Andalucía,Almería,Almería,"C/ Esperanza, 86",f,f
+690,Andalucía,Almería,Almería,"Bulevar Andalucía, 43",f,f
+691,Andalucía,Almería,Almería,"C/ Andalucía, 55",t,f
+692,Andalucía,Almería,Almería,"Paseo Gran Vía, 104",t,t
+693,Andalucía,Almería,Almería,"C/ Jovellanos, 29",f,f
+694,Andalucía,Almería,Almería,"Ronda Federico Chopin, 143",t,f
+695,Andalucía,Almería,Almería,"Avda. Real, 178",t,f
+696,Andalucía,Almería,Almería,"C/ Calvo Sotelo, 101",f,t
+697,Andalucía,Almería,El Ejido,"Bulevar Real, 102",t,f
+698,Andalucía,Almería,El Ejido,"C/ Esperanza, 121",t,f
+699,Andalucía,Almería,El Ejido,"Plaza Generalísimo, 17",f,f
+700,Andalucía,Almería,El Ejido,"Plaza Doctor Fleming, 116",t,f
+701,Andalucía,Almería,El Ejido,"Calle Alfonso XIII, 158",f,f
+702,Andalucía,Almería,Roquetas de Mar,"C/ Mar, 78",t,f
+703,Andalucía,Almería,Roquetas de Mar,"C/ Conde, 77",t,f
+704,Andalucía,Almería,Roquetas de Mar,"Avda. Cruz, 178",f,f
+705,Andalucía,Almería,Roquetas de Mar,"C/ San Pedro, 75",f,f
+706,Andalucía,Almería,Níjar,"C/ Luna, 160",f,f
+707,Andalucía,Almería,Adra,"C/ San Francisco, 199",t,f
+708,Andalucía,Almería,Adra,"Paseo Doctor Severo Ochoa, 64",f,f
+709,Andalucía,Almería,Vícar,"C/ Asia, 142",t,f
+710,Andalucía,Almería,Vícar,"C/ Rey, 200",f,f
+711,Andalucía,Almería,Berja,"Avda. San Antonio, 172",t,f
+712,Andalucía,Almería,Huércal-Overa,"Paseo San Francisco, 50",f,f
+713,Andalucía,Almería,Huércal-Overa,"C/ Rey, 57",f,f
+714,Andalucía,Huelva,Huelva,"C/ Aragón, 132",f,f
+715,Andalucía,Huelva,Huelva,"Plaza Almendro, 129",f,f
+716,Andalucía,Huelva,Huelva,"Avda. Fuente, 199",f,f
+717,Andalucía,Huelva,Huelva,"C/ Mar, 117",f,f
+718,Andalucía,Huelva,Huelva,"C/ Río Ebro, 10",t,f
+719,Andalucía,Huelva,Huelva,"Bulevar Libertad, 59",f,t
+720,Andalucía,Huelva,Huelva,"Plaza Naranjo, 19",f,f
+721,Andalucía,Huelva,Huelva,"C/ Luna, 30",f,t
+722,Andalucía,Huelva,Huelva,"Plaza Abogado, 138",f,f
+723,Andalucía,Huelva,Lepe,"C/ Abogado, 160",f,f
+724,Andalucía,Huelva,Lepe,"Ronda Esperanza, 171",f,f
+725,Andalucía,Huelva,Lepe,"Ronda Antonio Machado, 105",t,f
+726,Andalucía,Huelva,Ayamonte,"Plaza Río Segura, 37",t,t
+727,Andalucía,Huelva,Ayamonte,"C/ Maestro Falla, 85",f,f
+728,Andalucía,Huelva,Moguer,"Avda. Calvo Sotelo, 189",f,f
+729,Andalucía,Huelva,Moguer,"C/ Doctor Marañón, 111",f,f
+730,Andalucía,Huelva,Almonte,"C/ Castelar, 100",f,f
+731,Andalucía,Huelva,Almonte,"Paseo Galicia, 117",t,f
+732,Andalucía,Huelva,Isla Cristina,"C/ Fuente, 129",t,f
+733,Andalucía,Huelva,Isla Cristina,"Bulevar Generalísimo, 115",f,f
+734,Comunidad de Madrid,Madrid,Madrid,"Plaza Notario, 61",t,f
+735,Comunidad de Madrid,Madrid,Madrid,"C/ Comercio, 127",f,f
+736,Comunidad de Madrid,Madrid,Madrid,"Calle Paz, 50",f,f
+737,Comunidad de Madrid,Madrid,Madrid,"Ronda Mayor, 31",f,f
+738,Comunidad de Madrid,Madrid,Madrid,"C/ Naranjo, 36",f,f
+739,Comunidad de Madrid,Madrid,Madrid,"C/ General Mola, 72",f,f
+740,Comunidad de Madrid,Madrid,Madrid,"Ronda Generalísimo, 142",f,f
+741,Comunidad de Madrid,Madrid,Madrid,"Ronda Gran Vía, 171",f,f
+742,Comunidad de Madrid,Madrid,Madrid,"Plaza Constitución, 16",t,f
+743,Comunidad de Madrid,Madrid,Madrid,"Paseo Pintor Sorolla, 132",t,f
+744,Comunidad de Madrid,Madrid,Madrid,"Bulevar Independencia, 8",t,f
+745,Comunidad de Madrid,Madrid,Madrid,"Avda. Reina, 16",f,f
+746,Comunidad de Madrid,Madrid,Madrid,"Ronda Maestra Justa, 130",t,f
+747,Comunidad de Madrid,Madrid,Madrid,"Ronda Poeta Machado, 140",t,f
+748,Comunidad de Madrid,Madrid,Madrid,"Paseo Reina, 107",f,f
+749,Comunidad de Madrid,Madrid,Madrid,"Paseo Comercio, 84",f,f
+750,Comunidad de Madrid,Madrid,Madrid,"C/ Río Turia, 134",t,f
+751,Comunidad de Madrid,Madrid,Madrid,"Calle Calvo Sotelo, 28",t,t
+752,Comunidad de Madrid,Madrid,Madrid,"Plaza Periodista, 33",f,f
+753,Comunidad de Madrid,Madrid,Madrid,"Calle Poeta Machado, 190",f,f
+754,Comunidad de Madrid,Madrid,Madrid,"Paseo Rey, 175",t,f
+755,Comunidad de Madrid,Madrid,Madrid,"Calle Europa, 108",t,t
+756,Comunidad de Madrid,Madrid,Madrid,"C/ Pintor Sorolla, 122",f,f
+757,Comunidad de Madrid,Madrid,Madrid,"Bulevar Cataluña, 160",t,f
+758,Comunidad de Madrid,Madrid,Madrid,"C/ Reina, 68",f,f
+759,Comunidad de Madrid,Madrid,Madrid,"C/ España, 50",f,t
+760,Comunidad de Madrid,Madrid,Madrid,"C/ Antonio Machado, 99",f,f
+761,Comunidad de Madrid,Madrid,Madrid,"Paseo Abogado, 177",f,t
+762,Comunidad de Madrid,Madrid,Madrid,"Ronda Doctor Gregorio Marañón, 39",f,t
+763,Comunidad de Madrid,Madrid,Madrid,"Avda. Rey, 170",f,f
+764,Comunidad de Madrid,Madrid,Madrid,"C/ Arquitecto Gaudí, 25",f,t
+765,Comunidad de Madrid,Madrid,Madrid,"C/ Conde, 175",t,f
+766,Comunidad de Madrid,Madrid,Madrid,"C/ Santa Ana, 97",f,t
+767,Comunidad de Madrid,Madrid,Madrid,"Plaza Castelar, 99",f,f
+768,Comunidad de Madrid,Madrid,Madrid,"Plaza Naranjo, 82",t,f
+769,Comunidad de Madrid,Madrid,Madrid,"Avda. San Juan, 32",f,t
+770,Comunidad de Madrid,Madrid,Madrid,"C/ General Mola, 177",t,f
+771,Comunidad de Madrid,Madrid,Madrid,"C/ Paz, 24",f,f
+772,Comunidad de Madrid,Madrid,Madrid,"Calle Doctor Severo Ochoa, 67",t,f
+773,Comunidad de Madrid,Madrid,Madrid,"C/ Cruz, 15",f,f
+774,Comunidad de Madrid,Madrid,Madrid,"Bulevar Rey, 163",f,f
+775,Comunidad de Madrid,Madrid,Madrid,"C/ Maestro Falla, 129",f,f
+776,Comunidad de Madrid,Madrid,Madrid,"Bulevar San Pedro, 27",f,f
+777,Comunidad de Madrid,Madrid,Madrid,"C/ España, 187",t,f
+778,Comunidad de Madrid,Madrid,Madrid,"Paseo Comercio, 56",f,f
+779,Comunidad de Madrid,Madrid,Madrid,"Ronda Naranjo, 196",f,f
+780,Comunidad de Madrid,Madrid,Madrid,"Ronda Independencia, 157",f,f
+781,Comunidad de Madrid,Madrid,Madrid,"Paseo Doctor Fleming, 61",f,f
+782,Comunidad de Madrid,Madrid,Madrid,"C/ Cataluña, 61",f,f
+783,Comunidad de Madrid,Madrid,Madrid,"Avda. Poeta Nicolás Guillén, 43",f,f
+784,Comunidad de Madrid,Madrid,Madrid,"Avda. Poeta Machado, 128",f,t
+785,Comunidad de Madrid,Madrid,Madrid,"Paseo Asia, 129",f,f
+786,Comunidad de Madrid,Madrid,Madrid,"Bulevar Pintor Sorolla, 79",t,f
+787,Comunidad de Madrid,Madrid,Madrid,"Calle Jovellanos, 89",f,f
+788,Comunidad de Madrid,Madrid,Madrid,"Ronda Comercio, 57",t,f
+789,Comunidad de Madrid,Madrid,Madrid,"Plaza Alcalá, 31",f,f
+790,Comunidad de Madrid,Madrid,Madrid,"C/ Aragón, 64",f,f
+791,Comunidad de Madrid,Madrid,Madrid,"C/ Valencia, 64",f,f
+792,Comunidad de Madrid,Madrid,Madrid,"Paseo Isabel II, 134",t,f
+793,Comunidad de Madrid,Madrid,Madrid,"C/ Comercio, 37",f,f
+794,Comunidad de Madrid,Madrid,Madrid,"Avda. Duque, 53",f,f
+795,Comunidad de Madrid,Madrid,Madrid,"Ronda África, 63",t,f
+796,Comunidad de Madrid,Madrid,Madrid,"Paseo Gran Vía, 36",t,f
+797,Comunidad de Madrid,Madrid,Madrid,"C/ Paz, 83",f,f
+798,Comunidad de Madrid,Madrid,Madrid,"C/ Doctor Marañón, 129",f,f
+799,Comunidad de Madrid,Madrid,Madrid,"C/ Poeta Machado, 117",f,f
+800,Comunidad de Madrid,Madrid,Madrid,"Calle General Perón, 75",f,f
+801,Comunidad de Madrid,Madrid,Madrid,"Plaza Calvo Sotelo, 103",f,f
+802,Comunidad de Madrid,Madrid,Madrid,"C/ Abogado, 84",f,f
+803,Comunidad de Madrid,Madrid,Madrid,"Ronda Isabel II, 151",f,f
+804,Comunidad de Madrid,Madrid,Madrid,"C/ Abogado, 116",t,f
+805,Comunidad de Madrid,Madrid,Madrid,"Plaza Abogado, 134",f,f
+806,Comunidad de Madrid,Madrid,Madrid,"C/ Andalucía, 38",f,f
+807,Comunidad de Madrid,Madrid,Madrid,"C/ Poeta Lorca, 148",f,f
+808,Comunidad de Madrid,Madrid,Madrid,"Calle Santa Ana, 87",f,f
+809,Comunidad de Madrid,Madrid,Madrid,"Ronda Cruz, 42",f,f
+810,Comunidad de Madrid,Madrid,Madrid,"C/ Aeropuerto, 154",f,t
+811,Comunidad de Madrid,Madrid,Madrid,"C/ Miguel Hernández, 169",t,f
+812,Comunidad de Madrid,Madrid,Madrid,"C/ Victoria, 31",t,f
+813,Comunidad de Madrid,Madrid,Madrid,"Plaza Generalísimo, 33",t,t
+814,Comunidad de Madrid,Madrid,Madrid,"C/ Jovellanos, 152",f,f
+815,Comunidad de Madrid,Madrid,Madrid,"C/ Almendro, 20",t,f
+816,Comunidad de Madrid,Madrid,Madrid,"C/ Federico Chopin, 197",t,f
+817,Comunidad de Madrid,Madrid,Madrid,"C/ Río Segura, 74",f,t
+818,Comunidad de Madrid,Madrid,Madrid,"Bulevar Europa, 69",f,f
+819,Comunidad de Madrid,Madrid,Madrid,"Bulevar Rey, 100",f,f
+820,Comunidad de Madrid,Madrid,Madrid,"Bulevar Galicia, 99",t,f
+821,Comunidad de Madrid,Madrid,Madrid,"Bulevar Abogado, 26",f,f
+822,Comunidad de Madrid,Madrid,Madrid,"Calle Santa María, 91",t,f
+823,Comunidad de Madrid,Madrid,Madrid,"C/ Alcalá, 191",f,f
+824,Comunidad de Madrid,Madrid,Madrid,"C/ Doctor Severo Ochoa, 30",f,f
+825,Comunidad de Madrid,Madrid,Madrid,"C/ Santa María, 80",f,f
+826,Comunidad de Madrid,Madrid,Madrid,"C/ Federico García Lorca, 139",f,f
+827,Comunidad de Madrid,Madrid,Madrid,"C/ Reina, 163",f,f
+828,Comunidad de Madrid,Madrid,Madrid,"C/ Doctor Fleming, 106",f,t
+829,Comunidad de Madrid,Madrid,Madrid,"Paseo Doctor Fleming, 185",f,f
+830,Comunidad de Madrid,Madrid,Madrid,"Avda. Conde, 43",f,f
+831,Comunidad de Madrid,Madrid,Madrid,"Avda. África, 153",t,f
+832,Comunidad de Madrid,Madrid,Madrid,"Ronda Notario, 73",t,f
+833,Comunidad de Madrid,Madrid,Madrid,"Plaza Mayor, 151",f,f
+834,Comunidad de Madrid,Madrid,Madrid,"C/ Arquitecto Gaudí, 72",f,f
+835,Comunidad de Madrid,Madrid,Madrid,"C/ Mar, 94",t,f
+836,Comunidad de Madrid,Madrid,Madrid,"Bulevar Río Guadalquivir, 131",t,f
+837,Comunidad de Madrid,Madrid,Madrid,"C/ Federico García Lorca, 126",t,t
+838,Comunidad de Madrid,Madrid,Madrid,"Bulevar Antonio Machado, 107",t,f
+839,Comunidad de Madrid,Madrid,Madrid,"C/ Sagasta, 192",t,f
+840,Comunidad de Madrid,Madrid,Madrid,"C/ General Mola, 171",f,t
+841,Comunidad de Madrid,Madrid,Madrid,"Avda. General Perón, 49",t,t
+842,Comunidad de Madrid,Madrid,Madrid,"C/ Industria, 129",f,f
+843,Comunidad de Madrid,Madrid,Madrid,"Ronda Generalísimo, 116",f,t
+844,Comunidad de Madrid,Madrid,Madrid,"C/ Gloria, 4",t,f
+845,Comunidad de Madrid,Madrid,Madrid,"C/ Sagasta, 92",f,t
+846,Comunidad de Madrid,Madrid,Madrid,"C/ Santa Ana, 21",t,f
+847,Comunidad de Madrid,Madrid,Móstoles,"Plaza Doctor Marañón, 178",f,f
+848,Comunidad de Madrid,Madrid,Móstoles,"Avda. Colón, 51",f,f
+849,Comunidad de Madrid,Madrid,Móstoles,"Bulevar Maestro Falla, 111",f,f
+850,Comunidad de Madrid,Madrid,Móstoles,"Paseo Antonio Machado, 124",f,f
+851,Comunidad de Madrid,Madrid,Móstoles,"C/ Calvo Sotelo, 165",t,f
+852,Comunidad de Madrid,Madrid,Móstoles,"Ronda Conde, 79",f,f
+853,Comunidad de Madrid,Madrid,Móstoles,"Calle Cruz, 54",t,f
+854,Comunidad de Madrid,Madrid,Móstoles,"C/ Aragón, 86",f,f
+855,Comunidad de Madrid,Madrid,Móstoles,"C/ Escultor Benlliure, 28",t,t
+856,Comunidad de Madrid,Madrid,Leganés,"Plaza Trabajo, 123",t,t
+857,Comunidad de Madrid,Madrid,Leganés,"Bulevar Teniente Coronel, 46",f,f
+858,Comunidad de Madrid,Madrid,Leganés,"Avda. Beethoven, 128",f,f
+859,Comunidad de Madrid,Madrid,Leganés,"Avda. Rey, 83",f,f
+860,Comunidad de Madrid,Madrid,Leganés,"Avda. Príncipe, 102",f,f
+861,Comunidad de Madrid,Madrid,Leganés,"Plaza Duque, 95",f,t
+862,Comunidad de Madrid,Madrid,Leganés,"Bulevar General Mola, 69",f,t
+863,Comunidad de Madrid,Madrid,Alcalá de Henares,"C/ Naranjo, 77",t,f
+864,Comunidad de Madrid,Madrid,Alcalá de Henares,"Bulevar Poeta Nicolás Guillén, 151",f,f
+865,Comunidad de Madrid,Madrid,Alcalá de Henares,"Calle Miguel Hernández, 107",t,f
+866,Comunidad de Madrid,Madrid,Alcalá de Henares,"Ronda Pintor Sorolla, 169",f,f
+867,Comunidad de Madrid,Madrid,Alcalá de Henares,"C/ San Antonio, 195",f,f
+868,Comunidad de Madrid,Madrid,Alcalá de Henares,"Calle Maestro Rodrigo, 43",t,f
+869,Comunidad de Madrid,Madrid,Alcalá de Henares,"Bulevar Aeropuerto, 170",f,f
+870,Comunidad de Madrid,Madrid,Alcalá de Henares,"C/ Constitución, 55",t,f
+871,Comunidad de Madrid,Madrid,Fuenlabrada,"Ronda Doctor Gregorio Marañón, 30",f,f
+872,Comunidad de Madrid,Madrid,Fuenlabrada,"Paseo Generalísimo, 45",t,f
+873,Comunidad de Madrid,Madrid,Fuenlabrada,"Plaza Galicia, 199",f,f
+874,Comunidad de Madrid,Madrid,Fuenlabrada,"Calle Galicia, 149",f,f
+875,Comunidad de Madrid,Madrid,Fuenlabrada,"Plaza Reina, 200",f,f
+876,Comunidad de Madrid,Madrid,Fuenlabrada,"Bulevar Antonio Machado, 41",f,f
+877,Comunidad de Madrid,Madrid,Fuenlabrada,"Calle Doctor Fleming, 184",f,f
+878,Comunidad de Madrid,Madrid,Fuenlabrada,"C/ Paz, 147",f,f
+879,Comunidad de Madrid,Madrid,Getafe,"C/ Príncipe, 112",f,f
+880,Comunidad de Madrid,Madrid,Getafe,"C/ Sagasta, 165",f,f
+881,Comunidad de Madrid,Madrid,Getafe,"Plaza Roble, 198",f,t
+882,Comunidad de Madrid,Madrid,Getafe,"C/ San José, 181",f,f
+883,Comunidad de Madrid,Madrid,Getafe,"Paseo Pintor Sorolla, 142",t,f
+884,Comunidad de Madrid,Madrid,Getafe,"Bulevar Federico García Lorca, 163",f,f
+885,Comunidad de Madrid,Madrid,Alcorcón,"C/ Santa Ana, 181",f,f
+886,Comunidad de Madrid,Madrid,Alcorcón,"C/ Maestro Falla, 116",f,f
+887,Comunidad de Madrid,Madrid,Alcorcón,"Plaza Mar, 120",f,f
+888,Comunidad de Madrid,Madrid,Alcorcón,"C/ Victoria, 181",f,f
+889,Comunidad de Madrid,Madrid,Alcorcón,"C/ Pino, 134",t,f
+890,Comunidad de Madrid,Madrid,Alcorcón,"Plaza Farmacéutico, 169",f,f
+891,Comunidad de Madrid,Madrid,Torrejón de Ardoz,"C/ San José, 88",f,t
+892,Comunidad de Madrid,Madrid,Torrejón de Ardoz,"C/ Federico García Lorca, 169",t,f
+893,Comunidad de Madrid,Madrid,Torrejón de Ardoz,"Avda. Pintor Sorolla, 7",f,f
+894,Comunidad de Madrid,Madrid,Torrejón de Ardoz,"Paseo Jovellanos, 88",f,f
+895,Comunidad de Madrid,Madrid,Torrejón de Ardoz,"C/ Pintor Sorolla, 88",t,f
+896,Comunidad de Madrid,Madrid,Parla,"Paseo Río Turia, 172",t,f
+897,Comunidad de Madrid,Madrid,Parla,"Plaza General Perón, 124",t,f
+898,Comunidad de Madrid,Madrid,Parla,"C/ América, 41",f,f
+899,Comunidad de Madrid,Madrid,Parla,"Calle Conde, 114",f,f
+900,Comunidad de Madrid,Madrid,Parla,"Bulevar Arquitecto Gaudí, 164",f,f
+901,Comunidad de Madrid,Madrid,Alcobendas,"Calle Sol, 29",f,f
+902,Comunidad de Madrid,Madrid,Alcobendas,"Plaza Colón, 128",f,f
+903,Comunidad de Madrid,Madrid,Alcobendas,"C/ Cervantes, 119",f,f
+904,Comunidad de Madrid,Madrid,Alcobendas,"Bulevar Independencia, 175",f,f
+905,Comunidad de Madrid,Madrid,Las Rozas,"Ronda Constitución, 1",t,f
+906,Comunidad de Madrid,Madrid,Las Rozas,"C/ Roble, 79",f,f
+907,Comunidad de Madrid,Madrid,Las Rozas,"Ronda Maestro Rodrigo, 136",t,f
+908,Comunidad de Madrid,Madrid,Las Rozas,"C/ Maestro Rodrigo, 98",f,f
+909,Comunidad de Madrid,Madrid,Pozuelo de Alarcón,"Avda. Periodista, 175",t,f
+910,Comunidad de Madrid,Madrid,Pozuelo de Alarcón,"Avda. Isabel II, 150",t,f
+911,Comunidad de Madrid,Madrid,Pozuelo de Alarcón,"Bulevar Conde, 135",f,f
+912,Comunidad de Madrid,Madrid,Majadahonda,"Calle Comercio, 178",f,f
+913,Comunidad de Madrid,Madrid,Majadahonda,"Avda. España, 17",f,t
+914,Comunidad de Madrid,Madrid,Majadahonda,"C/ Asia, 135",t,f
+915,Comunidad de Madrid,Madrid,Arganda del Rey,"C/ Comercio, 187",t,f
+916,Comunidad de Madrid,Madrid,Arganda del Rey,"Avda. Independencia, 41",f,f
+917,Comunidad de Madrid,Madrid,Arganda del Rey,"C/ España, 41",t,f
+918,Comunidad de Madrid,Madrid,Collado Villalba,"C/ Río Segura, 15",f,f
+919,Comunidad de Madrid,Madrid,Collado Villalba,"Ronda Almendro, 84",f,f
+920,Comunidad de Madrid,Madrid,Collado Villalba,"C/ Periodista, 15",f,f
+921,Comunidad de Madrid,Madrid,San Sebastián de los Reyes,"Avda. Farmacéutico, 52",f,f
+922,Comunidad de Madrid,Madrid,San Sebastián de los Reyes,"C/ Arquitecto Gaudí, 121",t,f
+923,Comunidad de Madrid,Madrid,San Sebastián de los Reyes,"C/ Alfonso XIII, 20",t,f
+924,Comunidad de Madrid,Madrid,Rivas-Vaciamadrid,"Plaza Poeta Machado, 104",f,f
+925,Comunidad de Madrid,Madrid,Rivas-Vaciamadrid,"Avda. Constitución, 198",t,f
+926,Comunidad de Madrid,Madrid,Rivas-Vaciamadrid,"C/ Andalucía, 138",t,f
+927,Comunidad de Madrid,Madrid,Valdemoro,"C/ Aragón, 57",t,f
+928,Comunidad de Madrid,Madrid,Valdemoro,"Avda. Valencia, 50",t,f
+929,Comunidad de Madrid,Madrid,Valdemoro,"Calle Doctor Fleming, 156",t,f
+930,Comunidad de Madrid,Madrid,Coslada,"C/ Esperanza, 69",t,f
+931,Comunidad de Madrid,Madrid,Coslada,"C/ Infanta, 181",t,f
+932,Comunidad de Madrid,Madrid,Coslada,"C/ General Perón, 69",t,f
+933,Comunidad de Madrid,Madrid,Aranjuez,"Avda. Poeta Nicolás Guillén, 19",t,f
+934,Comunidad de Madrid,Madrid,Aranjuez,"Calle Galicia, 69",f,f
+935,Cataluña,Barcelona,Barcelona,"C/ Doctor Gregorio Marañón, 117",t,f
+936,Cataluña,Barcelona,Barcelona,"Ronda Mar, 169",f,f
+937,Cataluña,Barcelona,Barcelona,"Paseo Andalucía, 148",f,f
+938,Cataluña,Barcelona,Barcelona,"Ronda Santa Ana, 25",t,f
+939,Cataluña,Barcelona,Barcelona,"C/ San Francisco, 32",f,f
+940,Cataluña,Barcelona,Barcelona,"C/ San Juan, 24",f,f
+941,Cataluña,Barcelona,Barcelona,"Bulevar Mayor, 2",f,f
+942,Cataluña,Barcelona,Barcelona,"Paseo General Mola, 93",f,t
+943,Cataluña,Barcelona,Barcelona,"Avda. Teniente Coronel, 64",f,f
+944,Cataluña,Barcelona,Barcelona,"C/ Reina, 80",f,f
+945,Cataluña,Barcelona,Barcelona,"Calle Almendro, 144",f,f
+946,Cataluña,Barcelona,Barcelona,"Bulevar Roble, 10",t,f
+947,Cataluña,Barcelona,Barcelona,"Paseo Colón, 67",t,f
+948,Cataluña,Barcelona,Barcelona,"Avda. Río Turia, 66",f,t
+949,Cataluña,Barcelona,Barcelona,"C/ Doctor Fleming, 12",f,f
+950,Cataluña,Barcelona,Barcelona,"Calle Cataluña, 122",f,f
+951,Cataluña,Barcelona,Barcelona,"Plaza Galicia, 4",f,f
+952,Cataluña,Barcelona,Barcelona,"C/ Príncipe, 55",f,t
+953,Cataluña,Barcelona,Barcelona,"Paseo Mayor, 75",t,f
+954,Cataluña,Barcelona,Barcelona,"C/ Río Turia, 185",f,f
+955,Cataluña,Barcelona,Barcelona,"Plaza Aeropuerto, 128",t,f
+956,Cataluña,Barcelona,Barcelona,"C/ Gran Vía, 167",f,f
+957,Cataluña,Barcelona,Barcelona,"C/ España, 172",t,f
+958,Cataluña,Barcelona,Barcelona,"Paseo Abogado, 141",t,f
+959,Cataluña,Barcelona,Barcelona,"C/ Europa, 190",f,f
+960,Cataluña,Barcelona,Barcelona,"Bulevar Pino, 8",t,t
+961,Cataluña,Barcelona,Barcelona,"Paseo Valencia, 76",t,f
+962,Cataluña,Barcelona,Barcelona,"Plaza Gran Vía, 105",t,f
+963,Cataluña,Barcelona,Barcelona,"C/ Río Segura, 97",f,t
+964,Cataluña,Barcelona,Barcelona,"Paseo Paz, 158",t,f
+965,Cataluña,Barcelona,Barcelona,"Calle Fuente, 149",f,f
+966,Cataluña,Barcelona,Barcelona,"Bulevar Federico García Lorca, 194",f,f
+967,Cataluña,Barcelona,Barcelona,"Paseo Notario, 107",t,f
+968,Cataluña,Barcelona,Barcelona,"Calle Comercio, 94",f,t
+969,Cataluña,Barcelona,Barcelona,"Plaza Libertad, 165",f,f
+970,Cataluña,Barcelona,Barcelona,"C/ Pintor Sorolla, 179",t,f
+971,Cataluña,Barcelona,Barcelona,"Plaza Castilla, 13",t,f
+972,Cataluña,Barcelona,Barcelona,"C/ Príncipe, 198",t,f
+973,Cataluña,Barcelona,Barcelona,"Ronda Naranjo, 31",f,f
+974,Cataluña,Barcelona,Barcelona,"Plaza Escultor Benlliure, 168",f,f
+975,Cataluña,Barcelona,Hospitalet de Llobregat,"C/ Antonio Machado, 31",f,f
+976,Cataluña,Barcelona,Hospitalet de Llobregat,"C/ Naranjo, 132",t,t
+977,Cataluña,Barcelona,Hospitalet de Llobregat,"C/ Poeta Lorca, 92",t,t
+978,Cataluña,Barcelona,Hospitalet de Llobregat,"C/ Andalucía, 172",f,f
+979,Cataluña,Barcelona,Hospitalet de Llobregat,"C/ Asia, 148",t,f
+980,Cataluña,Barcelona,Hospitalet de Llobregat,"Plaza Andalucía, 58",t,f
+981,Cataluña,Barcelona,Badalona,"C/ Farmacéutico, 40",t,t
+982,Cataluña,Barcelona,Badalona,"Bulevar Generalísimo, 56",t,f
+983,Cataluña,Barcelona,Badalona,"Plaza Arquitecto Gaudí, 161",f,f
+984,Cataluña,Barcelona,Badalona,"Paseo Isabel II, 177",f,f
+985,Cataluña,Barcelona,Badalona,"Calle Aviación, 60",f,f
+986,Cataluña,Barcelona,Terrassa,"Bulevar Olivo, 9",t,f
+987,Cataluña,Barcelona,Terrassa,"C/ Santa Teresa, 155",f,f
+988,Cataluña,Barcelona,Terrassa,"C/ Pino, 22",f,f
+989,Cataluña,Barcelona,Terrassa,"Paseo San Antonio, 29",f,f
+990,Cataluña,Barcelona,Sabadell,"C/ Aragón, 5",f,f
+991,Cataluña,Barcelona,Sabadell,"Bulevar Santa María, 93",f,f
+992,Cataluña,Barcelona,Sabadell,"Paseo Aragón, 149",f,t
+993,Cataluña,Barcelona,Sabadell,"Plaza Paz, 16",f,f
+994,Cataluña,Barcelona,Santa Coloma de Gramenet,"C/ Asia, 74",t,f
+995,Cataluña,Barcelona,Santa Coloma de Gramenet,"C/ Santa Teresa, 144",f,f
+996,Cataluña,Barcelona,Santa Coloma de Gramenet,"Avda. Poeta Machado, 152",t,f
+997,Cataluña,Barcelona,Santa Coloma de Gramenet,"Bulevar Isabel II, 141",f,f
+998,Cataluña,Barcelona,Cornellà de Llobregat,"C/ Constitución, 78",f,f
+999,Cataluña,Barcelona,Cornellà de Llobregat,"C/ Castilla, 166",t,f
+1000,Cataluña,Barcelona,Cornellà de Llobregat,"C/ Esperanza, 90",t,f
+1001,Cataluña,Barcelona,Mataró,"C/ Cruz, 75",f,f
+1002,Cataluña,Barcelona,Mataró,"Plaza Mar, 178",t,f
+1003,Cataluña,Barcelona,Mataró,"Paseo Rey, 100",f,f
+1004,Cataluña,Barcelona,Rubí,"Avda. General Mola, 11",f,f
+1005,Cataluña,Barcelona,Rubí,"C/ Escultor Benlliure, 54",t,f
+1006,Cataluña,Barcelona,Castelldefels,"Ronda Infanta, 153",f,f
+1007,Cataluña,Barcelona,Castelldefels,"C/ San José, 65",f,f
+1008,Cataluña,Barcelona,Granollers,"Calle Cataluña, 184",f,f
+1009,Cataluña,Barcelona,Granollers,"Ronda Cedro, 75",f,f
+1010,Cataluña,Barcelona,Mollet del Vallès,"Avda. Santa Teresa, 72",f,f
+1011,Cataluña,Barcelona,Mollet del Vallès,"Bulevar Río Ebro, 6",f,f
+1012,Cataluña,Barcelona,Sant Cugat del Vallès,"C/ Farmacéutico, 90",t,t
+1013,Cataluña,Barcelona,Sant Cugat del Vallès,"Plaza Paz, 3",t,f
+1014,Cataluña,Barcelona,Gavà,"Plaza Farmacéutico, 122",f,f
+1015,Cataluña,Barcelona,Gavà,"Calle Federico García Lorca, 168",f,t
+1016,Cataluña,Barcelona,Viladecans,"C/ Andalucía, 171",t,f
+1017,Cataluña,Barcelona,Viladecans,"Ronda Comercio, 93",f,f
+1018,Cataluña,Barcelona,Prat de Llobregat,"C/ Calvo Sotelo, 37",f,f
+1019,Cataluña,Barcelona,Prat de Llobregat,"Avda. Poeta Nicolás Guillén, 195",f,f
+1020,Cataluña,Barcelona,Vilanova i la Geltrú,"Paseo Castelar, 143",f,f
+1021,Cataluña,Barcelona,Vilanova i la Geltrú,"Calle Comercio, 132",t,f
+1022,Cataluña,Tarragona,Tarragona,"Avda. Alfonso XIII, 54",t,f
+1023,Cataluña,Tarragona,Tarragona,"C/ Maestra Justa, 5",f,f
+1024,Cataluña,Tarragona,Tarragona,"Plaza Federico García Lorca, 97",t,f
+1025,Cataluña,Tarragona,Tarragona,"Paseo Santa María, 155",f,f
+1026,Cataluña,Tarragona,Tarragona,"Avda. Pintor Sorolla, 185",t,t
+1027,Cataluña,Tarragona,Tarragona,"C/ Pintor Sorolla, 136",t,f
+1028,Cataluña,Tarragona,Reus,"C/ Aviación, 187",f,f
+1029,Cataluña,Tarragona,Reus,"Calle San Juan, 116",f,f
+1030,Cataluña,Tarragona,Reus,"Plaza África, 183",f,f
+1031,Cataluña,Tarragona,Reus,"Bulevar Almendro, 39",t,f
+1032,Cataluña,Tarragona,Tortosa,"Avda. San Francisco, 137",f,f
+1033,Cataluña,Tarragona,Tortosa,"Calle Aragón, 175",t,f
+1034,Cataluña,Tarragona,Cambrils,"C/ Galicia, 107",f,f
+1035,Cataluña,Tarragona,Cambrils,"Bulevar Santa Teresa, 66",f,f
+1036,Cataluña,Tarragona,Salou,"Paseo Beethoven, 50",t,f
+1037,Cataluña,Tarragona,Salou,"Ronda Ramón y Cajal, 138",t,f
+1038,Cataluña,Tarragona,Valls,"Paseo Príncipe, 84",f,f
+1039,Cataluña,Tarragona,Valls,"Bulevar Castelar, 14",t,f
+1040,Cataluña,Girona,Girona,"C/ Beethoven, 109",t,f
+1041,Cataluña,Girona,Girona,"C/ Mayor, 156",f,f
+1042,Cataluña,Girona,Girona,"Paseo Luna, 108",f,f
+1043,Cataluña,Girona,Girona,"C/ Pino, 110",t,f
+1044,Cataluña,Girona,Girona,"Avda. San Juan, 55",t,f
+1045,Cataluña,Girona,Figueres,"C/ Mar, 14",t,f
+1046,Cataluña,Girona,Figueres,"Bulevar Federico Chopin, 73",f,f
+1047,Cataluña,Girona,Figueres,"Avda. Ramón y Cajal, 15",f,f
+1048,Cataluña,Girona,Blanes,"C/ Doctor Fleming, 133",f,t
+1049,Cataluña,Girona,Blanes,"C/ Aeropuerto, 157",f,f
+1050,Cataluña,Girona,Blanes,"Avda. Beethoven, 189",f,f
+1051,Cataluña,Girona,Olot,"Plaza Asia, 4",f,f
+1052,Cataluña,Girona,Olot,"C/ Cataluña, 121",f,f
+1053,Cataluña,Girona,Salt,"Bulevar Colón, 5",f,f
+1054,Cataluña,Girona,Salt,"Avda. Libertad, 72",f,f
+1055,Cataluña,Girona,Lloret de Mar,"C/ Real, 64",f,f
+1056,Cataluña,Girona,Lloret de Mar,"C/ Cruz, 97",f,t
+1057,Cataluña,Lleida,Lleida,"C/ Poeta Lorca, 110",t,f
+1058,Cataluña,Lleida,Lleida,"C/ Constitución, 153",t,f
+1059,Cataluña,Lleida,Lleida,"C/ Arquitecto Gaudí, 154",f,t
+1060,Cataluña,Lleida,Lleida,"Avda. Castilla, 87",f,f
+1061,Cataluña,Lleida,Lleida,"Plaza Sol, 103",f,f
+1062,Cataluña,Lleida,Mollerussa,"Plaza Aviación, 190",f,f
+1063,Cataluña,Lleida,Mollerussa,"Ronda Real, 7",t,t
+1064,Cataluña,Lleida,Balaguer,"C/ Esperanza, 57",f,f
+1065,Castilla-La Mancha,Toledo,Toledo,"Avda. Andalucía, 26",t,f
+1066,Castilla-La Mancha,Toledo,Toledo,"C/ Victoria, 142",t,f
+1067,Castilla-La Mancha,Toledo,Toledo,"C/ Arquitecto Gaudí, 6",t,f
+1068,Castilla-La Mancha,Toledo,Toledo,"Calle Miguel Hernández, 105",t,f
+1069,Castilla-La Mancha,Toledo,Toledo,"Avda. Mar, 64",f,f
+1070,Castilla-La Mancha,Toledo,Toledo,"Avda. Ramón y Cajal, 178",f,f
+1071,Castilla-La Mancha,Toledo,Toledo,"Ronda Sagasta, 107",f,t
+1072,Castilla-La Mancha,Toledo,Toledo,"C/ Real, 198",t,f
+1073,Castilla-La Mancha,Toledo,Toledo,"Calle Luna, 64",f,f
+1074,Castilla-La Mancha,Toledo,Talavera de la Reina,"C/ San Pedro, 197",f,t
+1075,Castilla-La Mancha,Toledo,Talavera de la Reina,"Calle San Francisco, 74",t,f
+1076,Castilla-La Mancha,Toledo,Talavera de la Reina,"C/ Colón, 136",f,f
+1077,Castilla-La Mancha,Toledo,Talavera de la Reina,"Calle Gloria, 127",f,f
+1078,Castilla-La Mancha,Toledo,Talavera de la Reina,"Calle Pino, 72",t,f
+1079,Castilla-La Mancha,Toledo,Talavera de la Reina,"Calle Teniente Coronel, 186",f,f
+1080,Castilla-La Mancha,Toledo,Talavera de la Reina,"Plaza Industria, 83",t,f
+1081,Castilla-La Mancha,Toledo,Illescas,"Ronda San Antonio, 17",t,f
+1082,Castilla-La Mancha,Toledo,Illescas,"Ronda Pintor Sorolla, 66",t,t
+1083,Castilla-La Mancha,Toledo,Illescas,"Paseo Santa María, 55",f,f
+1084,Castilla-La Mancha,Toledo,Seseña,"C/ Santa Teresa, 130",f,f
+1085,Castilla-La Mancha,Toledo,Seseña,"Plaza Doctor Fleming, 3",f,f
+1086,Castilla-La Mancha,Toledo,Madridejos,"Avda. Pintor Sorolla, 123",f,f
+1087,Castilla-La Mancha,Toledo,Madridejos,"C/ Miguel Hernández, 93",f,t
+1088,Castilla-La Mancha,Toledo,Ocaña,"C/ Doctor Gregorio Marañón, 128",f,f
+1089,Castilla-La Mancha,Toledo,Ocaña,"C/ Doctor Fleming, 77",f,f
+1090,Castilla-La Mancha,Ciudad Real,Ciudad Real,"Plaza Poeta Nicolás Guillén, 57",f,f
+1091,Castilla-La Mancha,Ciudad Real,Ciudad Real,"C/ Olivo, 187",t,t
+1092,Castilla-La Mancha,Ciudad Real,Ciudad Real,"C/ Olivo, 47",t,t
+1093,Castilla-La Mancha,Ciudad Real,Ciudad Real,"C/ Andalucía, 136",f,f
+1094,Castilla-La Mancha,Ciudad Real,Ciudad Real,"C/ Luna, 148",t,f
+1095,Castilla-La Mancha,Ciudad Real,Ciudad Real,"Calle Libertad, 182",f,f
+1096,Castilla-La Mancha,Ciudad Real,Ciudad Real,"Ronda San Antonio, 180",t,f
+1097,Castilla-La Mancha,Ciudad Real,Ciudad Real,"Paseo Doctor Gregorio Marañón, 132",f,f
+1098,Castilla-La Mancha,Ciudad Real,Puertollano,"C/ Castelar, 98",f,t
+1099,Castilla-La Mancha,Ciudad Real,Puertollano,"C/ Rey, 169",t,f
+1100,Castilla-La Mancha,Ciudad Real,Puertollano,"Avda. Isabel II, 186",t,f
+1101,Castilla-La Mancha,Ciudad Real,Puertollano,"C/ Poeta Lorca, 92",f,f
+1102,Castilla-La Mancha,Ciudad Real,Puertollano,"C/ Trabajo, 124",t,f
+1103,Castilla-La Mancha,Ciudad Real,Alcázar de San Juan,"Avda. Poeta Lorca, 139",t,f
+1104,Castilla-La Mancha,Ciudad Real,Alcázar de San Juan,"C/ San José, 89",t,t
+1105,Castilla-La Mancha,Ciudad Real,Alcázar de San Juan,"C/ Olivo, 31",f,f
+1106,Castilla-La Mancha,Ciudad Real,Alcázar de San Juan,"C/ Sagasta, 32",t,f
+1107,Castilla-La Mancha,Ciudad Real,Valdepeñas,"Avda. San Pedro, 64",f,f
+1108,Castilla-La Mancha,Ciudad Real,Valdepeñas,"C/ Antonio Machado, 99",t,f
+1109,Castilla-La Mancha,Ciudad Real,Valdepeñas,"C/ Victoria, 153",f,f
+1110,Castilla-La Mancha,Ciudad Real,Manzanares,"Plaza Luna, 188",f,f
+1111,Castilla-La Mancha,Ciudad Real,Manzanares,"C/ Libertad, 53",f,f
+1112,Castilla-La Mancha,Ciudad Real,Manzanares,"Avda. San Juan, 140",t,f
+1113,Castilla-La Mancha,Ciudad Real,Daimiel,"Paseo Industria, 174",f,f
+1114,Castilla-La Mancha,Ciudad Real,Daimiel,"Plaza Río Guadalquivir, 83",f,f
+1115,Castilla-La Mancha,Albacete,Albacete,"Paseo Primo de Rivera, 70",t,f
+1116,Castilla-La Mancha,Albacete,Albacete,"Bulevar Cedro, 155",t,f
+1117,Castilla-La Mancha,Albacete,Albacete,"C/ Colón, 177",t,t
+1118,Castilla-La Mancha,Albacete,Albacete,"Ronda General Mola, 123",t,f
+1119,Castilla-La Mancha,Albacete,Albacete,"C/ Mar, 168",f,f
+1120,Castilla-La Mancha,Albacete,Albacete,"C/ Castelar, 197",f,f
+1121,Castilla-La Mancha,Albacete,Albacete,"Plaza Aragón, 148",f,f
+1122,Castilla-La Mancha,Albacete,Albacete,"Avda. Duque, 79",t,f
+1123,Castilla-La Mancha,Albacete,Hellín,"Ronda General Mola, 88",t,f
+1124,Castilla-La Mancha,Albacete,Hellín,"Avda. Río Ebro, 10",f,f
+1125,Castilla-La Mancha,Albacete,Almansa,"Bulevar Federico Chopin, 123",t,f
+1126,Castilla-La Mancha,Albacete,Almansa,"C/ Real, 87",t,f
+1127,Castilla-La Mancha,Albacete,La Roda,"C/ Galicia, 12",f,t
+1128,Castilla-La Mancha,Albacete,Caudete,"C/ Olivo, 83",f,f
+1129,Castilla-La Mancha,Guadalajara,Guadalajara,"Calle Constitución, 158",f,f
+1130,Castilla-La Mancha,Guadalajara,Guadalajara,"C/ Doctor Marañón, 69",f,f
+1131,Castilla-La Mancha,Guadalajara,Guadalajara,"Plaza Santa Teresa, 96",f,f
+1132,Castilla-La Mancha,Guadalajara,Guadalajara,"C/ Ramón y Cajal, 136",t,f
+1133,Castilla-La Mancha,Guadalajara,Guadalajara,"C/ Gloria, 80",f,f
+1134,Castilla-La Mancha,Guadalajara,Guadalajara,"Avda. Notario, 125",t,f
+1135,Castilla-La Mancha,Guadalajara,Guadalajara,"C/ Mar, 14",t,f
+1136,Castilla-La Mancha,Guadalajara,Azuqueca de Henares,"C/ Mayor, 80",f,t
+1137,Castilla-La Mancha,Guadalajara,Azuqueca de Henares,"Paseo América, 152",f,f
+1138,Castilla-La Mancha,Guadalajara,Azuqueca de Henares,"C/ Aragón, 142",f,f
+1139,Castilla-La Mancha,Guadalajara,Azuqueca de Henares,"Bulevar Santa Teresa, 7",f,f
+1140,Castilla-La Mancha,Guadalajara,Cabanillas del Campo,"Paseo San Pedro, 185",t,f
+1141,Castilla-La Mancha,Guadalajara,Cabanillas del Campo,"C/ Río Turia, 33",t,f
+1142,Castilla-La Mancha,Cuenca,Cuenca,"Calle Pino, 58",f,f
+1143,Castilla-La Mancha,Cuenca,Cuenca,"C/ General Mola, 74",t,f
+1144,Castilla-La Mancha,Cuenca,Cuenca,"C/ Almendro, 45",t,t
+1145,Castilla-La Mancha,Cuenca,Cuenca,"Plaza África, 198",f,f
+1146,Castilla-La Mancha,Cuenca,Tarancón,"Paseo Constitución, 123",f,f
+1147,Castilla-La Mancha,Cuenca,Tarancón,"C/ Reina, 180",f,f
+1148,Castilla-La Mancha,Cuenca,Motilla del Palancar,"Bulevar Primo de Rivera, 106",t,f
+1149,Castilla-La Mancha,Cuenca,Motilla del Palancar,"Plaza Río Ebro, 111",f,f
+1150,Región de Murcia,Murcia,Murcia,"C/ Río Ebro, 27",t,f
+1151,Región de Murcia,Murcia,Murcia,"C/ Doctor Marañón, 161",f,t
+1152,Región de Murcia,Murcia,Murcia,"Avda. Pintor Sorolla, 193",f,f
+1153,Región de Murcia,Murcia,Murcia,"C/ Trabajo, 140",f,f
+1154,Región de Murcia,Murcia,Murcia,"C/ Galicia, 49",f,f
+1155,Región de Murcia,Murcia,Murcia,"Plaza Comercio, 149",f,f
+1156,Región de Murcia,Murcia,Murcia,"Paseo Miguel Hernández, 92",f,f
+1157,Región de Murcia,Murcia,Murcia,"Ronda Abogado, 173",f,f
+1158,Región de Murcia,Murcia,Murcia,"C/ Río Turia, 175",f,f
+1159,Región de Murcia,Murcia,Murcia,"Avda. Teniente Coronel, 25",f,f
+1160,Región de Murcia,Murcia,Murcia,"Bulevar Farmacéutico, 147",t,f
+1161,Región de Murcia,Murcia,Murcia,"Paseo Poeta Lorca, 65",f,f
+1162,Región de Murcia,Murcia,Murcia,"C/ Real, 26",t,t
+1163,Región de Murcia,Murcia,Murcia,"Ronda Rey, 122",t,t
+1164,Región de Murcia,Murcia,Murcia,"Paseo Poeta Lorca, 181",f,f
+1165,Región de Murcia,Murcia,Murcia,"Paseo América, 150",f,f
+1166,Región de Murcia,Murcia,Murcia,"Calle Conde, 186",t,f
+1167,Región de Murcia,Murcia,Murcia,"Paseo Fuente, 53",f,f
+1168,Región de Murcia,Murcia,Murcia,"C/ Santa Teresa, 87",f,f
+1169,Región de Murcia,Murcia,Murcia,"C/ Calvo Sotelo, 90",f,f
+1170,Región de Murcia,Murcia,Murcia,"C/ Andalucía, 127",t,f
+1171,Región de Murcia,Murcia,Murcia,"Plaza Poeta Lorca, 145",t,t
+1172,Región de Murcia,Murcia,Murcia,"C/ Sagasta, 128",f,t
+1173,Región de Murcia,Murcia,Cartagena,"C/ Trabajo, 60",t,f
+1174,Región de Murcia,Murcia,Cartagena,"C/ Maestro Falla, 1",t,f
+1175,Región de Murcia,Murcia,Cartagena,"C/ Isabel II, 121",f,f
+1176,Región de Murcia,Murcia,Cartagena,"Avda. Poeta Lorca, 179",f,f
+1177,Región de Murcia,Murcia,Cartagena,"Avda. Cedro, 49",f,f
+1178,Región de Murcia,Murcia,Cartagena,"Calle Comercio, 164",f,f
+1179,Región de Murcia,Murcia,Cartagena,"C/ Trabajo, 130",f,f
+1180,Región de Murcia,Murcia,Cartagena,"Bulevar Esperanza, 74",t,f
+1181,Región de Murcia,Murcia,Cartagena,"Paseo Luna, 38",t,f
+1182,Región de Murcia,Murcia,Cartagena,"C/ Castilla, 110",t,f
+1183,Región de Murcia,Murcia,Lorca,"Bulevar Reina, 186",f,f
+1184,Región de Murcia,Murcia,Lorca,"C/ Antonio Machado, 133",f,f
+1185,Región de Murcia,Murcia,Lorca,"Paseo Antonio Machado, 17",f,f
+1186,Región de Murcia,Murcia,Lorca,"Avda. Maestra Justa, 146",f,f
+1187,Región de Murcia,Murcia,Lorca,"Bulevar Aragón, 119",f,t
+1188,Región de Murcia,Murcia,Molina de Segura,"C/ Constitución, 9",f,f
+1189,Región de Murcia,Murcia,Molina de Segura,"Calle Luna, 109",f,f
+1190,Región de Murcia,Murcia,Molina de Segura,"Paseo San Francisco, 97",t,t
+1191,Región de Murcia,Murcia,Molina de Segura,"C/ Río Guadalquivir, 50",f,f
+1192,Región de Murcia,Murcia,Molina de Segura,"Avda. Rey, 184",t,f
+1193,Región de Murcia,Murcia,Alcantarilla,"C/ Calvo Sotelo, 96",t,f
+1194,Región de Murcia,Murcia,Alcantarilla,"C/ Constitución, 55",f,f
+1195,Región de Murcia,Murcia,Alcantarilla,"C/ Doctor Fleming, 198",t,t
+1196,Región de Murcia,Murcia,Yecla,"C/ Poeta Machado, 128",f,t
+1197,Región de Murcia,Murcia,Yecla,"Avda. Andalucía, 143",f,f
+1198,Región de Murcia,Murcia,Yecla,"Bulevar Fuente, 64",f,t
+1199,Región de Murcia,Murcia,Yecla,"Paseo Fuente, 182",f,f
+1200,Región de Murcia,Murcia,Jumilla,"C/ Independencia, 157",t,t
+1201,Región de Murcia,Murcia,Jumilla,"Ronda General Mola, 129",f,f
+1202,Región de Murcia,Murcia,Jumilla,"C/ Primo de Rivera, 1",f,f
+1203,Región de Murcia,Murcia,Cieza,"C/ Santa Teresa, 166",t,f
+1204,Región de Murcia,Murcia,Cieza,"Avda. Asia, 38",f,f
+1205,Región de Murcia,Murcia,Caravaca de la Cruz,"Plaza Doctor Severo Ochoa, 1",f,f
+1206,Región de Murcia,Murcia,Caravaca de la Cruz,"Calle Cataluña, 1",f,f
+1207,Región de Murcia,Murcia,Alhama de Murcia,"C/ Río Segura, 184",t,f
+1208,Región de Murcia,Murcia,Totana,"C/ Pino, 27",f,f
+1209,Región de Murcia,Murcia,San Pedro del Pinatar,"C/ Río Ebro, 15",f,t
+1210,Región de Murcia,Murcia,San Pedro del Pinatar,"Plaza Industria, 7",t,f
+1211,Región de Murcia,Murcia,Torre-Pacheco,"C/ Pino, 165",f,f
+1212,Región de Murcia,Murcia,Torre-Pacheco,"C/ Castilla, 156",t,t
+1213,Castilla y León,Valladolid,Valladolid,"Avda. Aeropuerto, 113",f,f
+1214,Castilla y León,Valladolid,Valladolid,"Avda. Miguel Hernández, 129",f,f
+1215,Castilla y León,Valladolid,Valladolid,"Calle Valencia, 195",f,f
+1216,Castilla y León,Valladolid,Valladolid,"Ronda Olivo, 108",f,f
+1217,Castilla y León,Valladolid,Valladolid,"C/ Valencia, 73",f,f
+1218,Castilla y León,Valladolid,Valladolid,"C/ Doctor Marañón, 72",f,f
+1219,Castilla y León,Valladolid,Valladolid,"Ronda Doctor Fleming, 3",t,t
+1220,Castilla y León,Valladolid,Valladolid,"Bulevar San Francisco, 131",t,f
+1221,Castilla y León,Valladolid,Valladolid,"Paseo Castilla, 143",f,f
+1222,Castilla y León,Valladolid,Valladolid,"C/ Ramón y Cajal, 4",f,f
+1223,Castilla y León,Valladolid,Valladolid,"C/ Mar, 124",f,f
+1224,Castilla y León,Valladolid,Valladolid,"Calle Doctor Severo Ochoa, 44",t,t
+1225,Castilla y León,Valladolid,Laguna de Duero,"Avda. Fuente, 190",f,f
+1226,Castilla y León,Valladolid,Laguna de Duero,"C/ Poeta Machado, 35",f,f
+1227,Castilla y León,Valladolid,Laguna de Duero,"C/ Poeta Nicolás Guillén, 192",f,f
+1228,Castilla y León,Valladolid,Medina del Campo,"C/ Cedro, 156",f,f
+1229,Castilla y León,Valladolid,Medina del Campo,"Ronda Mayor, 40",f,f
+1230,Castilla y León,Burgos,Burgos,"Calle Federico García Lorca, 50",f,f
+1231,Castilla y León,Burgos,Burgos,"Paseo Roble, 196",t,f
+1232,Castilla y León,Burgos,Burgos,"C/ Teniente Coronel, 55",t,f
+1233,Castilla y León,Burgos,Burgos,"C/ Abogado, 152",t,t
+1234,Castilla y León,Burgos,Burgos,"C/ Poeta Lorca, 178",t,f
+1235,Castilla y León,Burgos,Burgos,"Bulevar Doctor Gregorio Marañón, 35",f,f
+1236,Castilla y León,Burgos,Burgos,"C/ Europa, 10",f,f
+1237,Castilla y León,Burgos,Burgos,"Paseo Jovellanos, 126",t,f
+1238,Castilla y León,Burgos,Burgos,"C/ Real, 192",t,f
+1239,Castilla y León,Burgos,Miranda de Ebro,"Ronda Almendro, 52",f,f
+1240,Castilla y León,Burgos,Miranda de Ebro,"Calle Aragón, 118",f,f
+1241,Castilla y León,Burgos,Miranda de Ebro,"C/ Castelar, 34",f,f
+1242,Castilla y León,Burgos,Miranda de Ebro,"Bulevar Cataluña, 153",f,f
+1243,Castilla y León,Burgos,Aranda de Duero,"Ronda Federico García Lorca, 108",f,t
+1244,Castilla y León,Burgos,Aranda de Duero,"C/ Aeropuerto, 197",f,f
+1245,Castilla y León,Burgos,Aranda de Duero,"C/ Europa, 177",t,f
+1246,Castilla y León,Salamanca,Salamanca,"Avda. Infanta, 74",t,f
+1247,Castilla y León,Salamanca,Salamanca,"C/ Arquitecto Gaudí, 153",t,f
+1248,Castilla y León,Salamanca,Salamanca,"C/ General Perón, 14",f,f
+1249,Castilla y León,Salamanca,Salamanca,"Avda. Castilla, 139",t,f
+1250,Castilla y León,Salamanca,Salamanca,"Plaza Santa Ana, 118",t,f
+1251,Castilla y León,Salamanca,Salamanca,"Bulevar Roble, 139",f,f
+1252,Castilla y León,Salamanca,Salamanca,"Paseo Rey, 69",f,t
+1253,Castilla y León,Salamanca,Salamanca,"Ronda Cedro, 148",f,f
+1254,Castilla y León,Salamanca,Béjar,"C/ Asia, 72",t,f
+1255,Castilla y León,Salamanca,Béjar,"C/ Pintor Sorolla, 170",t,f
+1256,Castilla y León,Salamanca,Ciudad Rodrigo,"Calle Infanta, 147",t,f
+1257,Castilla y León,Salamanca,Ciudad Rodrigo,"Paseo Isabel II, 16",t,f
+1258,Castilla y León,León,León,"Ronda Industria, 10",f,f
+1259,Castilla y León,León,León,"Plaza Asia, 83",f,t
+1260,Castilla y León,León,León,"C/ Federico Chopin, 133",f,f
+1261,Castilla y León,León,León,"C/ Aragón, 61",f,f
+1262,Castilla y León,León,León,"Calle Aviación, 139",f,f
+1263,Castilla y León,León,León,"Paseo Notario, 40",f,t
+1264,Castilla y León,León,León,"C/ Príncipe, 77",t,f
+1265,Castilla y León,León,Ponferrada,"C/ Maestro Falla, 134",f,f
+1266,Castilla y León,León,Ponferrada,"Plaza Maestro Rodrigo, 81",f,f
+1267,Castilla y León,León,Ponferrada,"C/ Cervantes, 145",f,f
+1268,Castilla y León,León,Ponferrada,"Paseo Beethoven, 139",t,t
+1269,Castilla y León,León,San Andrés del Rabanedo,"Ronda Conde, 159",f,t
+1270,Castilla y León,León,San Andrés del Rabanedo,"Avda. Arquitecto Gaudí, 86",f,f
+1271,Castilla y León,Zamora,Zamora,"C/ Arquitecto Gaudí, 41",t,f
+1272,Castilla y León,Zamora,Zamora,"Plaza Roble, 85",t,f
+1273,Castilla y León,Zamora,Zamora,"C/ San Francisco, 23",f,f
+1274,Castilla y León,Zamora,Zamora,"C/ Andalucía, 184",f,f
+1275,Castilla y León,Zamora,Benavente,"Ronda Pintor Sorolla, 99",f,f
+1276,Castilla y León,Zamora,Benavente,"C/ Maestra Justa, 64",f,f
+1277,Castilla y León,Segovia,Segovia,"C/ Galicia, 112",f,f
+1278,Castilla y León,Segovia,Segovia,"Bulevar Castilla, 148",t,t
+1279,Castilla y León,Segovia,Segovia,"Bulevar San José, 136",f,t
+1280,Castilla y León,Segovia,Cuéllar,"C/ Escultor Benlliure, 190",f,f
+1281,Castilla y León,Ávila,Ávila,"C/ Cruz, 60",t,f
+1282,Castilla y León,Ávila,Ávila,"Ronda Galicia, 14",t,f
+1283,Castilla y León,Palencia,Palencia,"Calle San Francisco, 79",f,f
+1284,Castilla y León,Palencia,Palencia,"Paseo Gran Vía, 40",f,f
+1285,Castilla y León,Palencia,Palencia,"C/ Cedro, 47",t,f
+1286,Castilla y León,Palencia,Palencia,"Bulevar África, 194",f,f
+1287,Castilla y León,Palencia,Guardo,"Calle San Francisco, 35",f,f
+1288,Castilla y León,Palencia,Guardo,"C/ Duque, 45",t,f
+1289,Castilla y León,Soria,Soria,"C/ Príncipe, 30",t,f
+1290,Castilla y León,Soria,Soria,"C/ Miguel Hernández, 136",f,f
+1291,Canarias,Santa Cruz de Tenerife,Santa Cruz de Tenerife,"Ronda Maestro Rodrigo, 3",f,f
+1292,Canarias,Santa Cruz de Tenerife,Santa Cruz de Tenerife,"Plaza Isabel II, 188",t,f
+1293,Canarias,Santa Cruz de Tenerife,Santa Cruz de Tenerife,"Paseo Poeta Machado, 3",f,f
+1294,Canarias,Santa Cruz de Tenerife,Santa Cruz de Tenerife,"Bulevar Poeta Lorca, 9",t,f
+1295,Canarias,Santa Cruz de Tenerife,Santa Cruz de Tenerife,"C/ Gran Vía, 90",f,f
+1296,Canarias,Santa Cruz de Tenerife,Santa Cruz de Tenerife,"C/ Almendro, 71",f,f
+1297,Canarias,Santa Cruz de Tenerife,Santa Cruz de Tenerife,"Paseo San Francisco, 107",f,f
+1298,Canarias,Santa Cruz de Tenerife,Santa Cruz de Tenerife,"Paseo Infanta, 112",f,f
+1299,Canarias,Santa Cruz de Tenerife,Santa Cruz de Tenerife,"Ronda Almendro, 200",t,t
+1300,Canarias,Santa Cruz de Tenerife,Santa Cruz de Tenerife,"C/ Andalucía, 86",f,f
+1301,Canarias,Santa Cruz de Tenerife,La Laguna,"C/ Doctor Fleming, 112",f,f
+1302,Canarias,Santa Cruz de Tenerife,La Laguna,"Calle Aragón, 166",t,f
+1303,Canarias,Santa Cruz de Tenerife,La Laguna,"C/ Poeta Lorca, 183",f,f
+1304,Canarias,Santa Cruz de Tenerife,La Laguna,"C/ Cervantes, 21",t,f
+1305,Canarias,Santa Cruz de Tenerife,La Laguna,"Paseo Doctor Gregorio Marañón, 101",t,f
+1306,Canarias,Santa Cruz de Tenerife,La Laguna,"C/ Sol, 7",t,f
+1307,Canarias,Santa Cruz de Tenerife,Arona,"Plaza Gran Vía, 132",f,f
+1308,Canarias,Santa Cruz de Tenerife,Arona,"Bulevar Independencia, 135",t,f
+1309,Canarias,Santa Cruz de Tenerife,Arona,"Ronda Jovellanos, 37",f,t
+1310,Canarias,Santa Cruz de Tenerife,Adeje,"C/ Olivo, 16",f,f
+1311,Canarias,Santa Cruz de Tenerife,Adeje,"C/ España, 149",t,f
+1312,Canarias,Santa Cruz de Tenerife,Adeje,"Plaza Galicia, 139",f,t
+1313,Canarias,Santa Cruz de Tenerife,Puerto de la Cruz,"Bulevar España, 161",f,f
+1314,Canarias,Santa Cruz de Tenerife,Puerto de la Cruz,"Calle Fuente, 192",f,f
+1315,Canarias,Santa Cruz de Tenerife,Granadilla de Abona,"C/ General Mola, 177",f,f
+1316,Canarias,Santa Cruz de Tenerife,Granadilla de Abona,"Calle Independencia, 20",f,t
+1317,Canarias,Santa Cruz de Tenerife,Los Llanos de Aridane,"Calle Alfonso XIII, 13",f,f
+1318,Canarias,Santa Cruz de Tenerife,Los Llanos de Aridane,"C/ Alfonso XIII, 130",f,t
+1319,Canarias,Las Palmas,Las Palmas de Gran Canaria,"C/ España, 130",t,f
+1320,Canarias,Las Palmas,Las Palmas de Gran Canaria,"C/ Cervantes, 114",t,f
+1321,Canarias,Las Palmas,Las Palmas de Gran Canaria,"Plaza Aragón, 48",t,f
+1322,Canarias,Las Palmas,Las Palmas de Gran Canaria,"Paseo Río Segura, 122",f,f
+1323,Canarias,Las Palmas,Las Palmas de Gran Canaria,"Ronda Santa María, 16",f,f
+1324,Canarias,Las Palmas,Las Palmas de Gran Canaria,"Ronda Río Segura, 24",f,f
+1325,Canarias,Las Palmas,Las Palmas de Gran Canaria,"Avda. San Antonio, 22",t,f
+1326,Canarias,Las Palmas,Las Palmas de Gran Canaria,"Calle Naranjo, 141",f,f
+1327,Canarias,Las Palmas,Las Palmas de Gran Canaria,"C/ Andalucía, 87",f,f
+1328,Canarias,Las Palmas,Las Palmas de Gran Canaria,"Avda. Periodista, 54",f,f
+1329,Canarias,Las Palmas,Las Palmas de Gran Canaria,"Calle Roble, 196",f,f
+1330,Canarias,Las Palmas,Telde,"Calle Valencia, 68",t,f
+1331,Canarias,Las Palmas,Telde,"Calle Conde, 135",f,f
+1332,Canarias,Las Palmas,Telde,"Paseo Santa María, 34",f,t
+1333,Canarias,Las Palmas,Telde,"C/ Escultor Benlliure, 73",t,f
+1334,Canarias,Las Palmas,Santa Lucía de Tirajana,"Paseo Río Ebro, 79",f,f
+1335,Canarias,Las Palmas,Santa Lucía de Tirajana,"C/ Federico Chopin, 110",t,f
+1336,Canarias,Las Palmas,Arucas,"Plaza Independencia, 160",f,f
+1337,Canarias,Las Palmas,Arucas,"Bulevar Teniente Coronel, 108",f,f
+1338,Canarias,Las Palmas,San Bartolomé de Tirajana,"Plaza Castelar, 165",f,f
+1339,Canarias,Las Palmas,San Bartolomé de Tirajana,"C/ Constitución, 150",f,f
+1340,Canarias,Las Palmas,Mogán,"Plaza Doctor Severo Ochoa, 138",t,f
+1341,Euskadi,Vizcaya,Bilbao,"Paseo Doctor Marañón, 39",f,f
+1342,Euskadi,Vizcaya,Bilbao,"Paseo Almendro, 113",t,f
+1343,Euskadi,Vizcaya,Bilbao,"C/ Real, 192",t,f
+1344,Euskadi,Vizcaya,Bilbao,"Bulevar Reina, 162",f,f
+1345,Euskadi,Vizcaya,Bilbao,"C/ Naranjo, 197",f,f
+1346,Euskadi,Vizcaya,Bilbao,"C/ Abogado, 179",t,f
+1347,Euskadi,Vizcaya,Bilbao,"Avda. San Pedro, 16",f,f
+1348,Euskadi,Vizcaya,Bilbao,"C/ Paz, 109",f,f
+1349,Euskadi,Vizcaya,Bilbao,"C/ Paz, 40",f,f
+1350,Euskadi,Vizcaya,Bilbao,"Plaza Cataluña, 117",f,f
+1351,Euskadi,Vizcaya,Bilbao,"Paseo Castilla, 140",f,f
+1352,Euskadi,Vizcaya,Barakaldo,"C/ Real, 85",t,t
+1353,Euskadi,Vizcaya,Barakaldo,"Bulevar Asia, 112",f,t
+1354,Euskadi,Vizcaya,Barakaldo,"C/ Ramón y Cajal, 152",f,f
+1355,Euskadi,Vizcaya,Barakaldo,"Bulevar Colón, 27",f,f
+1356,Euskadi,Vizcaya,Barakaldo,"C/ Aeropuerto, 146",f,f
+1357,Euskadi,Vizcaya,Getxo,"Plaza Jovellanos, 52",t,f
+1358,Euskadi,Vizcaya,Getxo,"C/ Calvo Sotelo, 5",t,f
+1359,Euskadi,Vizcaya,Getxo,"Bulevar Doctor Marañón, 124",f,f
+1360,Euskadi,Vizcaya,Basauri,"Avda. Doctor Marañón, 198",t,f
+1361,Euskadi,Vizcaya,Basauri,"Plaza Sol, 75",f,f
+1362,Euskadi,Vizcaya,Basauri,"Avda. Naranjo, 85",f,f
+1363,Euskadi,Vizcaya,Basauri,"C/ Farmacéutico, 48",t,f
+1364,Euskadi,Vizcaya,Sestao,"Plaza Doctor Fleming, 47",f,f
+1365,Euskadi,Vizcaya,Sestao,"C/ Asia, 97",t,f
+1366,Euskadi,Vizcaya,Sestao,"C/ San Antonio, 117",t,f
+1367,Euskadi,Vizcaya,Leioa,"C/ Industria, 192",f,f
+1368,Euskadi,Vizcaya,Leioa,"C/ Río Segura, 46",f,t
+1369,Euskadi,Vizcaya,Leioa,"Bulevar Asia, 139",f,f
+1370,Euskadi,Vizcaya,Durango,"Avda. Maestro Rodrigo, 65",f,t
+1371,Euskadi,Vizcaya,Durango,"Calle Ramón y Cajal, 189",t,f
+1372,Euskadi,Vizcaya,Durango,"C/ Río Guadalquivir, 160",f,t
+1373,Euskadi,Vizcaya,Erandio,"Calle San Francisco, 160",t,t
+1374,Euskadi,Vizcaya,Erandio,"C/ África, 112",t,f
+1375,Euskadi,Guipúzcoa,Donostia-San Sebastián,"Bulevar Valencia, 120",f,t
+1376,Euskadi,Guipúzcoa,Donostia-San Sebastián,"C/ Doctor Marañón, 33",f,f
+1377,Euskadi,Guipúzcoa,Donostia-San Sebastián,"Bulevar Cedro, 125",t,f
+1378,Euskadi,Guipúzcoa,Donostia-San Sebastián,"Avda. Esperanza, 130",t,f
+1379,Euskadi,Guipúzcoa,Donostia-San Sebastián,"Paseo Aeropuerto, 81",t,f
+1380,Euskadi,Guipúzcoa,Donostia-San Sebastián,"C/ Primo de Rivera, 200",f,t
+1381,Euskadi,Guipúzcoa,Donostia-San Sebastián,"Paseo Maestra Justa, 31",t,f
+1382,Euskadi,Guipúzcoa,Donostia-San Sebastián,"C/ Miguel Hernández, 7",t,t
+1383,Euskadi,Guipúzcoa,Irún,"C/ Maestro Falla, 69",f,t
+1384,Euskadi,Guipúzcoa,Irún,"Plaza Duque, 5",f,f
+1385,Euskadi,Guipúzcoa,Irún,"Calle Doctor Gregorio Marañón, 173",f,f
+1386,Euskadi,Guipúzcoa,Eibar,"Bulevar Calvo Sotelo, 67",t,f
+1387,Euskadi,Guipúzcoa,Eibar,"Ronda Industria, 104",f,f
+1388,Euskadi,Guipúzcoa,Errenteria,"Avda. San José, 10",f,f
+1389,Euskadi,Guipúzcoa,Errenteria,"C/ Castilla, 197",f,f
+1390,Euskadi,Guipúzcoa,Errenteria,"Ronda San Antonio, 200",t,f
+1391,Euskadi,Guipúzcoa,Zarautz,"C/ Río Turia, 114",t,f
+1392,Euskadi,Guipúzcoa,Zarautz,"C/ Maestro Falla, 99",t,f
+1393,Euskadi,Álava,Vitoria-Gasteiz,"Avda. Conde, 183",t,f
+1394,Euskadi,Álava,Vitoria-Gasteiz,"Plaza San Antonio, 131",f,f
+1395,Euskadi,Álava,Vitoria-Gasteiz,"Plaza Roble, 72",t,f
+1396,Euskadi,Álava,Vitoria-Gasteiz,"Bulevar Río Ebro, 127",t,f
+1397,Euskadi,Álava,Amurrio,"Bulevar Federico García Lorca, 127",t,f
+1398,Euskadi,Álava,Llodio,"Avda. Mar, 120",t,f
+1399,Aragón,Zaragoza,Zaragoza,"C/ Ramón y Cajal, 14",f,f
+1400,Aragón,Zaragoza,Zaragoza,"Bulevar Libertad, 123",t,f
+1401,Aragón,Zaragoza,Zaragoza,"C/ Aeropuerto, 148",f,f
+1402,Aragón,Zaragoza,Zaragoza,"Bulevar Santa María, 30",f,f
+1403,Aragón,Zaragoza,Zaragoza,"C/ Real, 139",f,t
+1404,Aragón,Zaragoza,Zaragoza,"Calle América, 55",t,f
+1405,Aragón,Zaragoza,Zaragoza,"Bulevar Cataluña, 192",f,f
+1406,Aragón,Zaragoza,Zaragoza,"Avda. Escultor Benlliure, 67",f,f
+1407,Aragón,Zaragoza,Zaragoza,"Bulevar Aragón, 183",t,f
+1408,Aragón,Zaragoza,Zaragoza,"Calle Miguel Hernández, 147",f,f
+1409,Aragón,Zaragoza,Zaragoza,"C/ Notario, 190",f,t
+1410,Aragón,Zaragoza,Zaragoza,"C/ Isabel II, 58",t,f
+1411,Aragón,Zaragoza,Zaragoza,"Calle Libertad, 196",t,f
+1412,Aragón,Zaragoza,Zaragoza,"Calle Comercio, 157",t,t
+1413,Aragón,Zaragoza,Zaragoza,"C/ Sagasta, 13",f,t
+1414,Aragón,Zaragoza,Zaragoza,"Calle Castilla, 164",f,f
+1415,Aragón,Zaragoza,Zaragoza,"Ronda Notario, 51",f,t
+1416,Aragón,Zaragoza,Zaragoza,"C/ Cedro, 180",t,f
+1417,Aragón,Zaragoza,Zaragoza,"C/ Doctor Gregorio Marañón, 17",f,t
+1418,Aragón,Zaragoza,Calatayud,"Bulevar Escultor Benlliure, 132",f,f
+1419,Aragón,Zaragoza,Calatayud,"Ronda Calvo Sotelo, 19",f,f
+1420,Aragón,Zaragoza,Calatayud,"Ronda Gran Vía, 176",f,t
+1421,Aragón,Zaragoza,Calatayud,"C/ Paz, 34",t,f
+1422,Aragón,Zaragoza,Utebo,"C/ Aragón, 162",f,t
+1423,Aragón,Zaragoza,Utebo,"C/ Periodista, 171",t,f
+1424,Aragón,Zaragoza,Utebo,"Calle Pintor Sorolla, 108",f,f
+1425,Aragón,Zaragoza,Cuarte de Huerva,"Ronda Reina, 196",f,f
+1426,Aragón,Zaragoza,Cuarte de Huerva,"Calle Gran Vía, 153",t,f
+1427,Aragón,Zaragoza,Ejea de los Caballeros,"Plaza Generalísimo, 156",t,f
+1428,Aragón,Zaragoza,Ejea de los Caballeros,"Paseo España, 110",t,f
+1429,Aragón,Zaragoza,Tarazona,"C/ General Perón, 186",t,f
+1430,Aragón,Huesca,Huesca,"Bulevar Comercio, 184",f,f
+1431,Aragón,Huesca,Huesca,"C/ Cataluña, 131",t,t
+1432,Aragón,Huesca,Huesca,"C/ Pino, 67",f,f
+1433,Aragón,Huesca,Barbastro,"C/ Alcalá, 62",f,t
+1434,Aragón,Huesca,Barbastro,"Ronda San Francisco, 50",f,f
+1435,Aragón,Huesca,Monzón,"C/ Valencia, 83",t,f
+1436,Aragón,Huesca,Monzón,"Avda. San Francisco, 167",f,f
+1437,Aragón,Huesca,Fraga,"C/ África, 132",f,f
+1438,Aragón,Teruel,Teruel,"Avda. Duque, 23",t,f
+1439,Aragón,Teruel,Teruel,"Paseo Naranjo, 58",t,f
+1440,Aragón,Teruel,Teruel,"C/ San Pedro, 141",t,f
+1441,Aragón,Teruel,Alcañiz,"Bulevar Maestro Falla, 36",f,t
+1442,Aragón,Teruel,Alcañiz,"Plaza Fuente, 192",f,f
+1443,Extremadura,Badajoz,Badajoz,"Calle San José, 115",f,f
+1444,Extremadura,Badajoz,Badajoz,"Calle Federico Chopin, 71",f,f
+1445,Extremadura,Badajoz,Badajoz,"Bulevar San Francisco, 72",f,f
+1446,Extremadura,Badajoz,Badajoz,"Bulevar Generalísimo, 175",f,f
+1447,Extremadura,Badajoz,Badajoz,"Bulevar Príncipe, 68",t,f
+1448,Extremadura,Badajoz,Badajoz,"Ronda África, 116",f,f
+1449,Extremadura,Badajoz,Badajoz,"C/ Libertad, 175",f,f
+1450,Extremadura,Badajoz,Badajoz,"C/ San Juan, 63",f,f
+1451,Extremadura,Badajoz,Badajoz,"Ronda Colón, 53",f,f
+1452,Extremadura,Badajoz,Badajoz,"Calle Doctor Gregorio Marañón, 170",t,t
+1453,Extremadura,Badajoz,Badajoz,"Avda. Olivo, 38",f,t
+1454,Extremadura,Badajoz,Mérida,"C/ Comercio, 158",f,f
+1455,Extremadura,Badajoz,Mérida,"C/ Mar, 152",t,f
+1456,Extremadura,Badajoz,Mérida,"C/ Valencia, 141",f,f
+1457,Extremadura,Badajoz,Mérida,"Calle San José, 192",f,f
+1458,Extremadura,Badajoz,Mérida,"Ronda Federico Chopin, 35",t,f
+1459,Extremadura,Badajoz,Don Benito,"C/ África, 188",t,t
+1460,Extremadura,Badajoz,Don Benito,"C/ Río Ebro, 5",t,f
+1461,Extremadura,Badajoz,Don Benito,"Avda. Abogado, 45",f,f
+1462,Extremadura,Badajoz,Zafra,"Avda. Calvo Sotelo, 19",f,f
+1463,Extremadura,Badajoz,Zafra,"C/ Maestro Rodrigo, 30",f,f
+1464,Extremadura,Badajoz,Almendralejo,"C/ Aviación, 33",f,t
+1465,Extremadura,Badajoz,Almendralejo,"Plaza Mayor, 117",f,f
+1466,Extremadura,Badajoz,Almendralejo,"C/ Antonio Machado, 199",f,f
+1467,Extremadura,Badajoz,Olivenza,"C/ General Perón, 169",f,f
+1468,Extremadura,Cáceres,Cáceres,"Paseo Pintor Sorolla, 106",f,f
+1469,Extremadura,Cáceres,Cáceres,"C/ Río Segura, 10",f,f
+1470,Extremadura,Cáceres,Cáceres,"Ronda Paz, 25",t,f
+1471,Extremadura,Cáceres,Cáceres,"Plaza Santa Ana, 174",f,f
+1472,Extremadura,Cáceres,Cáceres,"C/ Farmacéutico, 128",t,f
+1473,Extremadura,Cáceres,Cáceres,"Bulevar Primo de Rivera, 4",f,f
+1474,Extremadura,Cáceres,Cáceres,"Calle Mayor, 158",f,t
+1475,Extremadura,Cáceres,Plasencia,"Bulevar Abogado, 13",f,f
+1476,Extremadura,Cáceres,Plasencia,"Plaza Maestra Justa, 188",f,f
+1477,Extremadura,Cáceres,Plasencia,"Paseo Poeta Machado, 39",t,t
+1478,Extremadura,Cáceres,Navalmoral de la Mata,"C/ Gran Vía, 40",t,t
+1479,Extremadura,Cáceres,Navalmoral de la Mata,"C/ San Francisco, 162",t,f
+1480,Extremadura,Cáceres,Miajadas,"C/ Farmacéutico, 11",f,f
+1481,Extremadura,Cáceres,Miajadas,"C/ Miguel Hernández, 135",f,f
+1482,Principado de Asturias,Asturias,Oviedo,"C/ Río Turia, 102",t,t
+1483,Principado de Asturias,Asturias,Oviedo,"Avda. Poeta Nicolás Guillén, 78",t,f
+1484,Principado de Asturias,Asturias,Oviedo,"Bulevar Poeta Lorca, 184",t,f
+1485,Principado de Asturias,Asturias,Oviedo,"C/ Jovellanos, 17",f,t
+1486,Principado de Asturias,Asturias,Oviedo,"C/ Pino, 183",f,f
+1487,Principado de Asturias,Asturias,Oviedo,"Avda. Príncipe, 66",t,f
+1488,Principado de Asturias,Asturias,Oviedo,"Avda. Asia, 26",f,f
+1489,Principado de Asturias,Asturias,Oviedo,"Plaza Aragón, 193",f,f
+1490,Principado de Asturias,Asturias,Oviedo,"Bulevar Reina, 28",f,f
+1491,Principado de Asturias,Asturias,Gijón,"Ronda Doctor Gregorio Marañón, 198",f,t
+1492,Principado de Asturias,Asturias,Gijón,"Calle Aviación, 168",t,f
+1493,Principado de Asturias,Asturias,Gijón,"Bulevar Constitución, 169",f,f
+1494,Principado de Asturias,Asturias,Gijón,"Ronda Sagasta, 196",t,f
+1495,Principado de Asturias,Asturias,Gijón,"Bulevar Asia, 197",f,f
+1496,Principado de Asturias,Asturias,Gijón,"Ronda Poeta Machado, 22",f,f
+1497,Principado de Asturias,Asturias,Gijón,"Bulevar Río Ebro, 193",f,f
+1498,Principado de Asturias,Asturias,Gijón,"Paseo Cataluña, 61",f,f
+1499,Principado de Asturias,Asturias,Avilés,"Ronda General Perón, 83",f,t
+1500,Principado de Asturias,Asturias,Avilés,"C/ Infanta, 121",f,f
+1501,Principado de Asturias,Asturias,Avilés,"C/ Generalísimo, 50",f,f
+1502,Principado de Asturias,Asturias,Siero,"C/ General Perón, 43",t,f
+1503,Principado de Asturias,Asturias,Siero,"C/ San Antonio, 184",f,f
+1504,Principado de Asturias,Asturias,Siero,"Avda. Roble, 116",f,f
+1505,Principado de Asturias,Asturias,Langreo,"C/ Almendro, 61",f,f
+1506,Principado de Asturias,Asturias,Langreo,"C/ Cervantes, 32",f,f
+1507,Principado de Asturias,Asturias,Langreo,"Avda. Luna, 117",f,f
+1508,Principado de Asturias,Asturias,Mieres,"C/ Industria, 196",f,f
+1509,Principado de Asturias,Asturias,Mieres,"C/ Periodista, 132",f,f
+1510,Principado de Asturias,Asturias,Mieres,"Ronda Europa, 69",f,f
+1511,Principado de Asturias,Asturias,Carreño,"Paseo Santa Ana, 44",f,f
+1512,Principado de Asturias,Asturias,Castrillón,"C/ San Antonio, 129",f,f
+1513,Galicia,Pontevedra,Vigo,"Plaza Cervantes, 74",t,f
+1514,Galicia,Pontevedra,Vigo,"Ronda Rey, 96",t,f
+1515,Galicia,Pontevedra,Vigo,"Avda. Santa María, 68",f,f
+1516,Galicia,Pontevedra,Vigo,"Ronda Alfonso XIII, 123",t,f
+1517,Galicia,Pontevedra,Pontevedra,"Paseo Generalísimo, 1",f,f
+1518,Galicia,Pontevedra,Pontevedra,"Avda. Aeropuerto, 156",t,f
+1519,Galicia,Pontevedra,Pontevedra,"Ronda Asia, 190",f,f
+1520,Galicia,Pontevedra,Vilagarcía de Arousa,"C/ Calvo Sotelo, 101",f,f
+1521,Galicia,Pontevedra,Redondela,"Ronda Real, 191",f,f
+1522,Galicia,Pontevedra,O Porriño,"Paseo Paz, 128",t,f
+1523,Galicia,Lugo,Lugo,"Plaza Santa Ana, 178",t,f
+1524,Galicia,Lugo,Lugo,"C/ Río Turia, 85",f,f
+1525,Galicia,Lugo,Monforte de Lemos,"C/ San Francisco, 145",f,t
+1526,Galicia,Ourense,Ourense,"Ronda Constitución, 157",t,f
+1527,Galicia,Ourense,Ourense,"C/ Poeta Lorca, 189",t,t
+1528,Galicia,Ourense,Ourense,"Plaza Roble, 14",t,f
+1529,Galicia,Ourense,O Barco de Valdeorras,"Bulevar Rey, 5",f,f
+1530,Illes Balears,Illes Balears,Palma,"Bulevar Sagasta, 141",f,f
+1531,Illes Balears,Illes Balears,Palma,"Bulevar Abogado, 45",f,f
+1532,Illes Balears,Illes Balears,Palma,"Plaza Aviación, 93",f,t
+1533,Illes Balears,Illes Balears,Palma,"C/ Maestro Rodrigo, 57",f,f
+1534,Illes Balears,Illes Balears,Palma,"Ronda Río Turia, 80",t,f
+1535,Illes Balears,Illes Balears,Palma,"Paseo Andalucía, 130",t,f
+1536,Illes Balears,Illes Balears,Palma,"C/ Río Segura, 198",f,f
+1537,Illes Balears,Illes Balears,Palma,"C/ Aeropuerto, 168",f,f
+1538,Illes Balears,Illes Balears,Manacor,"C/ Mayor, 79",f,f
+1539,Illes Balears,Illes Balears,Manacor,"C/ Aragón, 35",t,f
+1540,Illes Balears,Illes Balears,Calvià,"Avda. América, 117",t,f
+1541,Illes Balears,Illes Balears,Calvià,"Ronda Cedro, 27",f,f
+1542,Illes Balears,Illes Balears,Inca,"Plaza Andalucía, 121",f,f
+1543,Illes Balears,Illes Balears,Inca,"C/ Río Guadalquivir, 109",f,f
+1544,Illes Balears,Illes Balears,Llucmajor,"Calle Santa María, 164",f,f
+1545,Illes Balears,Illes Balears,Eivissa,"Ronda España, 40",t,f
+1546,Illes Balears,Illes Balears,Eivissa,"C/ Gloria, 107",f,f
+1547,Illes Balears,Illes Balears,Maó,"C/ Doctor Marañón, 126",f,f
+1548,Illes Balears,Illes Balears,Maó,"Calle Galicia, 169",t,f
+1549,Illes Balears,Illes Balears,Felanitx,"Paseo Notario, 136",f,f
+1550,Illes Balears,Illes Balears,Felanitx,"Calle Alfonso XIII, 111",t,t
+1551,Comunidad Foral de Navarra,Navarra,Pamplona,"Calle Almendro, 14",t,f
+1552,Comunidad Foral de Navarra,Navarra,Pamplona,"C/ Maestro Falla, 94",f,t
+1553,Comunidad Foral de Navarra,Navarra,Pamplona,"Plaza Doctor Severo Ochoa, 162",f,t
+1554,Comunidad Foral de Navarra,Navarra,Pamplona,"Avda. Arquitecto Gaudí, 142",t,f
+1555,Comunidad Foral de Navarra,Navarra,Pamplona,"Ronda Antonio Machado, 134",t,f
+1556,Comunidad Foral de Navarra,Navarra,Pamplona,"C/ Doctor Marañón, 39",f,f
+1557,Comunidad Foral de Navarra,Navarra,Pamplona,"Avda. Ramón y Cajal, 80",t,f
+1558,Comunidad Foral de Navarra,Navarra,Tudela,"C/ Mar, 5",f,f
+1559,Comunidad Foral de Navarra,Navarra,Tudela,"C/ Poeta Nicolás Guillén, 47",f,f
+1560,Comunidad Foral de Navarra,Navarra,Tudela,"Calle Periodista, 80",f,f
+1561,Comunidad Foral de Navarra,Navarra,Tudela,"Bulevar Europa, 103",t,f
+1562,Comunidad Foral de Navarra,Navarra,Barañáin,"Plaza Santa Ana, 8",t,t
+1563,Comunidad Foral de Navarra,Navarra,Barañáin,"Bulevar Aviación, 46",t,f
+1564,Comunidad Foral de Navarra,Navarra,Burlada,"Calle América, 97",f,f
+1565,Comunidad Foral de Navarra,Navarra,Huarte,"Plaza San Pedro, 117",f,f
+1566,Comunidad Foral de Navarra,Navarra,Huarte,"Ronda Infanta, 45",f,f
+1567,Comunidad Foral de Navarra,Navarra,Sarriguren,"Paseo Pino, 177",t,f
+1568,Comunidad Foral de Navarra,Navarra,Sarriguren,"C/ Doctor Marañón, 28",f,f
+1569,Comunidad Foral de Navarra,Navarra,Estella-Lizarra,"Bulevar Aviación, 41",f,f
+1570,Comunidad Foral de Navarra,Navarra,Estella-Lizarra,"Plaza Poeta Machado, 55",f,f
+1571,La Rioja,La Rioja,Logroño,"Paseo Aragón, 50",f,t
+1572,La Rioja,La Rioja,Logroño,"C/ Pino, 114",f,f
+1573,La Rioja,La Rioja,Logroño,"Plaza Arquitecto Gaudí, 103",f,t
+1574,La Rioja,La Rioja,Logroño,"C/ Rey, 111",f,f
+1575,La Rioja,La Rioja,Logroño,"Ronda Aviación, 10",f,f
+1576,La Rioja,La Rioja,Logroño,"C/ General Perón, 59",t,f
+1577,La Rioja,La Rioja,Logroño,"C/ Cataluña, 24",f,f
+1578,La Rioja,La Rioja,Logroño,"Avda. Cedro, 47",f,f
+1579,La Rioja,La Rioja,Calahorra,"Ronda Alfonso XIII, 34",f,f
+1580,La Rioja,La Rioja,Calahorra,"Ronda Escultor Benlliure, 81",t,f
+1581,La Rioja,La Rioja,Arnedo,"Paseo Calvo Sotelo, 88",f,f
+1582,La Rioja,La Rioja,Haro,"Ronda Farmacéutico, 171",t,f
+1583,La Rioja,La Rioja,Alfaro,"Avda. Poeta Nicolás Guillén, 30",f,f
+1584,Cantabria,Cantabria,Santander,"C/ Río Turia, 150",f,f
+1585,Cantabria,Cantabria,Santander,"Avda. Independencia, 156",f,t
+1586,Cantabria,Cantabria,Santander,"C/ Industria, 65",f,t
+1587,Cantabria,Cantabria,Santander,"C/ Reina, 69",t,t
+1588,Cantabria,Cantabria,Santander,"Paseo Alfonso XIII, 1",f,f
+1589,Cantabria,Cantabria,Torrelavega,"Calle Príncipe, 73",f,f
+1590,Cantabria,Cantabria,Torrelavega,"Paseo Luna, 78",t,f
+1591,Cantabria,Cantabria,Torrelavega,"Paseo Independencia, 159",f,f
+1592,Cantabria,Cantabria,Torrelavega,"C/ General Perón, 161",f,f
+1593,Cantabria,Cantabria,Castro-Urdiales,"Paseo Reina, 41",f,f
+1594,Cantabria,Cantabria,Castro-Urdiales,"C/ España, 121",t,f
+1595,Cantabria,Cantabria,Camargo,"Avda. Trabajo, 10",t,t
+1596,Cantabria,Cantabria,Camargo,"Bulevar Valencia, 46",f,f
+1597,Cantabria,Cantabria,Laredo,"Calle Paz, 10",f,f

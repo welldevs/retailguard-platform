@@ -1,0 +1,226 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "RAW canônico do gerador OLTP sintético (Python). Caminho canônico e completo = batch (CSV → source/*.csv, 18 tabelas). Um caminho de streaming EXPERIMENTAL (Kafka → MinIO → Snowflake) cobre 16 das 18 tabelas — ver extensions/streaming. Regenerar (batch): python erp/run_simulation.py --period 730d --seed 42 --target csv"
+    loader: dbt-duckdb read_csv / Snowflake COPY INTO (batch CSV ou streaming Parquet)
+    schema: "{{ 'main' if target.type == 'duckdb' else 'RAW' }}"
+    tables:
+      # ── PROXY loaded_at_field note ──────────────────────────────────────────────
+      # The RAW tables have no real ingestion timestamp (no Snowpipe COPY metadata,
+      # no _loaded_at column). We use the business-date VARCHAR column cast to
+      # TIMESTAMP_NTZ as a PROXY for freshness. In production this proxy would be
+      # replaced by either: (a) Snowpipe's COPY_HISTORY load_time, or (b) an
+      # explicit _loaded_at TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP() column added
+      # during COPY INTO. The proxy intentionally fires at least one WARN here
+      # (latest data ~2026-06-05, today 2026-06-10 → ~5 days old) to demonstrate
+      # the check working end-to-end.
+      # ────────────────────────────────────────────────────────────────────────────
+
+      - name: sales
+        # PROXY: order_date (VARCHAR 'YYYY-MM-DD') cast to timestamp_ntz.
+        # warn_after: 3d  → WARNS (data ~5 days old > 3d) — demonstrates the gate.
+        # error_after: 60d → won't ERROR until data is 60+ days stale.
+        # Production replacement: config.loaded_at_field: "_loaded_at" (a TIMESTAMP_NTZ
+        # DEFAULT CURRENT_TIMESTAMP() column populated by COPY INTO or Snowpipe).
+        config:
+          loaded_at_field: "cast(order_date as timestamp_ntz)"
+          freshness:
+            warn_after: {count: 3, period: day}
+            error_after: {count: 60, period: day}
+
+      - name: sale_lines
+        # PROXY: no standalone date column; freshness is inferred through sales.
+        # No freshness block here — covered by the sales parent check.
+
+      - name: customers
+      - name: products
+      - name: stores
+      - name: suppliers
+      - name: purchase_orders
+      - name: purchase_order_lines
+      - name: goods_receipts
+      - name: deliveries
+
+      - name: invoices
+        # PROXY: invoice_date (VARCHAR 'YYYY-MM-DD') cast to timestamp_ntz.
+        # warn_after: 7d  → PASSES (data ~5 days old < 7d).
+        # error_after: 60d → generous threshold; won't ERROR in normal operation.
+        # Production replacement: config.loaded_at_field: "_loaded_at" TIMESTAMP_NTZ.
+        config:
+          loaded_at_field: "cast(invoice_date as timestamp_ntz)"
+          freshness:
+            warn_after: {count: 7, period: day}
+            error_after: {count: 60, period: day}
+
+      - name: supplier_payments
+      - name: product_returns
+      - name: product_waste
+
+      - name: stock_movements
+        # PROXY: movement_date (VARCHAR 'YYYY-MM-DD') cast to timestamp_ntz.
+        # warn_after: 7d  → PASSES (data ~5 days old < 7d).
+        # error_after: 60d → generous threshold; won't ERROR in normal operation.
+        # Production replacement: config.loaded_at_field: "_loaded_at" TIMESTAMP_NTZ.
+        config:
+          loaded_at_field: "cast(movement_date as timestamp_ntz)"
+          freshness:
+            warn_after: {count: 7, period: day}
+            error_after: {count: 60, period: day}
+
+      - name: stockouts
+      - name: stock_snapshots
+      - name: distribution_centers
+
+models:
+  - name: stg_sales
+    description: "Sales order headers — typed, dates cast, channel validated."
+    columns:
+      - name: sale_id
+        tests: [unique, not_null]
+      - name: order_date
+        tests: [not_null]
+      - name: channel
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['tienda', 'ecommerce']
+
+  - name: stg_sale_lines
+    description: "Line items per sale order."
+    columns:
+      - name: sale_id
+        tests: [not_null]
+      - name: product_id
+        tests: [not_null]
+
+  - name: stg_customers
+    description: "Customer master with individual behaviour attributes."
+    columns:
+      - name: customer_id
+        tests: [unique, not_null]
+      - name: segment
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['Bronze', 'Silver', 'Gold', 'Platinum']
+
+  - name: stg_products
+    description: "Product catalogue. Full Mercadona catalogue (~3.7k SKUs) when the scraped resource is present; otherwise a reproducible 500-SKU synthetic fallback."
+    columns:
+      - name: product_id
+        tests: [unique, not_null]
+      - name: iva_type
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['S1', 'S2', 'S4']
+
+  - name: stg_stores
+    columns:
+      - name: store_id
+        tests: [unique, not_null]
+
+  - name: stg_suppliers
+    columns:
+      - name: supplier_id
+        tests: [unique, not_null]
+
+  - name: stg_purchase_orders
+    columns:
+      - name: po_id
+        tests: [unique, not_null]
+      - name: status
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['open', 'pending', 'confirmed', 'received', 'cancelled']
+
+  - name: stg_purchase_order_lines
+    columns:
+      - name: po_id
+        tests: [not_null]
+      - name: product_id
+        tests: [not_null]
+
+  - name: stg_goods_receipts
+    columns:
+      - name: receipt_id
+        tests: [unique, not_null]
+
+  - name: stg_deliveries
+    description: "Ecommerce deliveries only."
+    columns:
+      - name: delivery_id
+        tests: [unique, not_null]
+      - name: delivery_status
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['pending', 'dispatched', 'in_transit', 'delivered', 'failed']
+
+  - name: stg_invoices
+    columns:
+      - name: invoice_id
+        tests: [unique, not_null]
+      - name: payment_status
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['paid', 'pending', 'overdue', 'refunded']
+
+  - name: stg_supplier_payments
+    columns:
+      - name: payment_id
+        tests: [unique, not_null]
+      - name: status
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['pending', 'paid', 'overdue']
+
+  - name: stg_product_returns
+    columns:
+      - name: return_id
+        tests: [unique, not_null]
+
+  - name: stg_product_waste
+    columns:
+      - name: waste_id
+        tests: [unique, not_null]
+      - name: product_id
+        tests: [not_null]
+
+  - name: stg_stock_movements
+    columns:
+      - name: movement_id
+        tests: [unique, not_null]
+      - name: movement_type
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['IN', 'OUT', 'TRANSFER', 'RETURN']
+
+  - name: stg_stockouts
+    columns:
+      - name: stockout_id
+        tests: [unique, not_null]
+
+  - name: stg_stock_snapshots
+    columns:
+      - name: snapshot_date
+        tests: [not_null]
+      - name: product_id
+        tests: [not_null]
+      - name: location_id
+        tests: [not_null]
+      - name: location_type
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['DC', 'STORE']
+
+  - name: stg_distribution_centers
+    columns:
+      - name: dc_id
+        tests: [unique, not_null]

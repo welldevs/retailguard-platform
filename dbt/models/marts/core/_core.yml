@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: dim_date
+    description: "Date dimension — 2025-01-01 to 2026-12-31."
+    columns:
+      - name: date_id
+        tests: [unique, not_null]
+
+  - name: dim_product
+    description: "Product dimension with IVA rate and margin pre-calculated."
+    columns:
+      - name: product_id
+        tests: [unique, not_null]
+
+  - name: dim_store
+    description: "Store dimension enriched with DC name and region."
+    columns:
+      - name: store_id
+        tests: [unique, not_null]
+
+  - name: dim_supplier
+    description: "Supplier dimension."
+    columns:
+      - name: supplier_id
+        tests: [unique, not_null]
+
+  - name: dim_customer
+    description: >
+      Customer dimension with REAL SCD2 history sourced from the scd_customers
+      snapshot. Multiple rows per customer_id are expected (one per version);
+      uniqueness is enforced on dbt_scd_id, and exactly one current row per
+      customer is enforced by a singular test.
+    columns:
+      - name: customer_id
+        tests: [not_null]
+      - name: dbt_scd_id
+        description: "Snapshot surrogate key — unique per versioned row."
+        tests: [unique, not_null]
+
+  - name: fct_sales
+    description: "Sales fact table at sale_line grain (incremental merge)."
+    columns:
+      - name: sale_line_key
+        description: "Surrogate key over (sale_id, line_number); merge unique_key."
+        tests: [unique, not_null]
+      - name: sale_id
+        tests: [not_null]
+      - name: product_id
+        tests: [not_null]
+      - name: date_id
+        tests: [not_null]
+
+  - name: fct_inventory_movements
+    description: "Stock movement fact table (incremental merge). Grain: one row per stock movement (IN/OUT/TRANSFER/RETURN); row count scales with the simulated period and store count."
+    columns:
+      - name: movement_id
+        tests: [unique, not_null]
+      - name: date_id
+        tests: [not_null]

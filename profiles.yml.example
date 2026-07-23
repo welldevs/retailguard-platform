@@ -1,0 +1,43 @@
+# Copy this file to ~/.dbt/profiles.yml and fill in your credentials
+# NEVER commit profiles.yml with real credentials
+retail_analytics:
+  target: dev_raw
+  outputs:
+    # Local development — CSVs are loaded into physical DuckDB tables (main.*) by
+    # scripts/load_raw_layer.py, mirroring Snowflake's COPY INTO → RAW layer.
+    # Browsable in DBeaver. This is the default local target.
+    dev_raw:
+      type: duckdb
+      path: "/tmp/retail_analytics_dev.duckdb"
+      schema: main  # default schema; generate_schema_name → main / main_staging / main_marts
+      threads: 1  # DuckDB has a single write lock — 1 thread avoids race conditions on table rebuilds
+    # CI (GitHub Actions) injects an ephemeral `ci` target that reads CSVs directly
+    # via read_csv_auto — see .github/workflows/ci.yml. No pre-load step needed.
+    snowflake:
+      type: snowflake
+      # Account identifier format: <orgname>-<accountname>  (e.g. abc12345.us-east-1 or myorg-myaccount)
+      # Find it in Snowflake UI → bottom-left menu → Account → copy identifier
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: "{{ env_var('SNOWFLAKE_ROLE', 'ACCOUNTADMIN') }}"
+      warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE', 'COMPUTE_WH') }}"
+      database: "{{ env_var('SNOWFLAKE_DATABASE', 'RETAIL_DB') }}"
+      schema: STAGING  # default schema — generate_schema_name macro overrides per model layer
+      threads: 4
+
+    # SNOWFLAKE_KEYPAIR: same warehouse, but DBT_USER authenticates with an RSA
+    # key pair (JWT) instead of a password — the production standard for service
+    # accounts. Register the public key via Terraform (dbt_user_rsa_public_key);
+    # generate the key with scripts/gen_dbt_keypair.sh. No password is sent.
+    snowflake_keypair:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      user: DBT_USER
+      private_key_path: "{{ env_var('DBT_PRIVATE_KEY_PATH') }}"
+      private_key_passphrase: "{{ env_var('DBT_PRIVATE_KEY_PASSPHRASE', '') }}"
+      role: RETAIL_ENGINEER
+      warehouse: RETAIL_WH_XS
+      database: RETAIL_DB
+      schema: STAGING
+      threads: 4

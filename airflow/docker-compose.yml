@@ -1,0 +1,50 @@
+# Minimal Airflow stack for the RetailGuard batch pipeline.
+# Postgres (metadata) + a single Airflow node running `standalone` with LocalExecutor.
+# Run from the repo root:  docker compose -f airflow/docker-compose.yml up --build
+name: retail-airflow
+
+x-airflow-env: &airflow-env
+  AIRFLOW__CORE__EXECUTOR: LocalExecutor
+  AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+  AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+  AIRFLOW__CORE__DAGS_FOLDER: /opt/airflow/dags
+
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  airflow:
+    build:
+      context: ..                     # repo root, so the Dockerfile can COPY erp/ dbt/ scripts/
+      dockerfile: airflow/Dockerfile
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      <<: *airflow-env
+      # Fixed UI login (change here if you want). Avoids the random standalone password.
+      AIRFLOW_ADMIN_USER: admin
+      AIRFLOW_ADMIN_PASSWORD: admin
+    ports:
+      - "8080:8080"                    # Airflow UI → http://localhost:8080
+    volumes:
+      - ./dags:/opt/airflow/dags       # edit DAGs without rebuilding
+      - airflow_duckdb:/opt/airflow/duckdb
+      - airflow_logs:/opt/airflow/logs
+    command: ["bash", "/opt/airflow/entrypoint-demo.sh"]
+
+volumes:
+  pgdata:
+  airflow_duckdb:
+  airflow_logs:

@@ -1,0 +1,22 @@
+definition_version: 2
+
+# NOTA DE GOVERNANÇA / RBAC:
+# Este app Streamlit deve rodar sob a role RETAIL_DASHBOARD_ROLE. A transferência
+# de ownership do objeto STREAMLIT (e os GRANTs de leitura nas MARTS + masking
+# policies) são aplicados por snowflake/sql/rbac_and_masking.sql, executado pelo
+# Arquiteto durante o deploy. Não embutir credenciais aqui — a conexão usa env
+# vars / a connection 'retail' do Snowflake CLI.
+
+entities:
+  retail_dashboard:
+    type: streamlit
+    identifier:
+      name: RETAIL_DASHBOARD
+      database: RETAIL_DB
+      schema: PUBLIC
+    main_file: streamlit_app.py
+    query_warehouse: COMPUTE_WH
+    title: "RetailGuard — Spain"
+    artifacts:
+      - streamlit_app.py
+      - environment.yml

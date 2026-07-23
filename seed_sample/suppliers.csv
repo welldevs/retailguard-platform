@@ -1,0 +1,21 @@
+supplier_id,name,country,city,lead_time_days,reliability_score,payment_terms_days,contact_email,phone,active,category_specialization,cif,payment_terms,incoterm,currency,iban
+SUP_00001,Leroy & Cie.,Francia,París,9,0.8174,60,ventas@leroy&cie.fr,+47193349856,True,"['panaderia', 'limpieza_hogar', 'infantil']",V30738674,60D,DAP,EUR,ES6629041109652888127816
+SUP_00002,Martin S.A.S.,Francia,París,8,0.9023,60,ventas@martinsas.fr,+36868820204,True,"['carne_pescado', 'limpieza_hogar']",D49273766,60D,DAP,EUR,ES4280567099581482105983
+SUP_00003,Durand S.A.R.L.,Francia,Montpellier,9,0.8718,45,ventas@durandsarl.fr,+34331191390,True,['snacks'],F21759995,45D,DAP,EUR,ES8857113142409439554735
+SUP_00004,Jansen B.V.,Holanda,La Haya,10,0.9406,30,ventas@jansenbv.ho,+44675770529,True,['snacks'],P91106320,30D,DAP,EUR,ES6350704165802168203884
+SUP_00005,Productos Gómez S.A.,España,Bilbao,4,0.9239,30,ventas@productosgómezsa.es,+31810026086,True,['congelados'],G51174642,30D,FCA,EUR,ES5787881421816103851558
+SUP_00006,Productos Atlántica S.A.,España,Zaragoza,5,0.87,60,ventas@productosatlántica.es,+35497478786,True,['snacks'],P17754460,60D,EXW,EUR,ES7940441872393329163132
+SUP_00007,Productos Torres S.A.,España,Zaragoza,3,0.9032,60,ventas@productostorressa.es,+47335809993,True,"['limpieza_hogar', 'infantil', 'conservas']",N97812075,60D,FCA,EUR,ES1021052044500720980391
+SUP_00008,Dubois S.A.R.L.,Francia,París,4,0.8359,60,ventas@duboissarl.fr,+40328306011,True,['conservas'],K54290920,60D,DAP,EUR,ES4556887500703253070920
+SUP_00009,Groupe Bernard S.A.,Francia,Montpellier,9,0.8954,45,ventas@groupebernardsa.fr,+48560027313,True,"['bebidas', 'limpieza_hogar']",U25887782,45D,DAP,EUR,ES3923752462321000681451
+SUP_00010,Comercial Pereira S.A.,Portugal,Setúbal,6,0.7964,30,ventas@comercialpereirasa.po,+33264112119,True,['limpieza_hogar'],K69434872,30D,FCA,EUR,ES7102017064522665822120
+SUP_00011,Dupont S.A.S.,Francia,Montpellier,8,0.8427,60,ventas@dupontsas.fr,+30830448745,True,"['infantil', 'panaderia']",R87129758,60D,CIF,EUR,ES8378240857826540887383
+SUP_00012,Russo & C. S.n.c.,Italia,Palermo,12,0.7506,90,ventas@russo&csnc.it,+46918150683,True,"['congelados', 'snacks', 'conservas']",D63176531,90D,DAP,EUR,ES9384841543771820274125
+SUP_00013,Grupo Atlántica S.L.,España,Barcelona,3,0.8873,45,ventas@grupoatlánticasl.es,+47936043811,True,['carne_pescado'],R47736722,45D,FCA,EUR,ES1880606117932023558128
+SUP_00014,Janssen Groep B.V.,Holanda,Ámsterdam,10,0.9818,60,ventas@janssengroepbv.ho,+37162196678,True,['limpieza_hogar'],S94729300,60D,CIF,EUR,ES8650252302736742395608
+SUP_00015,Productos Martínez S.A.,España,Murcia,3,0.8431,90,ventas@productosmartínezs.es,+47277303722,True,"['bebidas', 'snacks']",R90706003,90D,EXW,EUR,ES5475170166846702716688
+SUP_00016,Sánchez & Asociados S.L.,España,Murcia,5,0.9991,60,ventas@sánchez&asociadoss.es,+44655742829,True,"['higiene_personal', 'congelados']",G42572009,60D,EXW,EUR,ES7477118377730888997606
+SUP_00017,Schneider AG,Alemania,Frankfurt,8,0.9506,30,ventas@schneiderag.al,+32860038427,True,"['saludable_fitness', 'infantil']",N63337150,30D,FCA,EUR,ES6569987231061212540369
+SUP_00018,Dubois S.A.S.,Francia,Toulouse,5,0.8473,45,ventas@duboissas.fr,+36678998028,True,"['higiene_personal', 'carne_pescado']",D27481614,45D,CIF,EUR,ES6429173590693317825024
+SUP_00019,Importaciones Sánchez S.A.,España,Murcia,2,0.8374,90,ventas@importacionessánch.es,+41554814084,True,"['panaderia', 'congelados']",C12668276,90D,EXW,EUR,ES0548449407810808389003
+SUP_00020,Müller GmbH,Alemania,Berlín,6,0.9098,30,ventas@müllergmbh.al,+47581695135,True,['higiene_personal'],A25205846,30D,CIF,EUR,ES4686068134878130346694
