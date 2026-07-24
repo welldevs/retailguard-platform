@@ -412,16 +412,81 @@ CATEGORY_GROUPS: List[str] = [
 _DEFAULT_GROUP = "conservas"
 
 
-def get_group(category_name: str) -> str:
+# ---------------------------------------------------------------------------
+# Taxonomia HIERÁRQUICA (fonte primária de verdade a partir de 2024-07)
+# ---------------------------------------------------------------------------
+# O `category_name` (leaf do Soysuper) é ambíguo ("Normal", "Varios", "Sabores")
+# e cobre mal o catálogo — ~21% dos SKUs caíam no default `conservas`, inflando
+# esse grupo e herdando margem/IVA/shelf-life errados. O `category_path` traz o
+# DEPARTAMENTO real (só ~18 valores, cobertura ~100%). Mapeamos por
+# (departamento, subdepartamento) quando o departamento é misto, senão pelo
+# departamento; o leaf legado abaixo fica só como último fallback (produtos sem
+# path, ex.: catálogo demo sintético).
+
+# Departamento (1º nível do breadcrumb) → grupo
+DEPARTMENT_TO_GROUP: Dict[str, str] = {
+    "Perfumería y Parafarmacia":                "higiene_personal",  # refinado por subdept
+    "Frescos y Charcutería":                    "carne_pescado",     # refinado por subdept
+    "Conservas, Sopas, Aceites y Condimentos":  "conservas",
+    "Droguería":                                "limpieza_hogar",
+    "Congelados":                               "congelados",
+    "Panadería, Pastelería y Repostería":       "panaderia",
+    "Lácteos y Huevos":                         "lacteos",
+    "Bebidas":                                  "bebidas",
+    "Aperitivos":                               "snacks",
+    "Chocolates y Dulces":                      "snacks",
+    "Cereales y Galletas":                      "snacks",            # refinado por subdept
+    "Cafés, Cacaos e Infusiones":               "bebidas",
+    "Bebés y Niños":                            "infantil",
+    "Pasta, Arroz y Legumbres":                 "conservas",
+    "Mascotas":                                 "infantil",          # sem grupo pet → infantil
+    "Bazar y Casa":                             "limpieza_hogar",    # menaje/decoração (não-alimentar)
+    "Dietéticos":                               "saludable_fitness",
+    "Ocio y Cultura":                           _DEFAULT_GROUP,
+}
+
+# (departamento, subdepartamento) → grupo — refina os departamentos mistos
+SUBDEPARTMENT_TO_GROUP: Dict[tuple, str] = {
+    # Perfumería: separa cosmética (maquiagem/rosto/corpo/solar) de higiene
+    ("Perfumería y Parafarmacia", "Maquillaje"):            "cosmetica",
+    ("Perfumería y Parafarmacia", "Cuidado Facial"):        "cosmetica",
+    ("Perfumería y Parafarmacia", "Cuidado Corporal"):      "cosmetica",
+    ("Perfumería y Parafarmacia", "Colonia"):               "cosmetica",
+    ("Perfumería y Parafarmacia", "Productos Solares"):     "cosmetica",
+    ("Perfumería y Parafarmacia", "Cuidado de Pies y Manos"): "cosmetica",
+    ("Perfumería y Parafarmacia", "Lotes Regalo"):          "cosmetica",
+    # Frescos: queso → lácteos; verduras frescas → saudável; resto → carne_pescado
+    ("Frescos y Charcutería", "Queso"):                     "lacteos",
+    ("Frescos y Charcutería", "Verduras, Hortalizas y Legumbres"): "saludable_fitness",
+    # Cereales y Galletas: cereais de despensa → conservas; bolachas → snacks (default do dept)
+    ("Cereales y Galletas", "Cereales"):                    "conservas",
+}
+
+
+def get_group(category_name: str, category_path: str = None) -> str:
     """
-    Retorna o group_id para uma category_name do Soysuper.
+    Retorna o group_id canônico de um produto.
+
+    Precedência (mais específico → mais genérico):
+        1. (departamento, subdepartamento) do ``category_path``
+        2. departamento do ``category_path``
+        3. leaf ``category_name`` no mapa legado (fallback p/ produtos sem path)
+        4. ``'conservas'`` (default)
 
     Args:
-        category_name: Valor exato do campo ``category_name`` no produto.
-
-    Returns:
-        group_id correspondente, ou ``'conservas'`` se não mapeado.
+        category_name: leaf ``category_name`` do Soysuper.
+        category_path: breadcrumb completo ("Dept > Sub > Leaf"); quando ausente,
+                       cai no mapa de leaf legado.
     """
+    if category_path:
+        parts = [p.strip() for p in category_path.split(">") if p.strip()]
+        if parts:
+            dept = parts[0]
+            sub = parts[1] if len(parts) > 1 else ""
+            if (dept, sub) in SUBDEPARTMENT_TO_GROUP:
+                return SUBDEPARTMENT_TO_GROUP[(dept, sub)]
+            if dept in DEPARTMENT_TO_GROUP:
+                return DEPARTMENT_TO_GROUP[dept]
     return CATEGORY_TO_GROUP.get(category_name, _DEFAULT_GROUP)
 
 
@@ -431,7 +496,7 @@ def group_products(products: list) -> dict:
 
     Args:
         products: Lista de dicts de produto. Cada dict precisa ter
-                  ``product_id`` e opcionalmente ``category_name``.
+                  ``product_id`` e opcionalmente ``category_name``/``category_path``.
 
     Returns:
         ``{group_id: [product_id, ...]}`` — todos os 12 grupos presentes,
@@ -440,13 +505,12 @@ def group_products(products: list) -> dict:
     grouped: Dict[str, List[str]] = {g: [] for g in CATEGORY_GROUPS}
 
     for product in products:
-        # Suporta tanto o campo gerado pelo run_simulation ('category')
-        # quanto o campo original do Soysuper ('category_name').
         prod_id = product.get("product_id") or product.get("id")
         if not prod_id:
             continue
         cat = product.get("category_name") or product.get("category") or ""
-        gid = get_group(cat)
+        path = product.get("category_path") or ""
+        gid = get_group(cat, path)
         if gid not in grouped:
             grouped[gid] = []
         grouped[gid].append(prod_id)

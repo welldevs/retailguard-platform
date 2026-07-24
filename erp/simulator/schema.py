@@ -39,74 +39,27 @@ import hashlib
 from datetime import datetime, timedelta, date
 from typing import Dict, List, Optional
 
+from erp.simulator.config import DEFAULT_CONFIG
+from erp.generators.category_map import get_group
+
+# ── Superfícies de ajuste VIVAS (chaveadas por category_group canônico) ───────
+# A partir de 2024-07 margem/shelf-life/IVA são derivadas do category_group do
+# produto (via config), não mais por substring do leaf `category_name` — o que
+# deixava ~83% dos SKUs na margem default e 94% no IVA de 21%. O config passa a
+# ser a única superfície de ajuste.
+_GROUP_MARGIN = DEFAULT_CONFIG["category_margin_rules"]
+_GROUP_SHELF = DEFAULT_CONFIG["shelf_life_days_by_category"]
+_GROUP_IVA = DEFAULT_CONFIG["iva_rate_by_group"]
+
 
 # ---------------------------------------------------------------------------
 # Constantes ERP
 # ---------------------------------------------------------------------------
 
-# IVA espanhol: alíquotas vigentes
-_IVA_RATES: Dict[str, float] = {
-    "general":      0.21,   # artigos de higiene, limpieza, eletrónica, etc.
-    "reducido":     0.10,   # alimentos em geral, restauração, transporte
-    "superreducido": 0.04,  # pão, leite, ovos, frutas, produtos infantis essenciais
-}
-
-# Mapeamento de categoria ERP → alíquota IVA
-_CATEGORY_TAX_MAP: Dict[str, float] = {
-    # Tipo superreducido (4%)
-    "pan":              0.04,
-    "panaderia":        0.04,
-    "infantil":         0.04,
-    "lacteos":          0.04,
-    # Tipo reducido (10%)
-    "alimentos":        0.10,
-    "bebidas":          0.10,
-    "conservas":        0.10,
-    "carne_pescado":    0.10,
-    "congelados":       0.10,
-    "saludable_fitness": 0.10,
-    "snacks":           0.10,
-    # Tipo general (21%)
-    "higiene":          0.21,
-    "higiene_personal": 0.21,
-    "limpieza":         0.21,
-    "limpieza_hogar":   0.21,
-    "electronica":      0.21,
-    "otros":            0.21,
-}
-
-# Vida útil (dias) por TOKEN de categoria perecível (frescos). O catálogo real
-# usa nomes de categoria em espanhol ("Carne", "Pescado y marisco", "Yogures",
-# "Frutas"…), por isso casamos por token contido no nome normalizado. Pega-se a
-# menor vida útil entre os tokens que casam (sinal mais perecível vence).
-# Categorias sem token → não-perecível (shelf_life_days=None, is_perishable=0).
-_SHELF_LIFE_DAYS: Dict[str, int] = {
-    "pan":         2,
-    "panaderia":   2,
-    "bolleria":    3,
-    "pasteleria":  3,
-    "carne":       4,
-    "pollo":       4,
-    "pavo":        4,
-    "pescado":     3,
-    "marisco":     3,
-    "charcuteria": 7,
-    "fiambre":     7,
-    "fruta":       5,
-    "verdura":     5,
-    "hortaliza":   5,
-    "ensalada":    4,
-    "lacteo":      12,
-    "leche":       10,
-    "yogur":       18,
-    "queso":       20,
-    "huevo":       21,
-    "mantequilla": 30,
-    "refrigerad":  7,
-    "fresco":      5,
-    "congelad":    180,
-    "helado":      180,
-}
+# IVA (alíquota), margem e vida útil derivam do category_group via config
+# (_GROUP_IVA / _GROUP_MARGIN / _GROUP_SHELF acima). Os antigos mapas por
+# substring do leaf (_IVA_RATES, _CATEGORY_TAX_MAP, _SHELF_LIFE_DAYS,
+# _CATEGORY_COST_RATIO_RANGES) foram removidos por terem sido substituídos.
 
 # Unidades de medida por categoria
 _CATEGORY_UOM_MAP: Dict[str, str] = {
@@ -143,13 +96,9 @@ _SEGMENT_PAYMENT_DAYS: Dict[str, int] = {
     "Platinum": 30,
 }
 
-# Desconto por segmento (máx %)
-_SEGMENT_DISCOUNT_MAX: Dict[str, float] = {
-    "Bronze":   0.0,
-    "Silver":   0.02,
-    "Gold":     0.04,
-    "Platinum": 0.05,
-}
+# (Descontos são promocionais por LINHA — ver config["promotions"] e engine.run.
+# O modelo Mercadona não tem cartão de fidelidade, logo não há desconto por
+# segmento de cliente.)
 
 # Transportadoras espanholas — perfil de fiabilidade (share, on_time, max_delay_days)
 _CARRIER_PROFILES: Dict[str, Dict] = {
@@ -159,55 +108,6 @@ _CARRIER_PROFILES: Dict[str, Dict] = {
     "Correos Express": {"share": 0.10, "on_time": 0.89, "max_delay_days": 4},
 }
 _CARRIERS: List[str] = list(_CARRIER_PROFILES.keys())
-
-# Margens brutas por categoria: cost_ratio = cost_price / sale_price
-# (token de categoria → intervalo [min, max])
-_CATEGORY_COST_RATIO_RANGES: Dict[str, tuple] = {
-    "bebidas":          (0.88, 0.92),  # 8-12% margem (bebidas = alta rotação, baixa margem)
-    "agua":             (0.86, 0.91),  # 9-14%
-    "cerveza":          (0.85, 0.90),  # 10-15%
-    "vino":             (0.82, 0.88),  # 12-18%
-    "carne":            (0.75, 0.83),  # 17-25%
-    "pescado":          (0.74, 0.82),  # 18-26%
-    "lacteo":           (0.72, 0.80),  # 20-28%
-    "fruta":            (0.70, 0.78),  # 22-30%
-    "verdura":          (0.70, 0.78),  # 22-30%
-    "hortaliz":         (0.70, 0.78),  # 22-30%
-    "pan":              (0.76, 0.83),  # 17-24% (âncora de tráfego)
-    "panaderia":        (0.76, 0.83),  # 17-24%
-    "bolleria":         (0.72, 0.80),  # 20-28%
-    "congelado":        (0.68, 0.76),  # 24-32%
-    "conserva":         (0.62, 0.72),  # 28-38%
-    "enlatado":         (0.62, 0.72),  # 28-38%
-    "snack":            (0.63, 0.72),  # 28-37%
-    "galleta":          (0.64, 0.73),  # 27-36%
-    "chocolate":        (0.62, 0.72),  # 28-38%
-    "limpieza":         (0.58, 0.68),  # 32-42% (limpeza do lar)
-    "detergent":        (0.58, 0.68),  # 32-42%
-    "suavizant":        (0.58, 0.68),  # 32-42%
-    "higiene":          (0.55, 0.62),  # 38-45% (higiene pessoal — maior margem)
-    "cosmetico":        (0.55, 0.62),  # 38-45%
-    "perfum":           (0.52, 0.62),  # 38-48%
-    "desodor":          (0.55, 0.63),  # 37-45%
-    "champu":           (0.55, 0.63),  # 37-45%
-    "bucal":            (0.55, 0.63),  # 37-45% (higiene bucal)
-    "dental":           (0.55, 0.63),  # 37-45%
-    "afeit":            (0.55, 0.63),  # 37-45% (gel/espuma de afeitar)
-    "corporal":         (0.56, 0.63),  # 37-44% (crema corporal, gel de baño)
-    "facial":           (0.54, 0.62),  # 38-46% (gel/crema facial)
-    "intim":            (0.55, 0.63),  # 37-45% (gel íntimo)
-    "depilat":          (0.54, 0.62),  # 38-46% (crema depilatoria)
-    "repelent":         (0.52, 0.62),  # 38-48%
-    "solar":            (0.52, 0.62),  # 38-48% (protector solar)
-    "toallita":         (0.56, 0.64),  # 36-44%
-    "bebe":             (0.65, 0.75),  # 25-35% (infantil)
-    "infantil":         (0.65, 0.75),  # 25-35%
-    "pet":              (0.60, 0.70),  # 30-40% (pet food — margem premium)
-    "mascota":          (0.60, 0.70),  # 30-40%
-    "saludable":        (0.62, 0.72),  # 28-38% (produtos health/fitness)
-    "fitness":          (0.60, 0.70),  # 30-40%
-    "electronica":      (0.72, 0.82),  # 18-28%
-}
 
 # Incoterms habituais em importações europeias
 _INCOTERMS: List[str] = ["EXW", "FCA", "CIF", "DAP"]
@@ -238,31 +138,12 @@ def _normalize_category(category: str) -> str:
     return category.strip().lower().replace(" ", "_").replace("-", "_")
 
 
-def _tax_rate_for_category(category: str) -> float:
-    key = _normalize_category(category)
-    for map_key, rate in _CATEGORY_TAX_MAP.items():
-        if map_key in key or key in map_key:
-            return rate
-    return _IVA_RATES["general"]
-
-
 def _uom_for_category(category: str) -> str:
     key = _normalize_category(category)
     for map_key, uom in _CATEGORY_UOM_MAP.items():
         if map_key in key or key in map_key:
             return uom
     return "UND"
-
-
-def _shelf_life_for_category(category: str):
-    """Vida útil (dias) para categorias perecíveis; None se não-perecível.
-
-    Casa por token contido no nome normalizado; se vários tokens casam, retorna
-    a MENOR vida útil (o sinal mais perecível prevalece).
-    """
-    key = _normalize_category(category)
-    matches = [days for tok, days in _SHELF_LIFE_DAYS.items() if tok in key]
-    return min(matches) if matches else None
 
 
 def _ean13(seed_str: str) -> str:
@@ -353,11 +234,15 @@ def build_products(raw_products: List[Dict]) -> List[Dict]:
         category = product.get("category", "otros")
         rng      = _rng_for(prod_id)
 
-        # Alíquota IVA (necessária para derivar o preço líquido)
-        tax_rate = _tax_rate_for_category(category)
+        # category_group canônico — chave única para IVA/margem/shelf-life e
+        # rollup dos marts (deriva de category_path; fallback de leaf).
+        category_group = get_group(category, product.get("category_path"))
+
+        # Alíquota IVA por grupo (config vivo). Fallback: reducido 10%.
+        tax_rate = _GROUP_IVA.get(category_group, _GROUP_IVA["default"])
 
         # Preço de prateleira (BRUTO, com IVA) — é o que o cliente paga e o que
-        # o scraper coleta. Mantido em `price`.
+        # o catálogo base traz. Mantido em `price`.
         raw_price = product.get("price", 0)
         try:
             gross_price = float(str(raw_price).replace(",", "."))
@@ -370,15 +255,10 @@ def build_products(raw_products: List[Dict]) -> List[Dict]:
         # receita (a receita reconhecida não inclui o imposto repassado).
         sale_price = round(gross_price / (1.0 + tax_rate), 4)
 
-        # Custo de compra por categoria: cada grupo tem uma faixa de cost_ratio
-        # (cost/sale) diferente, gerando margens reais por categoria.
-        cat_key = _normalize_category(category)
-        cost_ratio_range = (0.65, 0.78)  # default (22-35% margem)
-        for token, ratio_range in _CATEGORY_COST_RATIO_RANGES.items():
-            if token in cat_key:
-                cost_ratio_range = ratio_range
-                break
-        cost_factor = rng.uniform(*cost_ratio_range)
+        # Custo de compra por category_group (config vivo): cada grupo tem uma
+        # faixa de cost_ratio (cost/sale) diferente → margens reais por categoria.
+        margin_rule = _GROUP_MARGIN.get(category_group, _GROUP_MARGIN["default"])
+        cost_factor = rng.uniform(margin_rule["cost_ratio_min"], margin_rule["cost_ratio_max"])
         cost_price  = round(sale_price * cost_factor, 4)
 
         # Unidade de medida
@@ -403,11 +283,13 @@ def build_products(raw_products: List[Dict]) -> List[Dict]:
         # Data de ativação
         active_since = _random_date_between(2018, 2023, rng)
 
-        # Perecibilidade (frescos) — habilita merma/caducidad no engine
-        shelf_life = _shelf_life_for_category(category)
+        # Perecibilidade (frescos) por grupo — habilita merma/caducidad no engine.
+        # Grupos ausentes do mapa = não-perecíveis.
+        shelf_life = _GROUP_SHELF.get(category_group)
 
         products.append({
             **product,
+            "category_group":   category_group,
             "barcode":          barcode,
             "sale_price":       sale_price,
             "cost_price":       cost_price,
@@ -695,12 +577,12 @@ def build_sale_order_lines(
         tax_rate = prod.get("tax_rate", 0.10)
         unit_price_net = round(unit_price_gross / (1.0 + tax_rate), 4)
 
-        # SEM desconto sintético por linha: a receita líquida da linha é
-        # qty_delivered × preço líquido, idêntica à soma usada no header
-        # (engine.order_total_net). Isso reconcilia GMV header↔lines (antes um
-        # desconto aleatório independente divergia das duas fontes).
-        discount_pct = 0.0
-        line_total_net = round(qty_delivered * unit_price_net, 2)
+        # Desconto de promoção definido no ENGINE (ver engine.run, bloco de
+        # promoções). A MESMA fórmula por-linha é usada na acumulação do header
+        # (engine.order_total_net) → header.subtotal_net == soma(line_total_net),
+        # reconciliação GMV header↔lines exata.
+        discount_pct = item.get("discount_pct", 0.0)
+        line_total_net = round(qty_delivered * unit_price_net * (1.0 - discount_pct), 2)
 
         lines.append({
             "sale_id":           sale_id,

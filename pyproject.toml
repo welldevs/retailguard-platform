@@ -10,8 +10,6 @@ ignore = ["E501"]
 # Entrypoint inserts the project root into sys.path before importing local
 # packages, so module-level imports legitimately follow that statement.
 "erp/run_simulation.py" = ["E402"]
-# Mercadona scraper utilities add their own dir to sys.path before importing.
-"erp/resources/mercadona/*" = ["E402"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

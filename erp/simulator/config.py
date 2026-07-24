@@ -11,8 +11,11 @@ from typing import Dict, Any
 
 DEFAULT_CONFIG: Dict[str, Any] = {
     # --- Janela temporal ---
+    # Janela canônica de 2 anos: cobre as datas de TODOS os market_shocks (alguns
+    # em 2025) e dá mais história ao SCD2. `make simulate` já usa --period 730d;
+    # este default alinha o run "nu" (sem args) ao caminho canônico.
     "start_date": "2024-01-01",
-    "end_date": "2024-12-31",
+    "end_date": "2025-12-31",
 
     # --- Dimensões ---
     "num_customers": 1000,
@@ -149,6 +152,7 @@ DEFAULT_CONFIG: Dict[str, Any] = {
         "Comunidad Foral de Navarra":    "DC_ZGZ",
         "La Rioja":                      "DC_ZGZ",
         "País Vasco":                    "DC_ZGZ",
+        "Euskadi":                       "DC_ZGZ",   # forma basca (CSV de lojas real)
         "Cantabria":                     "DC_ZGZ",
         "Asturias":                      "DC_ZGZ",
         "Principado de Asturias":        "DC_ZGZ",
@@ -210,9 +214,10 @@ DEFAULT_CONFIG: Dict[str, Any] = {
     # ── Perecedero: vida útil (dias) por grupo de categoria ───────────────
     # Frescos têm shelf life curta → geram caducidad/merma. Categorias não
     # listadas são tratadas como não-perecíveis (sem merma por validade).
+    # Chaveado por category_group canônico (ver erp/generators/category_map.py).
+    # Grupos ausentes = não-perecíveis (sem merma por validade).
     "shelf_life_days_by_category": {
         "panaderia":     2,
-        "pan":           2,
         "carne_pescado": 4,
         "lacteos":       12,
         "congelados":    180,
@@ -228,6 +233,18 @@ DEFAULT_CONFIG: Dict[str, Any] = {
     "waste_line_probability": 0.015,
     "waste_qty_weights": {1: 0.60, 2: 0.28, 3: 0.12},
 
+    # ── Promoções (ofertas por linha de produto) ──────────────────────────────
+    # Modelo Mercadona: preço baixo diário + "ofertas" pontuais em SKUs — sem
+    # cartão de fidelidade. Cada linha tem `line_promo_probability` de estar em
+    # oferta; o desconto é sorteado de `discount_pct_weights`. Aplicado no engine
+    # sobre o preço de tabela; o header (subtotal_net) e as linhas (line_total_net)
+    # usam a MESMA base com desconto → reconciliação GMV preservada.
+    # Efeito emergente: item em oferta enche mais a cesta até o ticket alvo (lift).
+    "promotions": {
+        "line_promo_probability": 0.18,
+        "discount_pct_weights": {0.10: 0.35, 0.15: 0.30, 0.20: 0.20, 0.25: 0.10, 0.30: 0.05},
+    },
+
     # ── Transportadoras — perfil de fiabilidade ──────────────────────────────
     # share: quota de mercado (proporcional, não precisa somar 1.0 exactamente)
     # on_time: probabilidade de entrega no prazo prometido
@@ -242,17 +259,44 @@ DEFAULT_CONFIG: Dict[str, Any] = {
     # ── Margens brutas por categoria de produto ───────────────────────────────
     # cost_ratio = cost_price / sale_price; margem = 1 - cost_ratio
     # Gera distribuições diferenciadas no mart_margem_por_categoria
+    # Chaveado pelos 12 category_group canônicos + default. Esta é a superfície
+    # de ajuste REAL da margem — consumida por schema.build_products via
+    # category_group (não mais por substring do leaf).
     "category_margin_rules": {
-        "bebidas":          {"cost_ratio_min": 0.88, "cost_ratio_max": 0.92},  # 8-12% margem
-        "carne_pescado":    {"cost_ratio_min": 0.74, "cost_ratio_max": 0.83},  # 17-26%
-        "lacteos":          {"cost_ratio_min": 0.72, "cost_ratio_max": 0.80},  # 20-28%
-        "frutas_verduras":  {"cost_ratio_min": 0.70, "cost_ratio_max": 0.78},  # 22-30%
-        "panaderia":        {"cost_ratio_min": 0.76, "cost_ratio_max": 0.83},  # 17-24%
-        "congelados":       {"cost_ratio_min": 0.68, "cost_ratio_max": 0.76},  # 24-32%
-        "conservas":        {"cost_ratio_min": 0.62, "cost_ratio_max": 0.72},  # 28-38%
-        "limpieza_hogar":   {"cost_ratio_min": 0.58, "cost_ratio_max": 0.68},  # 32-42%
-        "higiene_personal": {"cost_ratio_min": 0.55, "cost_ratio_max": 0.62},  # 38-45%
-        "default":          {"cost_ratio_min": 0.64, "cost_ratio_max": 0.76},  # 24-36%
+        "bebidas":           {"cost_ratio_min": 0.88, "cost_ratio_max": 0.92},  # 8-12% margem
+        "carne_pescado":     {"cost_ratio_min": 0.74, "cost_ratio_max": 0.83},  # 17-26%
+        "lacteos":           {"cost_ratio_min": 0.72, "cost_ratio_max": 0.80},  # 20-28%
+        "panaderia":         {"cost_ratio_min": 0.76, "cost_ratio_max": 0.83},  # 17-24%
+        "congelados":        {"cost_ratio_min": 0.68, "cost_ratio_max": 0.76},  # 24-32%
+        "conservas":         {"cost_ratio_min": 0.62, "cost_ratio_max": 0.72},  # 28-38%
+        "snacks":            {"cost_ratio_min": 0.63, "cost_ratio_max": 0.72},  # 28-37%
+        "infantil":          {"cost_ratio_min": 0.65, "cost_ratio_max": 0.75},  # 25-35%
+        "saludable_fitness": {"cost_ratio_min": 0.60, "cost_ratio_max": 0.72},  # 28-40%
+        "limpieza_hogar":    {"cost_ratio_min": 0.58, "cost_ratio_max": 0.68},  # 32-42%
+        "higiene_personal":  {"cost_ratio_min": 0.55, "cost_ratio_max": 0.62},  # 38-45%
+        "cosmetica":         {"cost_ratio_min": 0.52, "cost_ratio_max": 0.62},  # 38-48% (maior margem)
+        "default":           {"cost_ratio_min": 0.64, "cost_ratio_max": 0.76},  # 24-36%
+    },
+
+    # ── IVA por category_group (aproximação da alíquota dominante do grupo) ────
+    # Espanha: 4% superreducido (leite/queijo/ovos/pão comum), 10% reducido
+    # (maioria dos alimentos), 21% general (não-alimentar, refrigerantes, álcool).
+    # Grupos misturam alíquotas na realidade; usa-se a dominante e documenta-se.
+    # Consumido por schema.build_products; corrige o antigo default (94% em 21%).
+    "iva_rate_by_group": {
+        "lacteos":           0.04,  # leche, queso, huevos, yogur (superreducido)
+        "panaderia":         0.04,  # pan común (bollería seria 10%)
+        "carne_pescado":     0.10,
+        "conservas":         0.10,
+        "congelados":        0.10,
+        "snacks":            0.10,
+        "saludable_fitness": 0.10,
+        "infantil":          0.10,  # comida de bebê/mascota
+        "bebidas":           0.21,  # refrescos/álcool dominantes (água seria 10%)
+        "higiene_personal":  0.21,
+        "cosmetica":         0.21,
+        "limpieza_hogar":    0.21,
+        "default":           0.10,
     },
 
     # ── Pressão sazonal sobre o abastecimento ─────────────────────────────────

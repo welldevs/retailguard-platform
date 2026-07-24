@@ -23,6 +23,7 @@ Classes:
 """
 
 import functools
+import hashlib
 import random
 from collections import defaultdict
 from datetime import datetime, timedelta, date
@@ -36,6 +37,17 @@ from erp.simulator.schema import (
 )
 from erp.generators.profiles import CUSTOMER_PROFILES
 from erp.generators.category_map import group_products
+
+
+def _stable_hash(text: str) -> int:
+    """Hash inteiro determinístico e ESTÁVEL entre processos.
+
+    O ``hash()`` embutido de strings é salgado por processo (PYTHONHASHSEED),
+    quebrando a reprodutibilidade byte-a-byte que o simulador promete com
+    ``--seed``. Usamos md5 para garantir o mesmo offset de fase por cliente em
+    qualquer execução, independentemente do ambiente.
+    """
+    return int(hashlib.md5(text.encode("utf-8")).hexdigest(), 16)
 
 
 # ---------------------------------------------------------------------------
@@ -237,7 +249,7 @@ def _maybe_switch_regime(
     """
     check_interval = cfg.get("behavior_switch_check_days", 90)
     # Cada cliente tem um offset próprio para não avaliarem todos no mesmo dia
-    cust_phase = hash(customer["customer_id"]) % check_interval
+    cust_phase = _stable_hash(customer["customer_id"]) % check_interval
     if (day_offset + cust_phase) % check_interval != 0:
         return customer.get("ticket_trend", "stable")
 
@@ -629,6 +641,13 @@ class SimulationEngine:
         waste_qty_keys  = list(_waste_weights.keys())
         waste_qty_wts   = list(_waste_weights.values())
 
+        # Parâmetros de promoção (ofertas por linha) — ver config["promotions"]
+        _promo          = cfg.get("promotions", {})
+        _promo_prob     = _promo.get("line_promo_probability", 0.0)
+        _promo_weights  = _promo.get("discount_pct_weights", {})
+        _promo_keys     = list(_promo_weights.keys())
+        _promo_wts      = list(_promo_weights.values())
+
         # Pré-computar choques ativos por data para O(1) lookup no loop interno.
         # active_shocks_by_date[date_str] = lista de shocks ativos naquele dia.
         # Elimina o loop O(n_shocks) × 10k clientes × 730 dias.
@@ -646,7 +665,7 @@ class SimulationEngine:
         _stockout_decay     = cfg.get("stockout_memory_decay", 0.985)
         _pen_per_hit        = cfg.get("stockout_penalty_per_hit", 0.025)
         _max_pen            = cfg.get("max_stockout_penalty", 0.35)
-        _cust_phases        = {c["customer_id"]: hash(c["customer_id"]) % _switch_interval
+        _cust_phases        = {c["customer_id"]: _stable_hash(c["customer_id"]) % _switch_interval
                                for c in self.customers}
 
         # ----------------------------------------------------------------
@@ -1087,18 +1106,29 @@ class SimulationEngine:
                     )
 
                     tax_rate   = product.get("tax_rate", 0.10)
-                    line_total = round(qty_delivered * unit_price, 2)
+                    # Promoção: com prob line_promo_probability a linha entra em
+                    # oferta com desconto sorteado. Aplicado sobre o preço de
+                    # tabela; o líquido acumulado no header usa a MESMA fórmula
+                    # por-linha do builder (schema.build_sale_order_lines) →
+                    # header.subtotal_net == soma(line_total_net), exato.
+                    discount_pct = 0.0
+                    if _promo_keys and rng.random() < _promo_prob:
+                        discount_pct = rng.choices(_promo_keys, weights=_promo_wts, k=1)[0]
+                    unit_price_net = round(unit_price / (1.0 + tax_rate), 4)
+                    line_total_net = round(qty_delivered * unit_price_net * (1.0 - discount_pct), 2)
+                    line_total     = round(qty_delivered * unit_price * (1.0 - discount_pct), 2)
                     order_lines.append({
                         "product_id":         prod_id,
                         "quantity":           qty_delivered,   # entregue (= saída de estoque)
                         "quantity_ordered":   qty_requested,   # pedido original do cliente
                         "quantity_delivered": qty_delivered,
-                        "unit_price":         unit_price,
-                        "line_total":         line_total,
+                        "unit_price":         unit_price,       # preço de TABELA (bruto, s/ desconto)
+                        "discount_pct":       discount_pct,
+                        "line_total":         line_total,       # bruto COM desconto aplicado
                         "tax_rate":           tax_rate,
                     })
                     order_total     += line_total
-                    order_total_net += line_total / (1.0 + tax_rate)
+                    order_total_net += line_total_net
 
                     # ---- Merma / caducidad (apenas perecíveis) ----
                     # Ao tocar um item perecível, há pequena chance de descartar
@@ -1198,6 +1228,7 @@ class SimulationEngine:
                         "quantity_ordered":   line["quantity_ordered"],
                         "quantity_delivered": line["quantity_delivered"],
                         "unit_price":         line["unit_price"],
+                        "discount_pct":       line["discount_pct"],
                         "line_total":         line["line_total"],
                         "tax_rate":           line["tax_rate"],
                     })
@@ -1457,7 +1488,9 @@ class SimulationEngine:
             return
 
         product  = self.product_index.get(product_id, {})
-        category = product.get("category", "otros")
+        # category_specialization dos fornecedores é lista de category_group
+        # canônico (ver suppliers.py); casar pelo grupo do produto, não pelo leaf.
+        category = product.get("category_group") or product.get("category", "otros")
 
         # Tentar fornecedor especializado na categoria
         specialized = [

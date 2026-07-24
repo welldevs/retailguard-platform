@@ -106,6 +106,7 @@ CREATE TABLE IF NOT EXISTS RETAIL_DB.RAW.PRODUCTS (
   brand            VARCHAR(100),
   category         VARCHAR(100),
   category_path    VARCHAR(300),
+  category_group   VARCHAR(30),      -- grupo canônico (12); dirige IVA/margem/shelf-life e rollup
   price            NUMBER(10,2),
   unit             VARCHAR(200),
   image_url        VARCHAR(500),
@@ -122,7 +123,11 @@ CREATE TABLE IF NOT EXISTS RETAIL_DB.RAW.PRODUCTS (
   is_perishable    NUMBER(1),       -- 1 = perecível (gera merma/caducidad)
   PRIMARY KEY (product_id)
 )
-COMMENT = '3,727 real Mercadona SKUs with pricing, tax and perishability.';
+COMMENT = '3,722 real Mercadona SKUs with pricing, tax and perishability.';
+
+-- Migração idempotente: adiciona category_group em ambientes RAW já provisionados
+-- (o CREATE TABLE IF NOT EXISTS acima não altera tabela existente).
+ALTER TABLE IF EXISTS RETAIL_DB.RAW.PRODUCTS ADD COLUMN IF NOT EXISTS category_group VARCHAR(30);
 
 CREATE TABLE IF NOT EXISTS RETAIL_DB.RAW.CUSTOMERS (
   customer_id          VARCHAR(30)   NOT NULL,

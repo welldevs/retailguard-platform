@@ -12,6 +12,24 @@ models:
     columns:
       - name: product_id
         tests: [unique, not_null]
+      - name: category_group
+        description: "Grupo canônico (12) que dirige IVA/margem/shelf-life e rollup de marts."
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - conservas
+                - carne_pescado
+                - lacteos
+                - snacks
+                - higiene_personal
+                - limpieza_hogar
+                - congelados
+                - panaderia
+                - bebidas
+                - infantil
+                - saludable_fitness
+                - cosmetica
 
   - name: dim_store
     description: "Store dimension enriched with DC name and region."

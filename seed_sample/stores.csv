@@ -1,11 +1,13 @@
 store_id,name,postal_code,municipality,province,ccaa,dc_id,opening_date,sqm,latitude,longitude,active
-ST_00130,"Mercadona Cartagena - C/ Real, 12",30200,Cartagena,Murcia,Región de Murcia,DC_VLC,2022-08-02,1205,,,True
-ST_00277,"Mercadona Alicante - Plaza Río Segura, 147",03001,Alicante,Alicante,Comunitat Valenciana,DC_VLC,2010-04-02,1965,,,True
-ST_00359,"Mercadona Castellón de la Plana - C/ Duque, 166",03002,Castellón de la Plana,Castellón,Comunitat Valenciana,DC_VLC,2018-07-27,2312,,,True
-ST_00374,"Mercadona Vila-real - C/ Príncipe, 55",46100,Vila-real,Castellón,Comunitat Valenciana,DC_VLC,2017-05-02,3324,,,True
-ST_00952,"Mercadona Barcelona - C/ Príncipe, 55",08030,Barcelona,Barcelona,Cataluña,DC_BCN,2013-05-12,2179,,,True
-ST_00981,"Mercadona Badalona - C/ Farmacéutico, 40",08500,Badalona,Barcelona,Cataluña,DC_BCN,2014-02-26,2179,,,True
-ST_01294,"Mercadona Santa Cruz de Tenerife - Bulevar Poeta Lorca, 9",38005,Santa Cruz de Tenerife,Santa Cruz de Tenerife,Canarias,DC_SEV,2021-08-13,1997,,,True
-ST_01403,"Mercadona Zaragoza - C/ Real, 139",50002,Zaragoza,Zaragoza,Aragón,DC_ZGZ,2017-12-16,2058,,,True
-ST_01425,"Mercadona Cuarte de Huerva - Ronda Reina, 196",50300,Cuarte de Huerva,Zaragoza,Aragón,DC_ZGZ,2014-02-24,1234,,,True
-ST_01467,"Mercadona Olivenza - C/ General Perón, 169",06001,Olivenza,Badajoz,Extremadura,DC_MAD,2011-07-20,984,,,True
+ST_00076,"Mercadona Algeciras - C/ Misioneras Concepcionistas, 1",11201,Algeciras,Cádiz,Andalucía,DC_SEV,2014-04-02,1693,37.25248,-4.95194,True
+ST_00130,"Mercadona Cartagena - C/ Real, 12",30200,Cartagena,Murcia,Región de Murcia,DC_VLC,2016-09-16,1143,38.19263,-1.37712,True
+ST_00277,"Mercadona Alicante - Plaza Río Segura, 147",03001,Alicante,Alicante,Comunitat Valenciana,DC_VLC,2015-01-28,1993,39.17958,-0.85558,True
+ST_00359,"Mercadona Castellón de la Plana - C/ Duque, 166",03002,Castellón de la Plana,Castellón,Comunitat Valenciana,DC_VLC,2016-12-15,1991,39.35123,-1.00055,True
+ST_00374,"Mercadona Vila-real - C/ Príncipe, 55",46100,Vila-real,Castellón,Comunitat Valenciana,DC_VLC,2021-08-12,3063,39.29338,-1.08391,True
+ST_00938,"Mercadona Barcelona - Ronda Santa Ana, 25",08010,Barcelona,Barcelona,Cataluña,DC_BCN,2016-02-14,3336,41.63638,1.45697,True
+ST_00952,"Mercadona Barcelona - C/ Príncipe, 55",08030,Barcelona,Barcelona,Cataluña,DC_BCN,2011-06-22,2684,41.55673,1.77413,True
+ST_00981,"Mercadona Badalona - C/ Farmacéutico, 40",08500,Badalona,Barcelona,Cataluña,DC_BCN,2012-12-15,2101,41.78145,1.92929,True
+ST_01294,"Mercadona Santa Cruz de Tenerife - Bulevar Poeta Lorca, 9",38005,Santa Cruz de Tenerife,Santa Cruz de Tenerife,Canarias,DC_SEV,2019-07-09,1406,28.43695,-16.57503,True
+ST_01403,"Mercadona Zaragoza - C/ Real, 139",50002,Zaragoza,Zaragoza,Aragón,DC_ZGZ,2018-12-22,1570,41.31422,-0.81394,True
+ST_01425,"Mercadona Cuarte de Huerva - Ronda Reina, 196",50300,Cuarte de Huerva,Zaragoza,Aragón,DC_ZGZ,2022-08-02,929,41.25379,-0.67719,True
+ST_01467,"Mercadona Olivenza - C/ General Perón, 169",06001,Olivenza,Badajoz,Extremadura,DC_MAD,2015-06-13,1380,38.82591,-6.42725,True

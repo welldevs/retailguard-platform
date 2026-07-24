@@ -27,7 +27,9 @@ joined as (
         d.year_month,
         d.year,
         d.month,
-        p.category                                                              as product_category,
+        -- Rollup por category_group canônico (~12 grupos), não pelo leaf
+        -- fragmentado (~500 valores). Alias mantido p/ estabilidade do contrato.
+        p.category_group                                                        as product_category,
         p.iva_type,
         s.line_total_net                                                        as revenue,
         -- custo estimado da linha = unit_price_net * qty * (cost_price / sale_price)

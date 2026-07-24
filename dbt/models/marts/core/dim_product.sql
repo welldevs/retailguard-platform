@@ -16,6 +16,7 @@ select
     brand,
     category,
     category_path,
+    category_group,
     unit,
     unit_of_measure,
     iva_type,

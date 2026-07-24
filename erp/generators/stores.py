@@ -13,6 +13,8 @@ import csv
 import random
 import unicodedata
 
+from erp.simulator.config import DEFAULT_CONFIG
+
 
 REAL_STORES_CSV = (
     Path(__file__).resolve().parents[1]
@@ -23,51 +25,54 @@ REAL_STORES_CSV = (
 
 
 # ---------------------------------------------------------------------------
-# Mapeamento CCAA → dc_id (Centro de Distribuição)
-# Cobre todos os valores reais de ccaa presentes em geo_spain.py
+# Mapeamento CCAA → dc_id (Centro de Distribuição) — FONTE ÚNICA no config.
+# Antes havia um mapa duplicado aqui e em config.py (risco de divergência entre
+# o dc_id da loja e a rota de e-commerce do engine). Agora ambos leem o mesmo
+# dicionário canônico de DEFAULT_CONFIG["region_to_dc"].
 # ---------------------------------------------------------------------------
 
-REGION_TO_DC: Dict[str, str] = {
-    # Madrid e entorno
-    "Madrid":                        "DC_MAD",
-    "Comunidad de Madrid":           "DC_MAD",
-    "Castilla-La Mancha":            "DC_MAD",
-    "Castilla y León":               "DC_MAD",
-    "Extremadura":                   "DC_MAD",
-    # Cataluña
-    "Cataluña":                      "DC_BCN",
-    # Zaragoza e norte/noroeste
-    "Aragón":                        "DC_ZGZ",
-    "Navarra":                       "DC_ZGZ",
-    "Comunidad Foral de Navarra":    "DC_ZGZ",
-    "La Rioja":                      "DC_ZGZ",
-    "Euskadi":                       "DC_ZGZ",
-    "País Vasco":                    "DC_ZGZ",
-    "Cantabria":                     "DC_ZGZ",
-    "Asturias":                      "DC_ZGZ",
-    "Principado de Asturias":        "DC_ZGZ",
-    "Galicia":                       "DC_ZGZ",
-    # Valencia
-    "Comunitat Valenciana":          "DC_VLC",
-    "Comunidad Valenciana":          "DC_VLC",   # alias alternativo
-    "Murcia":                        "DC_VLC",
-    "Región de Murcia":              "DC_VLC",
-    "Illes Balears":                 "DC_VLC",
-    "Islas Baleares":                "DC_VLC",
-    # Sevilla
-    "Andalucía":                     "DC_SEV",
-    "Canarias":                      "DC_SEV",
-    "Ceuta":                         "DC_SEV",
-    "Ciudad Autónoma de Ceuta":      "DC_SEV",
-    "Melilla":                       "DC_SEV",
-    "Ciudad Autónoma de Melilla":    "DC_SEV",
-}
+REGION_TO_DC: Dict[str, str] = DEFAULT_CONFIG["region_to_dc"]
 
 CCAA_ALIASES: Dict[str, str] = {
     "Comunidad Valenciana": "Comunitat Valenciana",
     "Euskadi": "País Vasco",
     "Baleares": "Illes Balears",
 }
+
+# Centroides aproximados (lat, lon) por CCAA canônico — para geocodificar lojas.
+# Não são coordenadas exatas do endereço (o CSV real não as traz); dão dispersão
+# geográfica realista para mapas. Jitter determinístico por loja é aplicado sobre
+# o centroide em _geocode().
+CCAA_CENTROIDS: Dict[str, Tuple[float, float]] = {
+    "Comunidad de Madrid":        (40.42, -3.70),
+    "Cataluña":                   (41.60,  1.60),
+    "Andalucía":                  (37.40, -4.80),
+    "Comunitat Valenciana":       (39.48, -0.75),
+    "País Vasco":                 (43.05, -2.62),
+    "Castilla y León":            (41.65, -4.72),
+    "Galicia":                    (42.76, -7.98),
+    "Castilla-La Mancha":         (39.50, -3.00),
+    "Canarias":                   (28.30, -16.50),
+    "Región de Murcia":           (37.99, -1.13),
+    "Aragón":                     (41.60, -0.90),
+    "Extremadura":                (39.20, -6.15),
+    "Illes Balears":              (39.57,  2.92),
+    "Principado de Asturias":     (43.30, -5.99),
+    "Comunidad Foral de Navarra": (42.70, -1.65),
+    "Cantabria":                  (43.20, -3.99),
+    "La Rioja":                   (42.29, -2.54),
+    "Ceuta":                      (35.89, -5.32),
+    "Melilla":                    (35.29, -2.94),
+}
+_DEFAULT_CENTROID = (40.42, -3.70)  # Madrid
+
+
+def _geocode(ccaa: str, rng: random.Random) -> Tuple[float, float]:
+    """Coordenada aproximada = centroide da CCAA + jitter determinístico (±~0.4°)."""
+    base_lat, base_lon = CCAA_CENTROIDS.get(ccaa, _DEFAULT_CENTROID)
+    lat = round(base_lat + rng.uniform(-0.4, 0.4), 5)
+    lon = round(base_lon + rng.uniform(-0.4, 0.4), 5)
+    return lat, lon
 
 
 def _normalize_key(value: str) -> str:
@@ -182,18 +187,22 @@ def _generate_real_stores(
         dc_id = REGION_TO_DC.get(ccaa) or REGION_TO_DC.get(row.get("region", ""), "DC_MAD")
         name = f"Mercadona {city} - {address}".strip(" -")
 
+        store_ccaa = ccaa or location.get("ccaa", "")
+        opening = _opening_date(rng)
+        sqm_val = _store_size(row, location, rng)
+        lat, lon = _geocode(store_ccaa, rng)
         stores.append({
             "store_id": f"ST_{original_id:05d}",
             "name": name[:100],
             "postal_code": location.get("postal_code", ""),
             "municipality": city or location.get("municipality", ""),
             "province": province or location.get("province", ""),
-            "ccaa": ccaa or location.get("ccaa", ""),
+            "ccaa": store_ccaa,
             "dc_id": dc_id,
-            "opening_date": _opening_date(rng),
-            "sqm": _store_size(row, location, rng),
-            "latitude": None,
-            "longitude": None,
+            "opening_date": opening,
+            "sqm": sqm_val,
+            "latitude": lat,
+            "longitude": lon,
             "active": True,
         })
 
@@ -258,6 +267,7 @@ def generate_stores(
         store_id = f"ST_{i:05d}"
         municipality = pc.get("municipality", "")
         name = f"Mercadona {municipality}"
+        lat, lon = _geocode(_canonical_ccaa(ccaa), rng)
 
         stores.append({
             "store_id": store_id,
@@ -269,8 +279,8 @@ def generate_stores(
             "dc_id": dc_id,
             "opening_date": opening_date,
             "sqm": sqm,
-            "latitude": None,    # nullable no DDL
-            "longitude": None,
+            "latitude": lat,
+            "longitude": lon,
             "active": True,
         })
 

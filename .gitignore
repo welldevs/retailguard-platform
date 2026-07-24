@@ -52,9 +52,11 @@ docs/security_remediation.md
 source/
 # seed_sample/
 
-# Mercadona resource data (large scraped files, regenerate with scraper.py)
+# Mercadona resource data — CSVs base versionados (catálogo de produtos e lojas);
+# quaisquer outros .csv/.json na pasta ficam locais.
 erp/resources/mercadona/*.csv
 !erp/resources/mercadona/stores_mercadona.csv
+!erp/resources/mercadona/products_catalog.csv
 erp/resources/mercadona/*.json
 
 # Logs

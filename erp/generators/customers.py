@@ -229,15 +229,29 @@ def generate_customers(
     reference_year = reference_date.year
     seen_ids: set = set()  # garante customer_id único e determinístico
 
-    # Índices de lookup para atribuir nearest_store_id por CEP → província → CCAA
+    # Índices de lookup para atribuir nearest_store_id por CEP → província → CCAA.
+    # A escolha dentro do grupo é PONDERADA por sqm: lojas maiores têm catchment
+    # maior (mais clientes atribuídos) — dá sentido real ao volume por loja no
+    # mart_store_day. A capacidade de estoque já escala com sqm (inventory.py),
+    # então loja grande = mais clientes E mais estoque (consistente, sem só gerar
+    # mais ruptura).
     stores_by_postal: Dict[str, List[str]] = {}
     stores_by_province: Dict[str, List[str]] = {}
     stores_by_ccaa: Dict[str, List[str]] = {}
+    store_sqm: Dict[str, float] = {}
     if stores:
         for s in stores:
             stores_by_postal.setdefault(s["postal_code"], []).append(s["store_id"])
             stores_by_province.setdefault(s["province"], []).append(s["store_id"])
             stores_by_ccaa.setdefault(s["ccaa"], []).append(s["store_id"])
+            store_sqm[s["store_id"]] = float(s.get("sqm") or 1000)
+
+    def _pick_store(store_ids: List[str]) -> str:
+        """Escolhe uma loja do grupo, ponderando por sqm (catchment ∝ tamanho)."""
+        if len(store_ids) == 1:
+            return store_ids[0]
+        weights = [store_sqm.get(sid, 1000.0) for sid in store_ids]
+        return rng.choices(store_ids, weights=weights, k=1)[0]
 
     customers: List[Dict] = []
     for i, location in enumerate(sampled_locations, start=1):
@@ -290,11 +304,11 @@ def generate_customers(
             prov = location["province"]
             ccaa = location["ccaa"]
             if pc_code in stores_by_postal:
-                nearest_store_id = rng.choice(stores_by_postal[pc_code])
+                nearest_store_id = _pick_store(stores_by_postal[pc_code])
             elif prov in stores_by_province:
-                nearest_store_id = rng.choice(stores_by_province[prov])
+                nearest_store_id = _pick_store(stores_by_province[prov])
             elif ccaa in stores_by_ccaa:
-                nearest_store_id = rng.choice(stores_by_ccaa[ccaa])
+                nearest_store_id = _pick_store(stores_by_ccaa[ccaa])
 
         customers.append({
             "customer_id": customer_id,

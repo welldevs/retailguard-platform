@@ -27,7 +27,7 @@
 
 | | | | |
 |---|---|---|---|
-| **44** dbt models | **141** tests | **19** KPI marts | **8** executive pages |
+| **44** dbt models | **143** tests | **19** KPI marts | **8** executive pages |
 | **18** staging views | **2** incremental facts | **1** SCD2 snapshot | **100%** IaC |
 
 - **dbt Medallion** — staging → star schema → KPI marts, with **incremental MERGE** facts and a **real SCD2** snapshot.
@@ -158,12 +158,12 @@ RetailGuard/
 make setup       # Python deps + dbt packages (once, after clone)
 make simulate    # generate synthetic data → source/*.csv
 make load        # load CSVs into the DuckDB RAW layer
-make build       # dbt build (staging → marts) — 187 nodes
+make build       # dbt build (staging → marts) — 189 nodes
 make platform    # Executive Decision Platform → http://localhost:8501
 ```
 
-Runs on a **clean clone** — no private files, no paid services (a reproducible 500-SKU synthetic catalogue
-is used if the full Mercadona catalogue is absent).
+Runs on a **clean clone** — no paid services, no scraping: the product catalogue ships as a versioned
+base CSV (`erp/resources/mercadona/products_catalog.csv`), read directly by the simulator.
 
 **Production (Snowflake):** `make tf-apply` → `python scripts/load_snowflake_raw.py` →
 `dbt build --target snowflake`. See [docs/deploy_runbook.md](docs/deploy_runbook.md).

@@ -26,7 +26,7 @@ Uso:
     python erp/run_simulation.py --target kafka --period 365d --seed 42
     python erp/run_simulation.py --target csv --period 90d
     python erp/run_simulation.py --mode realtime --interval 0.5
-    python erp/run_simulation.py --start 2024-01-01 --end 2024-12-31 --customers 2000
+    python erp/run_simulation.py --start 2024-01-01 --end 2025-12-31 --customers 2000
 """
 
 import argparse
@@ -98,29 +98,38 @@ def _save_json(data, path: Path) -> None:
 # Product loader
 # ---------------------------------------------------------------------------
 
+PRODUCTS_CATALOG_CSV = RESOURCES_DIR / "products_catalog.csv"
+
+
 def _load_products() -> list:
-    products_path = RESOURCES_DIR / "produtos_mix.json"
-    if products_path.exists():
-        with open(products_path, "r", encoding="utf-8") as f:
-            raw = json.load(f)
-        return [
-            {
-                "product_id":    f"PROD_{idx:06d}",
-                "sku":           p.get("id",            f"SKU_{idx}"),
-                "name":          p.get("name",          "Producto sin nombre"),
-                "brand":         p.get("brand",         "Marca desconocida"),
-                "category":      p.get("category_name", "Sin categoría"),
-                "category_path": p.get("category_path", ""),
-                "price":         _parse_price(p.get("price", "0")),
-                "unit":          p.get("variant",       "unidad"),
-                "image_url":     p.get("image_url",     ""),
-                "active":        True,
-            }
-            for idx, p in enumerate(raw, start=1)
-        ]
-    print("  [info] Catálogo Mercadona (produtos_mix.json) ausente — usando catálogo")
-    print("         sintético reproduzível (500 SKUs). Opcional: erp/resources/mercadona/scraper.py")
-    return _demo_products()
+    """Carrega o catálogo de produtos do CSV base versionado.
+
+    Fonte única e versionada: ``erp/resources/mercadona/products_catalog.csv``
+    (colunas: id, brand, name, variant, price, category_path, category_name,
+    image_url). É a base do simulador — sem scraper nem fallback sintético.
+    """
+    if not PRODUCTS_CATALOG_CSV.exists():
+        raise FileNotFoundError(
+            f"Catálogo de produtos não encontrado: {PRODUCTS_CATALOG_CSV}. "
+            "É o CSV base versionado do simulador."
+        )
+    with open(PRODUCTS_CATALOG_CSV, newline="", encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+    return [
+        {
+            "product_id":    f"PROD_{idx:06d}",
+            "sku":           p.get("id") or f"SKU_{idx}",
+            "name":          p.get("name") or "Producto sin nombre",
+            "brand":         p.get("brand") or "Marca desconocida",
+            "category":      p.get("category_name") or "Sin categoría",
+            "category_path": p.get("category_path", ""),
+            "price":         _parse_price(p.get("price", "0")),
+            "unit":          p.get("variant") or "unidad",
+            "image_url":     p.get("image_url", ""),
+            "active":        True,
+        }
+        for idx, p in enumerate(rows, start=1)
+    ]
 
 
 def _parse_price(raw) -> float:
@@ -128,55 +137,6 @@ def _parse_price(raw) -> float:
         return round(float(str(raw).replace(",", ".")), 2)
     except (ValueError, TypeError):
         return 0.0
-
-
-def _demo_products() -> list:
-    """Catálogo sintético REPRODUZÍVEL (determinístico, seed fixa).
-
-    Usado quando erp/resources/mercadona/produtos_mix.json (dados scraped, mantidos
-    privados) não está presente — garante que `make simulate` funcione num clone
-    limpo, sem arquivos privados nem serviços pagos. O catálogo completo da Mercadona
-    (~3.727 SKUs) é opcional e regenerável com erp/resources/mercadona/scraper.py.
-    """
-    import random
-    rng = random.Random(42)  # determinístico: catálogo estável entre execuções
-
-    # (categoria, faixa_de_preço_net) — categorias típicas de supermercado ES
-    categories = [
-        ("Lácteos y huevos",         (0.5, 4.0)),
-        ("Bebidas",                  (0.4, 6.0)),
-        ("Agua y refrescos",         (0.3, 3.0)),
-        ("Conservas",                (0.6, 5.0)),
-        ("Panadería y bollería",     (0.5, 4.5)),
-        ("Aperitivos",               (0.8, 5.0)),
-        ("Charcutería y quesos",     (1.0, 12.0)),
-        ("Carnicería y pescadería",  (1.5, 18.0)),
-        ("Frutas y verduras",        (0.5, 6.0)),
-        ("Congelados",               (1.0, 9.0)),
-        ("Cereales y pasta",         (0.5, 4.0)),
-        ("Dulces y chocolate",       (0.6, 6.0)),
-        ("Higiene y belleza",        (0.8, 10.0)),
-        ("Limpieza y hogar",         (0.7, 8.0)),
-    ]
-    brands = ["Hacendado", "Deliplus", "Bosque Verde", "Compy", "Marca Blanca"]
-    units  = ["unidad", "kg", "litro", "pack", "docena"]
-
-    products = []
-    for i in range(1, 501):
-        cat, (pmin, pmax) = rng.choice(categories)
-        products.append({
-            "product_id":    f"PROD_{i:06d}",
-            "sku":           f"DEMO_{i:05d}",
-            "name":          f"{cat.split()[0]} {rng.choice(brands)} {i}",
-            "brand":         rng.choice(brands),
-            "category":      cat,
-            "category_path": cat,
-            "price":         round(rng.uniform(pmin, pmax), 2),
-            "unit":          rng.choice(units),
-            "image_url":     "",
-            "active":        True,
-        })
-    return products
 
 
 # ---------------------------------------------------------------------------
@@ -219,8 +179,9 @@ def parse_args():
                    help="Número de dias (ignora --start/--end)")
     p.add_argument("--start",      type=str,   default="2024-01-01",
                    help="Data inicial (YYYY-MM-DD)")
-    p.add_argument("--end",        type=str,   default="2024-12-31",
-                   help="Data final   (YYYY-MM-DD)")
+    p.add_argument("--end",        type=str,   default="2025-12-31",
+                   help="Data final   (YYYY-MM-DD). Default = janela canônica de 2 anos "
+                        "(2024-01-01..2025-12-31), na qual TODOS os market_shocks disparam.")
     p.add_argument("--customers",  type=int,   default=100000,
                    help="Número de clientes")
     p.add_argument("--stores",     type=int,   default=0,
@@ -314,7 +275,7 @@ def _kafka_main(args) -> None:
     print(f"  {bus.total_published:,} registros de master data publicados ✓")
 
     # ── [3/4] Simulação com streaming por dia ──────────────────────────
-    if args.seed:
+    if args.seed is not None:
         _random.seed(args.seed)
 
     cfg = {
@@ -551,7 +512,7 @@ def main():
 
     # ── [3/5] Simulação ────────────────────────────────────────────────
     import random
-    if args.seed:
+    if args.seed is not None:
         random.seed(args.seed)
 
     cfg = {

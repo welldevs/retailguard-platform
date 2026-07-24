@@ -5,7 +5,7 @@
 ```mermaid
 flowchart TD
     subgraph SOURCES["✅ Data Sources"]
-        SC[("Soysuper scraper\n3,727 real SKUs\n(Mercadona brands: Hacendado / Deliplus…)")]
+        SC[("Product catalogue CSV\n3,722 SKUs (versioned base)\n(Mercadona brands: Hacendado / Deliplus…)")]
         GEO["173 Spanish postal codes\ndensity-weighted\n(erp/generators/geo_spain.py)"]
     end
 

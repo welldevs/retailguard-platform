@@ -106,7 +106,7 @@ models:
                 values: ['Bronze', 'Silver', 'Gold', 'Platinum']
 
   - name: stg_products
-    description: "Product catalogue. Full Mercadona catalogue (~3.7k SKUs) when the scraped resource is present; otherwise a reproducible 500-SKU synthetic fallback."
+    description: "Product catalogue (~3.7k Mercadona SKUs) from the versioned base CSV erp/resources/mercadona/products_catalog.csv, read directly by the simulator."
     columns:
       - name: product_id
         tests: [unique, not_null]

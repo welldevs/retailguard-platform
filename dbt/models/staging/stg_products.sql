@@ -10,6 +10,7 @@ renamed as (
         brand,
         category,
         category_path,
+        category_group,
         cast(price as numeric(10, 2))                   as price,
         unit,
         cast(active as boolean)                         as active,

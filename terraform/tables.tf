@@ -66,6 +66,7 @@ resource "snowflake_execute" "tbl_products" {
       brand           VARCHAR(100),
       category        VARCHAR(100),
       category_path   VARCHAR(300),
+      category_group  VARCHAR(30),
       price           NUMBER(10,2),
       unit            VARCHAR(200),
       image_url       VARCHAR(500),
@@ -81,10 +82,18 @@ resource "snowflake_execute" "tbl_products" {
       shelf_life_days NUMBER(6),
       is_perishable   NUMBER(1),
       PRIMARY KEY (product_id)
-    ) COMMENT = '3,727 real Mercadona SKUs with pricing, Spanish VAT classification and perishability.'
+    ) COMMENT = '3,722 real Mercadona SKUs with pricing, Spanish VAT classification and perishability.'
   SQL
   revert     = "DROP TABLE IF EXISTS RETAIL_DB.RAW.PRODUCTS"
   depends_on = [snowflake_schema.raw]
+}
+
+# Migração idempotente: garante category_group em RAW.PRODUCTS já provisionado
+# (CREATE TABLE IF NOT EXISTS não altera tabela existente). Roda a cada apply.
+resource "snowflake_execute" "tbl_products_add_category_group" {
+  execute    = "ALTER TABLE IF EXISTS RETAIL_DB.RAW.PRODUCTS ADD COLUMN IF NOT EXISTS category_group VARCHAR(30)"
+  revert     = "ALTER TABLE IF EXISTS RETAIL_DB.RAW.PRODUCTS DROP COLUMN IF EXISTS category_group"
+  depends_on = [snowflake_execute.tbl_products]
 }
 
 resource "snowflake_execute" "tbl_customers" {
